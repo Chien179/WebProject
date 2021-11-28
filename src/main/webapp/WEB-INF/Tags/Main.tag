@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Chilldingo</title>
 </head>
 <body>
     <jsp:include page="../../Partials/Header.jsp"/>
