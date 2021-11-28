@@ -21,3 +21,122 @@ html{
     font-size: 62.5%;
     line-height: 1.6rem;
 }
+#content{
+    position: relative;
+}
+/* Animation grow hover */
+@keyframes HoverGrow{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes grow{
+    from{
+        transform: scale(var(--grow-from));
+    }
+    to{
+        transform: scale(var(--grow-to));
+    }
+}
+@keyframes leftRight{
+    from{
+        left: -236px;
+    }
+    to{
+        left: 0;
+    }
+}
+.grid{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: #dbdbdb;
+    flex: 1;
+}
+.text-between{
+    color: var(--text-color);
+    padding: 0 1rem;
+    text-transform: uppercase;
+    font-size: .95rem;
+}
+.-or-{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn.btn--primary:hover{
+    color: var(--text-color);
+}
+.btn.btn--disabled{
+    cursor: default;
+    background-color: #c3c3c3;
+    color: #949494;
+}
+.btn + .btn{
+    margin-left: 2px;
+}
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*display: flex;*/
+    animation: fadeIn linear 0.1s;
+    display: none;
+}
+.modal__body{
+    --grow-from: 0.7;
+    --grow-to: 1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: grow linear 0.2s;
+}
