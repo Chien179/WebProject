@@ -1,0 +1,103 @@
+/* Category */
+.category{
+    position: absolute;
+    width: 230px;
+    background-color: var(--white-color);
+    box-shadow: 1px 1px 2px #ccc;
+    margin-top: 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    left: 0;
+    top: 0;
+    animation: leftRight linear 0.25s;
+    display: none;
+}
+.category.open{
+    display: block;
+}
+.category__item-wrap{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 0px;
+}
+.category__heading{
+    position: relative;
+    text-align: center;
+    margin: 4px auto;
+    font-size: 1.4rem;
+    padding: 4px 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.category__header{
+    font-size: 1.5rem;
+}
+.category__header:hover{
+    color: var(--primary-color);
+}
+.category__item{
+    position: relative;
+    text-align: center;
+    margin: 4px auto;
+    font-size: 1.4rem;
+    padding: 4px 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.category__item::after{
+    display: inline-block;
+    content: "";
+    width: 37px;
+    height: 22px;
+    position: absolute;
+    left: 181px;
+    top: 0px;
+}
+.category__item-wrap::after{
+    display: block;
+}
+.category__item:hover{
+    background-image: linear-gradient( to right, #1ab7ea, #48c5ee, #6dd1f1, #8adaf4);
+    color: var(--white-color);
+}
+.category__item.openSubcate .sub-category{
+    display: block;
+}
+.category__item:first-child:hover{
+    color: var(--primary-color);
+    background-color: transparent;
+    background-image: none;
+}
+.sub-category{
+    position: absolute;
+    width: calc(230px /2);
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 2px 1px #ccc;
+    margin-top: 5px;
+    border-radius: 3px;
+    animation: HoverGrow linear 0.15s;
+    transform-origin: 0 0;
+    left: 115%;
+    top: -40%;
+    color: var(--text-color);
+    display: none;
+}
+.category__item:hover
+.sub-category{
+    display: block;
+}
+.sub-category__item{
+    margin: 4px auto;
+    width: 80%;
+    padding: 4px 0;
+    font-size: 1.4rem;
+    border-radius: 3px;
+}
+.sub-category__item:hover{
+    color: var(--white-color);
+    background-image: linear-gradient( to right, #1ab7ea, #48c5ee, #6dd1f1, #8adaf4);
+}
+.sub-category__list .line{
+    width: 80%;
+    margin: 0 auto;
+}
