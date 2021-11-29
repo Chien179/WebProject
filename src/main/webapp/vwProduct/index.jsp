@@ -26,12 +26,12 @@
     <div class="row">
         <c:forEach begin="0" end="11" varStatus="loop">
             <div class="card card border-secondary h-60 col-4" style="width: 22rem; margin: 10px 0px 10px 20px">
-                <img src="image.jpg" style="padding: 20px 10px 0px 12px"  alt="House">
+                <img src="../Img/download.png" style="padding: 20px 10px 0px 12px"  alt="House">
                 <div class="card-body">
-                    <h1 class="card-title pt-0" style="color: #337ab7; font-size: 20px">House</h1>
+                    <h1 class="card-title pt-0" style="color: #337ab7; font-size: 20px">Hollow Knight</h1>
                     <p class="card-text" style="font-size: 12px; font-weight: bold">Ngày đăng: 1/12/2021</p>
                     <p class="card-text" style="font-size: 14px">BID HIỆN TẠI <span class="float-end">THỜI GIAN CÒN LẠI</span></p>
-                    <p class="card-text martop" style="font-size: 16px; color: green; font-weight: bold"><fmt:formatNumber value="${3000000000}" type="currency"/>
+                    <p class="card-text martop" style="font-size: 16px; color: green; font-weight: bold"><fmt:formatNumber value="${165000}" type="currency"/>
                         <span class="float-end" style="color: black">7 ngày</span></p>
 
                     <p class="card-text" style="font-size: 14px">SỐ LƯỢT RA GIÁ<span class="float-end">BIDDER CAO NHẤT</span></p>
