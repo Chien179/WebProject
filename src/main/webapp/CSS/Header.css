@@ -595,9 +595,11 @@
     justify-content: center;
     margin: 10px 0;
     line-height: 5.5rem;
+    align-items: center;
 }
 .login-form__socials-icon-apple{
     font-size: 4rem;
+    margin-bottom: 9px
     /* align-self: center */
 }
 .login-form__socials-icon a{
