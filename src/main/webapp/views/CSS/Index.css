@@ -1,0 +1,19 @@
+.carousel-control {
+    width: 30px;
+    height: 30px;
+    margin-top: 150px;
+}
+
+.carousel-indicators {
+    width: 160px;
+    margin: auto;
+}
+
+.card-hover:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: 1px solid blue;
+}
+
+.fa:hover {
+    font: normal normal normal 60px/1 FontAwesome;
+}

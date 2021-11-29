@@ -1,4 +1,6 @@
 <%@ tag pageEncoding="UTF-8" %>
+<%@ attribute name="css" fragment="true" required="false" %>
+<%@ attribute name="js" fragment="true" required="false" %>
 
 <!DOCTYPE html>
 <html>
@@ -12,16 +14,17 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Category.css">
+    <jsp:invoke fragment="css" />
     <title>Chilldingo</title>x
 </head>
 <body>
     <jsp:include page="../../views/Partials/Header.jsp"/>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <jsp:include page="../../views/Partials/Category.jsp"/>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-10">
                 <jsp:doBody/>
             </div>
         </div>
@@ -31,5 +34,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script src="${pageContext.request.contextPath}/views/JS/Header.js"></script>
+    <jsp:invoke fragment="js" />
 </body>
 </html>
