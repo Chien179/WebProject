@@ -1,16 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../CSS/Main.css">
-    <link rel="stylesheet" href="../CSS/Header.css">
-    <link rel="stylesheet" href="../CSS/Category.css">
-    <title>Chilldingo</title>
-</head>
-<body>
+
+<%--<meta charset="UTF-8">--%>
+<%--<meta http-equiv="X-UA-Compatible" content="IE=edge">--%>
+<%--<meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
+<%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />--%>
+<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/Main.css">--%>
+<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/Header.css">--%>
+<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/Category.css">--%>
+<%--<title>Chilldingo</title>--%>
+
 <div class="app">
     <!-- Header -->
     <div id="header">
@@ -30,7 +28,7 @@
                             <ul class="header__notify-list">
                                 <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="../Img/download.png" alt="" class="header__notify-img">
+                                        <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Item-name</span>
                                             <span class="header__notify-description">Item-description</span>
@@ -39,7 +37,7 @@
                                 </li>
                                 <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="../Img/download.png" alt="" class="header__notify-img">
+                                        <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Item-name</span>
                                             <span class="header__notify-description">Item-description</span>
@@ -48,7 +46,7 @@
                                 </li>
                                 <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="../Img/download.png" alt="" class="header__notify-img">
+                                        <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Item-name</span>
                                             <span class="header__notify-description">Item-description</span>
@@ -85,7 +83,7 @@
                     <i class="fas fa-bars header__cate-icon"></i>
                 </div>
                 <div class="header__logo">
-                    <a href="#"><img class="header__logo-img" src="../Img/download.png" alt="Logo"></a>
+                    <a href="#"><img class="header__logo-img" src="${pageContext.request.contextPath}/Img/download.png" alt="Logo"></a>
                 </div>
                 <div class="header__search">
                     <div class="header__search-input-wrap">
@@ -133,14 +131,14 @@
                         <!-- No cart:  Add header__cart-list--no-cart-->
                         <div class="header__cart-list">
                             <!-- Chua co hinh -->
-                            <img src="../Img/download.png" alt="" class="header__cart-no-cart-img">
+                            <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-no-cart-img">
                             <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
 
                             <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
                             <ul class="header__cart-list-item">
                                 <!-- Cart item -->
                                 <li class="header__cart-item">
-                                    <img src="../Img/download.png" alt="" class="header__cart-img">
+                                    <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-img">
                                     <div class="header__cart-item-info">
                                         <div class="header__cart-item-head">
                                             <h5 class="header__cart-item-name">Item-name</h5>
@@ -157,7 +155,7 @@
                                     </div>
                                 </li>
                                 <li class="header__cart-item">
-                                    <img src="../Img/download.png" alt="" class="header__cart-img">
+                                    <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-img">
                                     <div class="header__cart-item-info">
                                         <div class="header__cart-item-head">
                                             <h5 class="header__cart-item-name">Item-name</h5>
@@ -174,7 +172,7 @@
                                     </div>
                                 </li>
                                 <li class="header__cart-item">
-                                    <img src="../Img/download.png" alt="" class="header__cart-img">
+                                    <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-img">
                                     <div class="header__cart-item-info">
                                         <div class="header__cart-item-head">
                                             <h5 class="header__cart-item-name">Item-name</h5>
@@ -275,6 +273,3 @@
         </div>
     </div>
 </div>
-<script src="../JS/Header.js"></script>
-</body>
-</html>

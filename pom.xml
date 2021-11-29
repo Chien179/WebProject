@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ute</groupId>
-    <artifactId>WebProject</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>metmoiqua</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>WebProject</name>
+    <name>metmoiqua</name>
     <packaging>war</packaging>
 
     <properties>
@@ -31,15 +31,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.taglibs</groupId>
-            <artifactId>taglibs-standard-spec</artifactId>
-            <version>1.2.5</version>
-        </dependency>
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- taglibs-standard-spec-*.jar -->
+        <!-- http://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-spec -->
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-spec</artifactId>
+            <version>1.2.5</version>
         </dependency>
 
         <!-- taglibs-standard-impl-*.jar -->
@@ -48,21 +51,6 @@
             <groupId>org.apache.taglibs</groupId>
             <artifactId>taglibs-standard-impl</artifactId>
             <version>1.2.5</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.27</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.sql2o/sql2o -->
-        <dependency>
-            <groupId>org.sql2o</groupId>
-            <artifactId>sql2o</artifactId>
-            <version>1.6.0</version>
         </dependency>
     </dependencies>
 
