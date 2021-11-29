@@ -6,6 +6,7 @@
 </head>
 <body>
     <jsp:include page="../../Partials/Header.jsp"/>
+    <jsp:include page="../../Partials/Category.jsp"/>
     <jsp:doBody/>
 </body>
 </html>
