@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Đăng Ký</title>
-  <link rel="stylesheet" href="CSS/Register.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Register.css">
 </head>
 <body>
 <div style="background-color: lightblue" >
