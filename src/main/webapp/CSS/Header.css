@@ -487,3 +487,125 @@
 .header__cart-view-btn{
     margin-bottom: 4px;
 }
+/* Login form */
+.login-modal.open{
+    display: flex;
+}
+.modal__overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.modal__body{
+    background-color: var(--white-color);
+    margin: auto;
+    /* position: relative; */
+    z-index: 1;
+    border-radius: 5px;
+}
+.login-form{
+    width: 500px;
+
+}
+.login-form__container{
+    padding: 32px 32px 0;
+}
+.login__header{
+    padding-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.escape-btn{
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+.escape-btn:hover{
+    color: var(--primary-color);
+}
+.login__heading{
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.login-form__form{
+
+}
+.login-form__input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    margin-top: 8px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    outline: none;
+}
+.login-form__input:focus-visible{
+    border-color: #888;
+}
+.login-form__btn{
+    width: 100%;
+    margin: 32px 0 5px;
+}
+.btn--login{
+    width: 100%;
+}
+.login-form__more{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 5px 0 0;
+}
+.login-form__more-link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    position: relative;
+    /* line-height: 1.2rem; */
+}
+.login-form__more-link + .login-form__more-link{
+    padding-left: 10px;
+}
+.login-form__more-link:hover{
+    text-decoration: underline;
+}
+.login-form__more .login-form__more-forgetpass{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.login-form__more-forgetpass::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: -7px;
+    top: 1px;
+    width: 1px;
+    height: 14px;
+    border-left: 1px solid var(--black-color);
+}
+.login-form__socials{
+
+}
+.login-form__socials-icon{
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    margin: 10px 0;
+    line-height: 5.5rem;
+}
+.login-form__socials-icon-apple{
+    font-size: 4rem;
+    /* align-self: center */
+}
+.login-form__socials-icon a{
+    color: var(--text-color);
+}
+.login-form__socials-icon a:hover{
+    color: var(--primary-color);
+}
+.login-form__socials-icon a + a{
+    margin-left: 5px;
+}
