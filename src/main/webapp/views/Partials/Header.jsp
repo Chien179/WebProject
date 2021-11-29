@@ -73,7 +73,7 @@
                     </li>
                     <li class="nav-item nav-item-strong">
                         <i class="fas fa-sign-in-alt"></i>
-                        <a class="js-login">Đăng nhập</a>
+                        <a class="js-login nav-item-link nav-item-strong">Đăng nhập</a>
                     </li>
                 </ul>
             </nav>

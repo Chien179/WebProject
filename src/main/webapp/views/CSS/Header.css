@@ -28,6 +28,7 @@
 .nav-item:hover,
 .nav-item-link:hover{
     color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
 }
 .nav-item:hover .header__notify{
     display: block;
@@ -181,6 +182,7 @@
 }
 .header__search-input:focus-visible ~
 .header__search-history{
+    z-index: 1;
     display: block;
 }
 /* Search history */
@@ -239,6 +241,7 @@
 }
 .header__search-select:hover
 .header__search-option{
+    z-index: 1;
     display: block;
 }
 .header__search-select-label{

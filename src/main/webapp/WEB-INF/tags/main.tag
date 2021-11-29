@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Category.css">
     <jsp:invoke fragment="css" />
-    <title>Chilldingo</title>x
+    <title>Chilldingo</title>
 </head>
 <body>
     <jsp:include page="../../views/Partials/Header.jsp"/>
