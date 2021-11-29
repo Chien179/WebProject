@@ -198,3 +198,49 @@
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal login-modal js-modal">
+    <div class="modal__overlay js-modal__overlay">
+
+    </div>
+    <div class="modal__body">
+        <div class="login-form">
+            <div class="login-form__container js-login-form__container">
+                <div class="login__header">
+                    <h3 class="login__heading">Đăng nhập</h3>
+                    <div class="js-escape-btn">
+                        <i class="fas fa-times escape-btn"></i>
+                    </div>
+                </div>
+                <div class="login-form__form">
+                    <input type="text" class="login-form__input" placeholder="Tài khoản">
+                </div>
+                <div class="login-form__form">
+                    <input type="password" class="login-form__input" placeholder="Mật khẩu">
+                    <div class="login-form__more">
+                        <a href="" class="login-form__more-link login-form__more-forgetpass">Quên mật khẩu</a>
+                        <a href="" class="login-form__more-link">Cần trợ giúp?!</a>
+                    </div>
+                </div>
+                <div class="login-form__btn">
+                    <button class="btn btn--primary btn--login">ĐĂNG NHẬP</button>
+                </div>
+                <div class="login-form__socials">
+                    <div class="-or-">
+                        <div class="line"></div>
+                        <span class="text-between">HOẶC</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="login-form__socials-icon">
+                        <a href=""><i class="fab fa-facebook login-form__socials-icon-fb"></i></a>
+                        <a href=""><i class="fab fa-google"></i></a>
+                        <a href=""><i class="fab fa-apple login-form__socials-icon-apple"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../JS/Header.js"></script>
+</body>
+</html>
