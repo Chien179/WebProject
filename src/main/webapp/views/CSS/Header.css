@@ -2,6 +2,8 @@
 #header{
     height: var(--header-height);
     background-image: linear-gradient( #1ab7ea, #48c5ee, #6dd1f1, #8adaf4);
+    position: fixed;
+    width: 100%;
 }
 .header__nav{
     display: flex;

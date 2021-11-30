@@ -1,0 +1,10 @@
+.carousel-indicators > li {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-indicators {
+    width: 80px;
+    margin: auto;
+}

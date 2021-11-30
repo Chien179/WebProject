@@ -15,8 +15,17 @@ public class ProductServlet extends HttpServlet {
         if (path == null || path.equals("/")) {
             path = "/Product";
         }
-
-        ServletUtils.forward("/views/vwProduct/Product.jsp", request, response);
+        switch (path) {
+            case "/Product":
+                ServletUtils.forward("/views/vwProduct/Product.jsp", request, response);
+                break;
+            case "/ProductDetail":
+                ServletUtils.forward("/views/vwProduct/ProductDetail.jsp", request, response);
+                break;
+            default:
+                ServletUtils.forward("/views/404.jsp", request, response);
+                break;
+        }
     }
 
     @Override

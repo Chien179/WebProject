@@ -1,7 +1,7 @@
 .carousel-control {
     width: 30px;
     height: 30px;
-    margin-top: 150px;
+    margin-top: 19em;
 }
 
 .carousel-indicators {
@@ -9,11 +9,6 @@
     margin: auto;
 }
 
-.card-hover:hover {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border: 1px solid blue;
-}
-
 .fa:hover {
-    font: normal normal normal 60px/1 FontAwesome;
+    font: normal normal normal 50px/1 FontAwesome;
 }
