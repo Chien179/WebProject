@@ -85,19 +85,19 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev carousel-control" href="#carouselExampleIndicators" style="z-index: 0" role="button" data-slide="prev">
                         <i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next carousel-control" href="#carouselExampleIndicators " style="z-index: 0" role="button" data-slide="next">
                         <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
             <div class="row p-5">
-                <div class="card-header bg-white mb-1 w-100 sticky-top p-3">
-                    <h3 class="my-auto">SẢN PHẨM GỢI Ý</h3>
+                <div class="card-header bg-white mb-1 w-100 p-3">
+                    <h3 class="my-auto" style="z-index: 0">SẢN PHẨM GỢI Ý</h3>
                 </div>
                 <c:forEach begin="0" end="19" varStatus="loop">
                     <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">

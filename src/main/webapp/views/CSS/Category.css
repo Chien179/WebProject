@@ -12,6 +12,7 @@
     animation: leftRight linear 0.25s;
     display: none;
     z-index: 1;
+    margin-top: 120px;
 }
 .category.open{
     display: block;

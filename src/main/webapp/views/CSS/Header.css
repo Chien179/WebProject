@@ -4,6 +4,7 @@
     background-image: linear-gradient( #1ab7ea, #48c5ee, #6dd1f1, #8adaf4);
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 .header__nav{
     display: flex;
@@ -26,6 +27,8 @@
     text-decoration: none;
     font-weight: 300;
     padding-bottom: 2px;
+    font-family: arial !important;
+
 }
 .nav-item:hover,
 .nav-item-link:hover{
@@ -107,6 +110,9 @@
 .header__notify-list{
     padding-left: 0;
 }
+.header__notify-item a:hover{
+    text-decoration: none !important;
+}
 .header__notify-item{
     /* display: flex; */
 }
@@ -129,6 +135,9 @@
 .header__notify-info{
     flex: 1;
     margin-left: 12px;
+}
+a.header__notify-link:hover{
+    text-decoration: none;
 }
 .header__notify-name{
     display: block;
