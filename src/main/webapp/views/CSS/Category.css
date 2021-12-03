@@ -1,6 +1,5 @@
 /* Category */
 .category{
-    position: absolute;
     width: 230px;
     background-color: var(--white-color);
     box-shadow: 1px 1px 2px #ccc;
@@ -13,6 +12,7 @@
     display: none;
     z-index: 1;
     margin-top: 120px;
+    position: fixed;
 }
 .category.open{
     display: block;

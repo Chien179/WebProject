@@ -24,9 +24,6 @@ html, body{
 #content{
     position: relative;
 }
-a:hover{
-    text-decoration: none !important;
-}
 /* Animation grow hover */
 @keyframes HoverGrow{
     from{
