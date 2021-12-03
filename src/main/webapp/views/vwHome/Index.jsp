@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="row p-5">
-                <div class="card-header bg-white mb-1 w-100 sticky-top p-3">
+                <div class="card-header bg-white mb-1 w-100 p-3">
                     <h3 class="my-auto">SẢN PHẨM GỢI Ý</h3>
                 </div>
                 <c:forEach begin="0" end="19" varStatus="loop">
