@@ -9,7 +9,7 @@
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="metmoiqua-1.0-SNAPSHOT.war">
+    <root id="archive" name="WebProject-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="WebProject:war exploded" />
     </root>
   </artifact>

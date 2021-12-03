@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/ProductDetail.css">
     </jsp:attribute>
     <jsp:body>
-        <div class="container-fluid bg-light">
-            <div class="row mt-3">
+        <div class="container-fluid">
+            <div class="row p-5">
+                <div class="row">
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-12">
@@ -88,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+                <div class="row">
                 <div class="col-md-9">
                     <div class="row h-auto w-auto">
                         <div class="mt-5 mx-2">
@@ -146,6 +147,7 @@
                         </c:forEach>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </jsp:body>

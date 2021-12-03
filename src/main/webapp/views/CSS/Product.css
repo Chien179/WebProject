@@ -1,5 +1,6 @@
 div.card:hover, div.card:active{
-    background-color: #F7F7F7; cursor: pointer}
+    background-color: #F7F7F7; cursor: pointer;
+}
 
 .martop{
     margin-top: -10px !important;

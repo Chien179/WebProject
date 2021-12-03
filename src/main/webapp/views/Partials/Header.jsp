@@ -1,13 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%--<meta charset="UTF-8">--%>
-<%--<meta http-equiv="X-UA-Compatible" content="IE=edge">--%>
-<%--<meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
-<%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />--%>
-<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/Main.css">--%>
-<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/Header.css">--%>
-<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/Category.css">--%>
-<%--<title>Chilldingo</title>--%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
 
 <div class="app">
     <!-- Header -->
@@ -65,16 +60,23 @@
                             Trợ giúp
                         </a>
                     </li>
-                    <li class="nav-item nav-item--separate">
-                        <a href="" class="nav-item-link nav-item-strong">
-                            <i class="fas fa-user-plus"></i>
-                            Đăng ký
-                        </a>
-                    </li>
-                    <li class="nav-item nav-item-strong">
-                        <i class="fas fa-sign-in-alt"></i>
-                        <a class="js-login nav-item-link nav-item-strong">Đăng nhập</a>
-                    </li>
+                    <c:choose>
+                        <c:when test="${auth}">
+                            hehe
+                        </c:when>
+                        <c:otherwise>
+                            <li class="nav-item nav-item--separate">
+                                <a href="${pageContext.request.contextPath}/views/vwAccount/Register.jsp" class="nav-item-link nav-item-strong">
+                                    <i class="fas fa-user-plus"></i>
+                                    Đăng ký
+                                </a>
+                            </li>
+                            <li class="nav-item nav-item-strong">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <a class="js-login nav-item-link nav-item-strong">Đăng nhập</a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
                 </ul>
             </nav>
             <!-- Header search -->
@@ -232,18 +234,19 @@
 </div>
 <!-- Modal -->
 <div class="modal login-modal js-modal">
-    <div class="modal__overlay js-modal__overlay">
+<div class="modal__overlay js-modal__overlay">
 
-    </div>
-    <div class="modal__body">
-        <div class="login-form">
-            <div class="login-form__container js-login-form__container">
-                <div class="login__header">
-                    <h3 class="login__heading">Đăng nhập</h3>
-                    <div class="js-escape-btn">
-                        <i class="fas fa-times escape-btn"></i>
-                    </div>
+</div>
+<div class="modal__body">
+    <div class="login-form">
+        <div class="login-form__container js-login-form__container">
+            <div class="login__header">
+                <h3 class="login__heading">Đăng nhập</h3>
+                <div class="js-escape-btn">
+                    <i class="fas fa-times escape-btn"></i>
                 </div>
+            </div>
+            <form action="" method="post">
                 <div class="login-form__form">
                     <input type="text" class="login-form__input" placeholder="Tài khoản">
                 </div>
@@ -269,7 +272,9 @@
                         <a href=""><i class="fab fa-apple login-form__socials-icon-apple"></i></a>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
+</div>
+<script src="${pageContext.request.contextPath}/views/JS/Header.js"></script>

@@ -7,8 +7,23 @@
 .carousel-indicators {
     width: 160px;
     margin: auto;
+    z-index: 1;
+}
+
+.carousel-indicators li {
+    background-color: var(--primary-color);
+}
+
+.fa-arrow-circle-o-left, .fa-arrow-circle-o-right {
+    color: var(--primary-color);
 }
 
 .fa:hover {
     font: normal normal normal 50px/1 FontAwesome;
+    z-index: 1;
+}
+
+.sticky-top {
+    z-index: 1;
+    top: 120px;
 }

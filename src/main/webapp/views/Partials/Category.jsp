@@ -1,5 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Category.css">
+
 <div id="content">
     <!-- Category -->
     <div class="category js-cate">
