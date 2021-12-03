@@ -6,5 +6,10 @@
     <file url="file://$PROJECT_DIR$/../AuctionData/auction_categories.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/../AuctionData/auction_products.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/../AuctionData/auction_users.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../AuctionData/data/auction.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../AuctionData/data/auction_auction.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../AuctionData/data/auction_categories.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../AuctionData/data/auction_products.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../AuctionData/data/auction_users.sql" dialect="MySQL" />
   </component>
 </project>
