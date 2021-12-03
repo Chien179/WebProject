@@ -10,7 +10,7 @@
     </jsp:attribute>
     <jsp:body>
         <div class="container-fluid">
-            <div class="row list-group-item-primary">
+            <div class="row">
                 <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -19,7 +19,7 @@
                     </ol>
                     <div class="carousel-inner p-5">
                         <div class="carousel-item active">
-                            <div class="list-group-item-primary p-3">
+                            <div class="p-3">
                                 <h3 class="my-auto">Top 5 sản phẩm</h3>
                             </div>
                             <div class="d-flex">
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="list-group-item-primary p-3">
+                            <div class="p-3">
                                 <h3 class="my-auto">Top 5 sản phẩm</h3>
                             </div>
                             <div class="d-flex">
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="list-group-item-primary p-3">
+                            <div class="p-3">
                                 <h3 class="my-auto">Top 5 sản phẩm</h3>
                             </div>
                             <div class="d-flex">
@@ -85,18 +85,18 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i>
+                    <a class="carousel-control-prev carousel-control" style="margin-top: 33em;" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-circle-o-left fa-5x" aria-hidden="true"></i>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i>
+                    <a class="carousel-control-next carousel-control" style="margin-top: 33em;" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <i class="fa fa-arrow-circle-o-right fa-5x" aria-hidden="true"></i>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
             <div class="row p-5">
-                <div class="card-header bg-white mb-1 w-100 p-3">
+                <div class="card-header bg-white sticky-top mb-1 w-100 p-3">
                     <h3 class="my-auto">SẢN PHẨM GỢI Ý</h3>
                 </div>
                 <c:forEach begin="0" end="19" varStatus="loop">

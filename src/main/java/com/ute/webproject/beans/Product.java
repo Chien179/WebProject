@@ -1,6 +1,8 @@
 package com.ute.webproject.beans;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Product {
     private int ProID;
@@ -93,5 +95,20 @@ public class Product {
 
     public String getName() {
         return name;
+    }
+
+    public long getDurationTime() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        Duration t = Duration.between(now, this.EndDateTime);
+        long day = t.toDays();
+        long hour = t.toHours();
+        System.out.println(now);
+        System.out.println(this.EndDateTime);
+        if(day <= 0){
+            return 0;
+        }
+
+        return t.toDays();
     }
 }
