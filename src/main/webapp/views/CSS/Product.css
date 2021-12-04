@@ -25,3 +25,7 @@ div.card:hover, div.card:active{
 .p-custom{
     padding: 3rem 3rem 3rem 6rem;
 }
+
+.w-77 {
+    width: 77%;
+}

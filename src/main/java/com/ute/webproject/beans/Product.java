@@ -3,6 +3,7 @@ package com.ute.webproject.beans;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 public class Product {
     private int ProID;
@@ -97,18 +98,22 @@ public class Product {
         return name;
     }
 
-    public long getDurationTime() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        Duration t = Duration.between(now, this.EndDateTime);
-        long day = t.toDays();
-        long hour = t.toHours();
-        System.out.println(now);
-        System.out.println(this.EndDateTime);
-        if(day <= 0){
-            return 0;
-        }
-
-        return t.toDays();
+    public String getTimeFormat() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String timeFormat = this.EndDateTime.format(formatter);
+//        LocalDateTime now = LocalDateTime.now();
+//        Duration t = Duration.between(now, this.EndDateTime);
+//        System.out.println(t);
+//        long day = t.toDays();
+//        long hour = t.toHours();
+//        long minute = t.toMinutes();
+////        long second = t.toSeconds();
+//        System.out.println(day);
+//        System.out.println(hour);
+//        System.out.println(minute);
+////        System.out.println(second);
+//        String result = Long.toString(day) + "d " + Long.toString(hour) + "h " + Long.toString(minute) + "m "  + "s";
+//        System.out.println(result);
+        return timeFormat;
     }
 }
