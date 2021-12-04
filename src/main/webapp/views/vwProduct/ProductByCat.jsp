@@ -45,7 +45,7 @@
     </jsp:attribute>
     <jsp:body>
         <div class="container-fluid">
-            <div class="row p-5">
+            <div class="row p-custom">
                 <c:forEach begin="0" end="${products.size() - 1}" varStatus="loop" var = "i">
                     <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
                         <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">

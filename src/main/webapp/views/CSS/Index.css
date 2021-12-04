@@ -26,3 +26,6 @@
     z-index: 1;
     top: 120px;
 }
+.p-custom {
+    padding: 3rem 3rem 3rem 6rem;
+}

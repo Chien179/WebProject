@@ -95,7 +95,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row p-5">
+            <div class="row p-custom">
                 <div class="card-header bg-white sticky-top mb-1 w-100 p-3">
                     <h3 class="my-auto">SẢN PHẨM GỢI Ý</h3>
                 </div>
