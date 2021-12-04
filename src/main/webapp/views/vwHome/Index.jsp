@@ -23,7 +23,7 @@
                                 <h3 class="my-auto">Top 5 sản phẩm</h3>
                             </div>
                             <div class="d-flex">
-                                <c:forEach begin="0" end="5" varStatus="loop">
+                                <c:forEach begin="0" end="4" varStatus="loop">
                                     <div class="card card card-hover border-secondary h-60" style="width: 227px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                         <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                         <div class="card-body">
@@ -45,7 +45,7 @@
                                 <h3 class="my-auto">Top 5 sản phẩm</h3>
                             </div>
                             <div class="d-flex">
-                                <c:forEach begin="0" end="5" varStatus="loop">
+                                <c:forEach begin="0" end="4" varStatus="loop">
                                     <div class="card card border-secondary h-60" style="width: 227px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                         <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                         <div class="card-body">
@@ -67,7 +67,7 @@
                                 <h3 class="my-auto">Top 5 sản phẩm</h3>
                             </div>
                             <div class="d-flex">
-                                <c:forEach begin="0" end="5" varStatus="loop">
+                                <c:forEach begin="0" end="4" varStatus="loop">
                                     <div class="card card border-secondary h-60" style="width: 227px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                         <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                         <div class="card-body">
@@ -99,7 +99,7 @@
                 <div class="card-header bg-white sticky-top mb-1 w-100 p-3">
                     <h3 class="my-auto">SẢN PHẨM GỢI Ý</h3>
                 </div>
-                <c:forEach begin="0" end="19" varStatus="loop">
+                <c:forEach begin="0" end="14" varStatus="loop">
                     <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
                         <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                         <div class="card-body">

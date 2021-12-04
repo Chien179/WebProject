@@ -87,7 +87,7 @@
                     <i class="fas fa-bars header__cate-icon"></i>
                 </div>
                 <div class="header__logo">
-                    <a href="#"><img class="header__logo-img" src="${pageContext.request.contextPath}/Img/download.png" alt="Logo"></a>
+                    <a href="${pageContext.request.contextPath}/Home"><img class="header__logo-img" src="${pageContext.request.contextPath}/Img/download.png" alt="Logo"></a>
                 </div>
                 <div class="header__search">
                     <div class="header__search-input-wrap">
@@ -207,7 +207,7 @@
         <ul class="category__list">
             <div class="category__item-wrap">
                 <li class="category__heading">
-                    <h3 class="category__header">Danh mục sản phẩm</h3>
+                   <a href="${pageContext.request.contextPath}/Product"><h3 class="category__header">Danh mục sản phẩm</h3></a>
                 </li>
                 <c:choose>
                     <c:when test="${categories.size() == 0}">
@@ -218,14 +218,11 @@
                     <c:otherwise>
                         <c:forEach items="${categories}" var="c">
                             <div class="line"></div>
-                            <li class="category__item js-category__item">
-                                    ${c.catName}
-                                <div class="js-sub-category sub-category">
-                                    <ul class="sub-category__list">
-                                        <li class="sub-category__item">SubCate1</li>
-                                    </ul>
-                                </div>
-                            </li>
+                            <a href="${pageContext.request.contextPath}/Product/ByCate/ProductByCat?id=${c.catID}">
+                                <li class="category__item js-category__item">
+                                        ${c.catName}
+                                </li>
+                            </a>
                         </c:forEach>
                     </c:otherwise>
                 </c:choose>

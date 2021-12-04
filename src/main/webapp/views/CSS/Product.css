@@ -18,3 +18,7 @@ div.card:hover, div.card:active{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.sticky-top {
+    z-index: 1;
+    top: 118px;
+}

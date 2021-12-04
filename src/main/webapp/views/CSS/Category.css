@@ -59,8 +59,8 @@
     display: block;
 }
 .category__item:hover{
-    background-image: linear-gradient( to right, #1ab7ea, #48c5ee, #6dd1f1, #8adaf4);
-    color: var(--white-color);
+    background-image: linear-gradient( to right, #1ab7ea, #48c5ee, #6dd1f1, #8adaf4)!important;
+    color: var(--white-color)!important;
 }
 .category__item.openSubcate .sub-category{
     display: block;
@@ -102,4 +102,11 @@
 .sub-category__list .line{
     width: 80%;
     margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
 }

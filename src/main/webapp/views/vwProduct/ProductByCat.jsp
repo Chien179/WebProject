@@ -32,7 +32,7 @@
                      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                      // Output the result in an element with id="remaining"
-                    document.querySelector('.test').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                     document.querySelector('.test').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
                      // If the count down is over, write some text
                      if (distance < 0) {
@@ -46,9 +46,6 @@
     <jsp:body>
         <div class="container-fluid">
             <div class="row p-5">
-                <div class="card-header bg-white sticky-top mb-1 w-100 p-3">
-                    <h3 class="my-auto">SẢN PHẨM HIỆN CÓ</h3>
-                </div>
                 <c:forEach begin="0" end="${products.size() - 1}" varStatus="loop" var = "i">
                     <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
                         <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
@@ -74,4 +71,5 @@
         </div>
     </jsp:body>
 </t:main>
+
 
