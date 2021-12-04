@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<jsp:useBean id="categories" scope="request" type="java.util.List<com.ute.webproject.beans.Category>"/>
+
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
 
@@ -207,27 +209,26 @@
                 <li class="category__heading">
                     <h3 class="category__header">Danh mục sản phẩm</h3>
                 </li>
-                <div class="line"></div>
-                <li class="category__item js-category__item">
-                    Category-1
-                    <div class="js-sub-category sub-category">
-                        <ul class="sub-category__list">
-                            <li class="sub-category__item">SubCate1</li>
+                <c:choose>
+                    <c:when test="${categories.size() == 0}">
+                        <li class="category__item">
+                            Không có dữ liệu
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <c:forEach items="${categories}" var="c">
                             <div class="line"></div>
-                            <li class="sub-category__item">SubCate2</li>
-                            <div class="line"></div>
-                            <li class="sub-category__item">SubCate3</li>
-                        </ul>
-                    </div>
-                </li>
-                <div class="line"></div>
-                <li class="category__item">
-                    Category-2
-                </li>
-                <div class="line"></div>
-                <li class="category__item">
-                    Category-3
-                </li>
+                            <li class="category__item js-category__item">
+                                    ${c.catName}
+                                <div class="js-sub-category sub-category">
+                                    <ul class="sub-category__list">
+                                        <li class="sub-category__item">SubCate1</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </c:forEach>
+                    </c:otherwise>
+                </c:choose>
             </div>
         </ul>
     </div>

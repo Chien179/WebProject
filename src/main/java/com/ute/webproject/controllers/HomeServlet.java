@@ -2,8 +2,10 @@ package com.ute.webproject.controllers;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.ute.webproject.beans.Product;
+import com.ute.webproject.beans.Category;
 import com.ute.webproject.beans.User;
 import com.ute.webproject.models.ProductModel;
+import com.ute.webproject.models.CategoryModel;
 import com.ute.webproject.models.UserModel;
 import com.ute.webproject.utils.ServletUtils;
 
@@ -69,8 +71,10 @@ public class HomeServlet extends HttpServlet {
     }
 
     private void Index (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        List<Category> cat = CategoryModel.findAll();
         List<Product> list = ProductModel.findAll();
         request.setAttribute("products", list);
+        request.setAttribute("categories", cat);
         ServletUtils.forward("/views/vwHome/Index.jsp", request, response);
     }
 }

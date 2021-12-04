@@ -1,7 +1,9 @@
 package com.ute.webproject.controllers;
 
+import com.ute.webproject.models.CategoryModel;
 import com.ute.webproject.utils.ServletUtils;
 import com.ute.webproject.beans.Product;
+import com.ute.webproject.beans.Category;
 import com.ute.webproject.models.ProductModel;
 
 import javax.servlet.*;
@@ -20,8 +22,10 @@ public class ProductServlet extends HttpServlet {
         }
         switch (path) {
             case "/Product":
+                List<Category> cat = CategoryModel.findAll();
                 List<Product> list = ProductModel.findAll();
                 request.setAttribute("products", list);
+                request.setAttribute("categories", cat);
                 ServletUtils.forward("/views/vwProduct/Product.jsp", request, response);
                 break;
             case "/ProductDetail":

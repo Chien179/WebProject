@@ -3,11 +3,18 @@ div.card:hover, div.card:active{
 }
 
 .martop{
-    margin-top: -10px !important;
+    margin-top: 0px !important;
 }
 
 .card-text-config{
     font-size: 14px;
     display: flex;
     justify-content: space-between;
+}
+
+.txtOverflow{
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
