@@ -20,7 +20,7 @@
     <jsp:body>
         <div class="container-fluid">
             <div class="row">
-                <div class="row w-82">
+                <div class="row" style="width: 125rem">
                     <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="d-flex">
                                     <c:forEach items="${top5Time}" var="t">
-                                        <div class="card card card-hover border-secondary h-60" style="width: 225px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
+                                        <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="d-flex">
                                     <c:forEach items="${top5Time}" var="t">
-                                        <div class="card card card-hover border-secondary h-60" style="width: 225px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
+                                        <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="d-flex">
                                     <c:forEach items="${top5Time}" var="t">
-                                        <div class="card card card-hover border-secondary h-60" style="width: 225px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
+                                        <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div class="row p-custom">
-                <div class="card-header w-77 bg-white mb-1 sticky-top">
+                <div class="card-header bg-white mb-1 sticky-top" style="width:112rem; height: 5rem">
                     <h3 class="my-auto">SẢN PHẨM GỢI Ý</h3>
                 </div>
                 <c:forEach begin="0" end="14" varStatus="loop" var="i">

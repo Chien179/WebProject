@@ -16,7 +16,7 @@
     <jsp:body>
         <div class="container-fluid">
             <div class="row p-custom">
-                <div class="card-header bg-white sticky-top mb-1 w-77 p-3">
+                <div class="card-header bg-white sticky-top mb-1 p-3" style="width: 112rem; height: 5rem">
                     <h3 class="my-auto">SẢN PHẨM HIỆN CÓ</h3>
                 </div>
                 <c:forEach begin="0" end="${products.size() - 1}" varStatus="loop" var = "i">

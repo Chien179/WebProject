@@ -11,41 +11,14 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Product.css">
     </jsp:attribute>
     <jsp:attribute name="js">
-         <script>
-             let endDate = document.querySelector('.remaining');
-             // Update the count down every 1 second
-             let x = setInterval(function() {
-                 for (let i =0; i < endDate.length; i++){
-                     // Set the date we're counting down to
-                     let countDownDate = new Date('2021-12-14T14:00').getTime();
-
-                     // Get today's date and time
-                     let now = new Date().getTime();
-
-                     // Find the distance between now and the count down date
-                     let distance = countDownDate - now;
-
-                     // Time calculations for days, hours, minutes and seconds
-                     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                     // Output the result in an element with id="remaining"
-                     document.querySelector('.test').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-                     // If the count down is over, write some text
-                     if (distance < 0) {
-                         clearInterval(x);
-                         document.getElementById("remaining").innerHTML = "EXPIRED";
-                     }
-                 }
-             }, 1000);
-         </script>
+        <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
     </jsp:attribute>
     <jsp:body>
         <div class="container-fluid">
             <div class="row p-custom">
+                <div class="card-header bg-white sticky-top mb-1 p-3" style="width: 112rem; height: 5rem">
+                    <h3 class="my-auto">SẢN PHẨM HIỆN CÓ</h3>
+                </div>
                 <c:forEach begin="0" end="${products.size() - 1}" varStatus="loop" var = "i">
                     <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
                         <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
@@ -56,8 +29,8 @@
                                 <span class="float-end">THỜI GIAN CÒN LẠI</span>
                             </p>
                             <p class="card-text card-text-config martop" style="font-size: 16px; color: green; font-weight: bold"><fmt:formatNumber value="${products[i].price}" type="currency"/>
-                                <span class="remaining float-end" style="color: black">${products[i].endDateTime}</span>
-                                <span class="test"></span>
+                                <span hidden class="time">${products[i].timeFormat}</span>
+                                <span class="remaining float-end" style="color: black"></span>
                             </p>
                             <p class="card-text card-text-config" style="font-size: 14px">SỐ LƯỢT RA GIÁ<span class="float-end">BIDDER CAO NHẤT</span></p>
                             <c:set var="fullname" value="${products[i].name}"/>
@@ -71,5 +44,4 @@
         </div>
     </jsp:body>
 </t:main>
-
 
