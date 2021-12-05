@@ -19,13 +19,33 @@ let x = setInterval(function() {
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="demo"
-        endDate[i].innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        if (days > 3) {
+            // Output the result in an element with id="demo"
+            endDate[i].innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        else {
+            if (days > 0) {
+                endDate[i].innerHTML =`${days} ngày nữa`;
+            }
+            else {
+                if (hours > 0){
+                    endDate[i].innerHTML =`${hours} tiếng nữa`;
+                }
+                else {
+                    if (minutes > 0){
+                        endDate[i].innerHTML =`${minutes} phút nữa`;
+                    }
+                    else {
+                        endDate[i].innerHTML =`${seconds} giây nữa`;
+                    }
+                }
+            }
+        }
 
         // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(x);
-            endDate[i].innerHTML = "Hết Giờ";
+            endDate[i].innerHTML = "Hết Thời Hạn";
         }
     }
 }, 1000);
