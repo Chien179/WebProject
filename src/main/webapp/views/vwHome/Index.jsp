@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div class="row p-custom">
-                <div class="card-header bg-white mb-1 sticky-top" style="width:112rem; height: 5rem">
+                <div class="card-header bg-white mb-1 sticky-top" style="width:113rem; height: 5rem">
                     <h3 class="my-auto">SẢN PHẨM GỢI Ý</h3>
                 </div>
                 <c:forEach begin="0" end="14" varStatus="loop" var="i">
