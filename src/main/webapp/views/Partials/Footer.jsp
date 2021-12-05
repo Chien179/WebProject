@@ -19,7 +19,7 @@
                 <div class="width25">
                     <span>Nguyễn Minh Chiến</span>
                     <br>
-                    <span>19110000</span>
+                    <span>19110173</span>
                 </div>
                 <div class="width25">
                     <span>Nguyễn Hữu Đăng</span>
@@ -29,7 +29,7 @@
                 <div class="width25">
                     <span>Nguyễn Minh Khang</span>
                     <br>
-                    <span>19110000</span>
+                    <span>19110223</span>
                 </div>
                 <div class="width25">
                     <span>Nguyễn Văn Sơn Tùng</span>
