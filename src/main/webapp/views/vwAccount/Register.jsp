@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Register.css">
 </head>
 <body>
-<div style="background-color: lightblue" >
+<div style="background-image: linear-gradient( #1ab7ea, #48c5ee, #6dd1f1, #8adaf4)" >
   <h2 class="logo">AUCTION</h2>
 </div>
 <div class="container-signup">
