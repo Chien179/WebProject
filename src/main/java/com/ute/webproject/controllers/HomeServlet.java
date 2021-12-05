@@ -26,6 +26,12 @@ public class HomeServlet extends HttpServlet {
 
         switch (path) {
             case "/Index":
+                List<Product> top5Time = ProductModel.top5Time();
+                List<Product> top5Price = ProductModel.top5Price();
+                List<Product> top5Turn = ProductModel.top5Turn();
+                request.setAttribute("top5Time", top5Time);
+                request.setAttribute("top5Price", top5Price);
+                request.setAttribute("top5Turn", top5Turn);
                 Index(request, response);
                 break;
             case "/About":

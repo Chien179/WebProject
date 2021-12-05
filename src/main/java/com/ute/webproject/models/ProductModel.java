@@ -8,7 +8,17 @@ import java.util.List;
 
 public class ProductModel {
     public static List<Product> findAll() {
-        final String query = "select products.ProID, products.ProName, products.TinyDes, products.FullDes, products.Price, products.Quantity, products.StartDateTime, products.EndDateTime, products.StartPrice, users.name from products INNER JOIN users ON products.UserID = users.id";
+        final String query = "select products.ProID, " +
+                                "products.ProName, " +
+                                "products.TinyDes, " +
+                                "products.FullDes, " +
+                                "products.Price, " +
+                                "products.Quantity, " +
+                                "products.StartDateTime, " +
+                                "products.EndDateTime, " +
+                                "products.StartPrice, " +
+                                "users.name " +
+                                "from products INNER JOIN users ON products.UserID = users.id";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query).throwOnMappingFailure(false)//Tam thoi
                     .executeAndFetch(Product.class);
@@ -16,7 +26,20 @@ public class ProductModel {
     }
 
     public static List<Product> findByCatId(int catId) {
-        final String query = "select products.ProID, products.ProName, products.TinyDes, products.FullDes, products.Price, products.Quantity, products.StartDateTime, products.EndDateTime, products.StartPrice, users.name from products INNER JOIN users ON products.UserID = users.id INNER JOIN categories c on products.ProID = c.ProID where CatID = :CatID";
+        final String query = "select products.ProID, " +
+                                "products.ProName, " +
+                                "products.TinyDes, " +
+                                "products.FullDes, " +
+                                "products.Price, " +
+                                "products.Quantity, " +
+                                "products.StartDateTime, " +
+                                "products.EndDateTime, " +
+                                "products.StartPrice, " +
+                                "users.name " +
+                                "from products " +
+                                "INNER JOIN users " +
+                                "ON products.UserID = users.id " +
+                                "INNER JOIN categories c on products.ProID = c.ProID where CatID = :CatID";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("CatID", catId).throwOnMappingFailure(false)//Tam thoi
@@ -24,6 +47,29 @@ public class ProductModel {
         }
     }
 
+    public static List<Product> top5Time () {
+        final String query = "select * from products order by timediff(now(),EndDateTime) DESC limit 5";
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(query)
+                    .executeAndFetch(Product.class);
+        }
+    }
+
+    public static List<Product> top5Price () {
+        final String query = "select * from products order by Price DESC limit 5";
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(query)
+                    .executeAndFetch(Product.class);
+        }
+    }
+
+    public static List<Product> top5Turn () {
+        final String query = "select * from products order by Price DESC limit 5";
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(query)
+                    .executeAndFetch(Product.class);
+        }
+    }
 //    public static Product findById(int id) {
 //        final String query = "select * from products where ProID = :ProID";
 //        try (Connection con = DbUtils.getConnection()) {
