@@ -39,7 +39,12 @@
                                             <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
-                                                <p class="card-text card-text-config" style="font-size: 6px; font-weight: bold">Ngày đăng: ${t.startDateTime}<span><button class="float-end buy-button-small"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>
+                                                <p class="card-text card-text-config" style="font-size: 6px; font-weight: bold">
+                                                    Ngày đăng: ${t.startDateTime}
+                                                    <span>
+                                                        <button class="float-end buy-button-small"><i class="fas fa-cart-plus"></i> Mua ngay</button>
+                                                    </span>
+                                                </p>
                                                 <p class="card-text card-text-config" style="font-size: 7px">BID HIỆN TẠI <span class="float-end">THỜI GIAN CÒN LẠI</span></p>
                                                 <p class="card-text card-text-config martop" style="font-size: 8px; color: green; font-weight: bold"><fmt:formatNumber value="${t.price}" type="currency"/>
                                                     <span hidden class="time">${t.timeFormat}</span>
@@ -62,7 +67,7 @@
                                     <h3 class="my-auto">TOP 5 SẢN PHẨM GIÁ CAO NHẤT</h3>
                                 </div>
                                 <div class="d-flex">
-                                    <c:forEach items="${top5Time}" var="t">
+                                    <c:forEach items="${top5Price}" var="t">
                                         <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                             <div class="card-body">
@@ -90,7 +95,7 @@
                                     <h3 class="my-auto">TOP 5 SẢN PHẨM NHIỀU LƯỢT ĐẤU GIÁ NHẤT</h3>
                                 </div>
                                 <div class="d-flex">
-                                    <c:forEach items="${top5Time}" var="t">
+                                    <c:forEach items="${top5Turn}" var="t">
                                         <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
                                             <div class="card-body">

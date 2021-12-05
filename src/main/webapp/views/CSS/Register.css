@@ -16,7 +16,7 @@ input,textarea{
     width: calc(100% - 520px);
     position: relative;
 
-    background-image: url(/Img/auction.png);
+    background-image: url("../../Img/auction.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,6 @@ input,textarea{
 }
 .wrap-signup{
     width: 520px;
-    min-height: 100vh;
     background: #fff;
     border-radius: 2px;
     position: relative;

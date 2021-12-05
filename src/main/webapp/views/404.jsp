@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>404 Not Found</title>
-    <link rel="stylesheet" href="/views/CSS/404.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/404.css">
 </head>
 <body>
 <div class="container">
