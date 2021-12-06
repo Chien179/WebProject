@@ -21,13 +21,11 @@
                 </div>
                 <c:forEach begin="0" end="${products.size() - 1}" varStatus="loop" var = "i">
                     <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
-                        <img src="${pageContext.request.contextPath}/Img/download.png" style="padding: 20px 10px 0px 12px" alt="House">
+                        <img src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 343px; height: 200px" alt="${products[i].proName}"/>
                         <div class="card-body">
                             <h1 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${products[i].proName}</h1>
-                            <p class="card-text card-text-config" style="font-size: 12px; font-weight: bold">Ngày đăng: ${products[i].startDateTime}</p>
-                            <p class="card-text card-text-config" style="font-size: 14px">BID HIỆN TẠI
-                                <span class="float-end">THỜI GIAN CÒN LẠI</span>
-                            </p>
+                            <p class="card-text card-text-config" style="font-size: 12px; font-weight: bold">Ngày đăng: ${products[i].startDateTime}<span><button class="float-end buy-button"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>
+                            <p class="card-text card-text-config" style="font-size: 14px">BID HIỆN TẠI <span class="float-end">THỜI GIAN CÒN LẠI</span></p>
                             <p class="card-text card-text-config martop" style="font-size: 16px; color: green; font-weight: bold"><fmt:formatNumber value="${products[i].price}" type="currency"/>
                                 <span hidden class="time">${products[i].timeFormat}</span>
                                 <span class="remaining float-end" style="color: black"></span>
