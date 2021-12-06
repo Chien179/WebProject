@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="sửa register&#10;điều chỉnh 1 số chức năng" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="đưa ảnh thumbnail lên" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +17,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -31,14 +35,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AuctionData/auction_users.sql" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -138,7 +145,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1638711920505</updated>
-      <workItem from="1638711923114" duration="3430000" />
+      <workItem from="1638711923114" duration="3490000" />
+      <workItem from="1638752970160" duration="3998000" />
+      <workItem from="1638757070581" duration="49000" />
+      <workItem from="1638757135022" duration="119000" />
+      <workItem from="1638757274339" duration="2596000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -147,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638715062718</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sửa register&#10;điều chỉnh 1 số chức năng">
+      <created>1638715386520</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638715386520</updated>
+    </task>
+    <task id="LOCAL-00003" summary="đưa ảnh thumbnail lên">
+      <created>1638759685584</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638759685584</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,9 +188,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sửa register&#10;điều chỉnh 1 số chức năng" />
-    <option name="LAST_COMMIT_MESSAGE" value="sửa register&#10;điều chỉnh 1 số chức năng" />
+    <MESSAGE value="đưa ảnh thumbnail lên" />
+    <option name="LAST_COMMIT_MESSAGE" value="đưa ảnh thumbnail lên" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
