@@ -6,7 +6,6 @@ const cateBtn=document.querySelector('.js-cate-btn');
 const cateForm=document.querySelector('.js-cate');
 const cateItems=document.querySelectorAll('.js-category__item');
 
-
 var countcateBtn=0;
 
 //Hien thi Modal login
@@ -18,6 +17,7 @@ function showLoginModal(){
 function hideLoginModal(){
     modal.classList.remove('open')
 }
+
 function showhideCate(){
     if(countcateBtn % 2===0){
         // Dua cate form tu trai qua

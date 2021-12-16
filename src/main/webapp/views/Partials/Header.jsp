@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:useBean id="categories" scope="request" type="java.util.List<com.ute.webproject.beans.Category>"/>
+<jsp:useBean id="authUser" scope="session" type="com.ute.webproject.beans.User" />
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
@@ -236,7 +237,7 @@
 
 </div>
 <div class="modal__body">
-    <div class="login-form">
+    <form class="login-form" method="post">
         <div class="login-form__container js-login-form__container">
             <div class="login__header">
                 <h3 class="login__heading">Đăng nhập</h3>
@@ -244,35 +245,53 @@
                     <i class="fas fa-times escape-btn"></i>
                 </div>
             </div>
-            <form action="" method="post">
-                <div class="login-form__form">
-                    <input type="text" class="login-form__input" placeholder="Tài khoản">
-                </div>
-                <div class="login-form__form">
-                    <input type="password" class="login-form__input" placeholder="Mật khẩu">
-                    <div class="login-form__more">
-                        <a href="" class="login-form__more-link login-form__more-forgetpass">Quên mật khẩu</a>
-                        <a href="" class="login-form__more-link">Cần trợ giúp?!</a>
+            <div class="login-form__form">
+                <input type="text" class="login-form__input" placeholder="Tài khoản" name="email">
+            </div>
+            <div class="login-form__form">
+                <input type="password" class="login-form__input" placeholder="Mật khẩu" name="password">
+                <c:if test="${hasError}">
+                    <div class="text-danger" style="font-size: 12px">
+                        Your account and/or password is incorrect, please try again
                     </div>
+                </c:if>
+                <div class="login-form__more">
+                    <a href="" class="login-form__more-link login-form__more-forgetpass">Quên mật khẩu</a>
+                    <a href="" class="login-form__more-link">Cần trợ giúp?!</a>
                 </div>
-                <div class="login-form__btn">
-                    <button class="btn btn--primary btn--login">ĐĂNG NHẬP</button>
+            </div>
+            <div class="login-form__btn">
+                <button class="btn btn--primary btn--login" id="submit">ĐĂNG NHẬP</button>
+            </div>
+            <div class="login-form__socials">
+                <div class="-or-">
+                    <div class="line"></div>
+                    <span class="text-between">HOẶC</span>
+                    <div class="line"></div>
                 </div>
-                <div class="login-form__socials">
-                    <div class="-or-">
-                        <div class="line"></div>
-                        <span class="text-between">HOẶC</span>
-                        <div class="line"></div>
-                    </div>
-                    <div class="login-form__socials-icon">
-                        <a href=""><i class="fab fa-facebook login-form__socials-icon-fb"></i></a>
-                        <a href=""><i class="fab fa-google"></i></a>
-                        <a href=""><i class="fab fa-apple login-form__socials-icon-apple"></i></a>
-                    </div>
+                <div class="login-form__socials-icon">
+                    <a href=""><i class="fab fa-facebook login-form__socials-icon-fb"></i></a>
+                    <a href=""><i class="fab fa-google"></i></a>
+                    <a href=""><i class="fab fa-apple login-form__socials-icon-apple"></i></a>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
 </div>
+<div class="error" hidden>${hasError}</div>
 <script src="${pageContext.request.contextPath}/views/JS/Header.js"></script>
+<script>
+    const loginError= Boolean(document.querySelector('.error').innerHTML);
+
+    if (loginError){
+        window.addEventListener('load', function (e) {
+            e.preventDefault()
+            document.querySelector('.js-modal').classList.add('open')
+        })
+    }
+
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>

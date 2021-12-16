@@ -26,12 +26,6 @@ public class HomeServlet extends HttpServlet {
 
         switch (path) {
             case "/Index":
-                List<Product> top5Time = ProductModel.top5Time();
-                List<Product> top5Price = ProductModel.top5Price();
-                List<Product> top5Turn = ProductModel.top5Turn();
-                request.setAttribute("top5Time", top5Time);
-                request.setAttribute("top5Price", top5Price);
-                request.setAttribute("top5Turn", top5Turn);
                 Index(request, response);
                 break;
             case "/About":
@@ -54,15 +48,17 @@ public class HomeServlet extends HttpServlet {
 
         User user = UserModel.findByEmail(email);
         if (user != null) {
-            BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
-            if (result.verified) {
+            if (password.equals(user.getPassword())) {
+//            BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
+//            if (result.verified) {
                 HttpSession session = request.getSession();
                 session.setAttribute("auth", true);
                 session.setAttribute("authUser", user);
 
-                String url = (String) session.getAttribute("retUrl");
-                if (url == null)
-                    url = "/Home";
+//                String url = (String) session.getAttribute("retUrl");
+                String url = "/Home";
+//                if (url == null)
+//                    url = "/Home";
                 ServletUtils.redirect(url, request, response);
             } else {
                 request.setAttribute("hasError", true);
@@ -79,8 +75,14 @@ public class HomeServlet extends HttpServlet {
     private void Index (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         List<Category> cat = CategoryModel.findAll();
         List<Product> list = ProductModel.findAll();
+        List<Product> top5Time = ProductModel.top5Time();
+        List<Product> top5Price = ProductModel.top5Price();
+        List<Product> top5Turn = ProductModel.top5Turn();
         request.setAttribute("products", list);
         request.setAttribute("categories", cat);
+        request.setAttribute("top5Time", top5Time);
+        request.setAttribute("top5Price", top5Price);
+        request.setAttribute("top5Turn", top5Turn);
         ServletUtils.forward("/views/vwHome/Index.jsp", request, response);
     }
 }

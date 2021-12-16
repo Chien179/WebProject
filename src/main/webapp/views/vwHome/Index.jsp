@@ -20,7 +20,7 @@
     <jsp:body>
         <div class="container-fluid">
             <div class="row">
-                <div class="row" style="width: 125rem">
+                <div class="row" style="width: 126rem">
                     <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="d-flex">
                                     <c:forEach items="${top5Time}" var="t">
-                                        <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
+                                        <div class="card card card-hover border-secondary h-60" style="width: 222px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}" >
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="d-flex">
                                     <c:forEach items="${top5Price}" var="t">
-                                        <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
+                                        <div class="card card card-hover border-secondary h-60" style="width: 222px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}">
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="d-flex">
                                     <c:forEach items="${top5Turn}" var="t">
-                                        <div class="card card card-hover border-secondary h-60" style="width: 220px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
+                                        <div class="card card card-hover border-secondary h-60" style="width: 222px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
                                             <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}">
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
