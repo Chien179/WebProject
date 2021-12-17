@@ -1,6 +1,7 @@
 package com.ute.webproject.controllers;
 
 import com.ute.webproject.models.CategoryModel;
+import com.ute.webproject.utils.AccountUtils;
 import com.ute.webproject.utils.ServletUtils;
 import com.ute.webproject.beans.Product;
 import com.ute.webproject.beans.Category;
@@ -22,10 +23,6 @@ public class ProductServlet extends HttpServlet {
         }
         switch (path) {
             case "/Product":
-                List<Category> cat = CategoryModel.findAll();
-                List<Product> list = ProductModel.findAll();
-                request.setAttribute("products", list);
-                request.setAttribute("categories", cat);
                 ServletUtils.forward("/views/vwProduct/Product.jsp", request, response);
                 break;
             case "/ProductDetail":
@@ -39,6 +36,6 @@ public class ProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        AccountUtils.login(request, response, "/views/vwProduct/Product.jsp");
     }
 }

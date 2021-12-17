@@ -4,8 +4,13 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <filter-mapping>
-        <filter-name>LayoutFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <filter-name>HomeFilter</filter-name>
+        <url-pattern>/Home</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>ProductFilter</filter-name>
+        <url-pattern>/Product</url-pattern>
     </filter-mapping>
 
     <filter-mapping>

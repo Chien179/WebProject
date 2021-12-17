@@ -9,20 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="đưa ảnh thumbnail lên">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/HomeFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WebProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/LayoutFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/ProductFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/ProductFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/JS/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/JS/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwHome/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwHome/Index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +61,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ute.webproject.filters" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -163,7 +174,8 @@
       <workItem from="1639549605609" duration="5503000" />
       <workItem from="1639585769065" duration="6536000" />
       <workItem from="1639641938366" duration="8945000" />
-      <workItem from="1639652854168" duration="6373000" />
+      <workItem from="1639652854168" duration="8048000" />
+      <workItem from="1639736740177" duration="8644000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -193,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638759900934</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp">
+      <created>1639669490579</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639669490579</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sửa register&#10;điều chỉnh 1 số chức năng" />
     <MESSAGE value="đưa ảnh thumbnail lên" />
-    <option name="LAST_COMMIT_MESSAGE" value="đưa ảnh thumbnail lên" />
+    <MESSAGE value="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
