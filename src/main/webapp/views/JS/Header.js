@@ -14,9 +14,10 @@ function showLoginModal(){
 }
 
 //An Modal Login
-function hideLoginModal(){
-    modal.classList.remove('open')
-}
+// function hideLoginModal(){
+//     document.getElementById('loginError').hidden = true
+//     modal.classList.remove('open')
+// }
 
 function showhideCate(){
     if(countcateBtn % 2===0){
@@ -62,8 +63,8 @@ function hideCate(){
 // }
 
 loginBtn.addEventListener('click', showLoginModal)
-modalOverlay.addEventListener('click', hideLoginModal)
-escapeBtn.addEventListener('click', hideLoginModal)
+// modalOverlay.addEventListener('click', hideLoginModal)
+// escapeBtn.addEventListener('click', hideLoginModal)
 cateBtn.addEventListener('click', showhideCate)
 // for(var i=0; i<cateItems.length; i++)
 // {

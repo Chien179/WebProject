@@ -250,11 +250,9 @@
             </div>
             <div class="login-form__form">
                 <input type="password" class="login-form__input" placeholder="Mật khẩu" name="password">
-                <c:if test="${hasError}">
-                    <div class="text-danger" style="font-size: 12px">
-                        Your account and/or password is incorrect, please try again
-                    </div>
-                </c:if>
+                <div class="text-danger" style="font-size: 12px" id="loginError" hidden>
+                    Your account and/or password is incorrect, please try again
+                </div>
                 <div class="login-form__more">
                     <a href="" class="login-form__more-link login-form__more-forgetpass">Quên mật khẩu</a>
                     <a href="" class="login-form__more-link">Cần trợ giúp?!</a>
@@ -285,13 +283,19 @@
     const loginError= Boolean(document.querySelector('.error').innerHTML);
 
     if (loginError){
-        window.addEventListener('load', function (e) {
-            e.preventDefault()
-            document.querySelector('.js-modal').classList.add('open')
-        })
+        document.getElementById('loginError').hidden = false
+        window.addEventListener('load', showLoginModal)
     }
 
     if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );
     }
+
+    function hideLoginModal(){
+        document.getElementById('loginError').hidden = true
+        modal.classList.remove('open')
+    }
+
+    modalOverlay.addEventListener('click', hideLoginModal)
+    escapeBtn.addEventListener('click', hideLoginModal)
 </script>

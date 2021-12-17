@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/HomeFilter.java" afterDir="false" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="- tách file chức năng login&#10;- tạo login cho product&#10;- thêm 2 filter cho index và product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/LayoutFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/ProductFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/ProductFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/JS/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/JS/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +171,7 @@
       <workItem from="1639585769065" duration="6536000" />
       <workItem from="1639641938366" duration="8945000" />
       <workItem from="1639652854168" duration="8048000" />
-      <workItem from="1639736740177" duration="8644000" />
+      <workItem from="1639736740177" duration="13245000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -212,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639669490579</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- tách file chức năng login&#10;- tạo login cho product&#10;- thêm 2 filter cho index và product">
+      <created>1639763733676</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639763733676</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +237,8 @@
     <MESSAGE value="sửa register&#10;điều chỉnh 1 số chức năng" />
     <MESSAGE value="đưa ảnh thumbnail lên" />
     <MESSAGE value="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp" />
+    <MESSAGE value="- tách file chức năng login&#10;- tạo login cho product&#10;- thêm 2 filter cho index và product" />
+    <option name="LAST_COMMIT_MESSAGE" value="- tách file chức năng login&#10;- tạo login cho product&#10;- thêm 2 filter cho index và product" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
