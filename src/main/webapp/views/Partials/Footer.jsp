@@ -49,7 +49,7 @@
                     <img class="footer__logo-img" src="${pageContext.request.contextPath}/Img/f8-logo.png" alt="F8 Logo">
                 </a>
                 <a href="https://tiki.vn/" target="_blank">
-                    <img class="footer__logo-img" src="${pageContext.request.contextPath}/Img/tiki-logo-removebg-preview.png" alt="Tiki Logo">
+                    <img class="footer__logo-img" src="${pageContext.request.contextPath}/Img/ebaylogo.png" alt="Ebay Logo">
                 </a>
             </div>
         </div>
