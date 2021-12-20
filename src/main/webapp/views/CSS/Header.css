@@ -501,6 +501,10 @@ a.header__notify-link:hover{
 .header__cart-view-btn{
     margin-bottom: 4px;
 }
+/* Up */
+.up{
+    width: 1000px;
+}
 /* Login form */
 .login-modal.open{
     display: flex;

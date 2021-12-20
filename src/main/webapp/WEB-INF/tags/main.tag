@@ -18,12 +18,13 @@
     <jsp:include page="../../views/Partials/Header.jsp"/>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="">
                 <jsp:include page="../../views/Partials/Category.jsp"/>
             </div>
-            <div class="col-sm-10" style="margin-top: 100px">
+            <div class="col-sm-10" style="margin: 100px auto 0; display: flex">
                 <jsp:doBody/>
             </div>
+
         </div>
     </div>
     <jsp:include page="../../views/Partials/Footer.jsp"/>
