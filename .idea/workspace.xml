@@ -11,16 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/main.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/main.tag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/Category.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/Category.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/Product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/Product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwHome/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwHome/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductByCat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductByCat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +178,7 @@
       <workItem from="1639641938366" duration="8945000" />
       <workItem from="1639652854168" duration="8048000" />
       <workItem from="1639736740177" duration="13245000" />
-      <workItem from="1640006956805" duration="12909000" />
+      <workItem from="1640006956805" duration="13267000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -246,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640011887039</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix Product.jsp">
+      <created>1640020598081</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1640020598081</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".">
+      <created>1640020618687</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1640020618687</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +274,8 @@
     <MESSAGE value="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp" />
     <MESSAGE value="- tách file chức năng login&#10;- tạo login cho product&#10;- thêm 2 filter cho index và product" />
     <MESSAGE value="Sửa các thứ đồ" />
+    <MESSAGE value="Commit gì đó" />
+    <MESSAGE value="Fix Product.jsp" />
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
