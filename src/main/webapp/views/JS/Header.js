@@ -5,6 +5,7 @@ const escapeBtn=document.querySelector('.js-escape-btn');
 const cateBtn=document.querySelector('.js-cate-btn');
 const cateForm=document.querySelector('.js-cate');
 const cateItems=document.querySelectorAll('.js-category__item');
+// const upBtn=document.querySelector('.js-Up');
 
 var countcateBtn=0;
 

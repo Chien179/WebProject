@@ -502,8 +502,31 @@ a.header__notify-link:hover{
     margin-bottom: 4px;
 }
 /* Up */
-.up{
-    width: 1000px;
+.Up{
+    position: -webkit-sticky;
+    position: sticky;
+    left: 100%;
+    display: flex;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+}
+.Up.open{
+    display: flex;
+}
+.Up__icon{
+    font-size: 2rem !important;
+    margin: 7px auto 0;
+    color: white;
+}
+.Up:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.Up:hover .Up__icon{
+    color: white;
 }
 /* Login form */
 .login-modal.open{
