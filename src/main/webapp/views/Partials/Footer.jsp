@@ -11,7 +11,7 @@
         </div>
         <div class="footer__info">
             <div class="footer__info-GV">
-                <span>Lecture name: Ngô Ngọc Đăng Khoa</span>
+                <span>Lecturer name: Ngô Ngọc Đăng Khoa</span>
                 <div class="line"></div>
             </div>
             <span>Students name</span>
