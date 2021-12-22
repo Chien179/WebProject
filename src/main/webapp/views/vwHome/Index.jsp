@@ -129,27 +129,27 @@
                 </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="card-header bg-white mb-1 sticky-top" style="width: 100%;height: 35px;margin: 0 auto;margin-left: 1.3%;">
-                    <h3 class="my-auto" style="text-align: center; cursor: default; text-transform: uppercase">SẢN PHẨM GỢI Ý</h3>
+            <div class="row product__container">
+                <div class="card-header bg-white mb-1 sticky-top product__header">
+                    <h3 class="my-auto product__heading">SẢN PHẨM GỢI Ý</h3>
                 </div>
-                <div class="bao1caigido" style="display: flex;max-width: 1110px;flex-wrap: wrap;margin: 0 auto;">
+                <div class="product__body">
                     <c:forEach begin="0" end="14" varStatus="loop" var="i">
-                        <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
-                            <img src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 343px; height: 200px" alt="${products[i].proName}"/>
-                            <div class="card-body">
-                                <h1 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${products[i].proName}</h1>
-                                <p class="card-text card-text-config" style="font-size: 12px; font-weight: bold">Ngày đăng: ${products[i].startDateTime}<span><button class="float-end buy-button"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>
-                                <p class="card-text card-text-config" style="font-size: 14px">BID HIỆN TẠI <span class="float-end">THỜI GIAN CÒN LẠI</span></p>
-                                <p class="card-text card-text-config martop" style="font-size: 16px; color: green; font-weight: bold"><fmt:formatNumber value="${products[i].price}" type="currency"/>
+                        <div class="card card border-secondary h-60 product__body-item">
+                            <img class="product__body-img" src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" alt="${products[i].proName}"/>
+                            <div class="card-body product__body-img-body">
+                                <h1 class="card-title pt-0 txtOverflow product__body-img-heading">${products[i].proName}</h1>
+                                <p class="card-text card-text-config product__body-img-date">Ngày đăng: ${products[i].startDateTime}<span><button class="float-end buy-button"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>
+                                <p class="card-text card-text-config product__body-img-info-type">BID HIỆN TẠI <span class="float-end">THỜI GIAN CÒN LẠI</span></p>
+                                <p class="card-text card-text-config martop product__body-img-info"><fmt:formatNumber value="${products[i].price}" type="currency"/>
                                     <span hidden class="time">${products[i].timeFormat}</span>
                                     <span class="remaining float-end" style="color: black"></span>
                                 </p>
-                                <p class="card-text card-text-config" style="font-size: 14px">SỐ LƯỢT RA GIÁ<span class="float-end">BIDDER CAO NHẤT</span></p>
+                                <p class="card-text card-text-config product__body-img-bid-price-type">SỐ LƯỢT RA GIÁ<span class="float-end">BIDDER CAO NHẤT</span></p>
                                 <c:set var="fullname" value="${products[i].name}"/>
                                 <c:set var="lengthname" value="${fn:length(fullname)}"/>
                                 <c:set var = "name" value="${fn:substring(fullname,lengthname/2,lengthname)}"/>
-                                <p class="card-text card-text-config martop" style="font-size: 16px; font-weight: bold">10<span class="float-end">***${name}</span></p>
+                                <p class="card-text card-text-config martop product__body-img-bid-price">10<span class="float-end">***${name}</span></p>
                             </div>
                         </div>
                     </c:forEach>
