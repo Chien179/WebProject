@@ -505,13 +505,14 @@ a.header__notify-link:hover{
 .Up{
     position: -webkit-sticky;
     position: sticky;
-    left: 100%;
-    display: flex;
+    left: 95%;
+    display: none;
     bottom: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 32px;
     height: 32px;
     border-radius: 20px;
+    animation: fadeIn ease 0.2s;
 }
 .Up.open{
     display: flex;

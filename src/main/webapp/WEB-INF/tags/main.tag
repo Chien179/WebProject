@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="Up js-Up">
-            <a href="#" class="Up__icon"><i class="fa fa-angle-up"></i></a>
+            <a href="#" class="Up__icon"><i class="fa fa-angle-up Up__icon-fa"></i></a>
         </div>
     </div>
     <jsp:include page="../../views/Partials/Footer.jsp"/>

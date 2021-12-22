@@ -18,8 +18,8 @@
         <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
     </jsp:attribute>
     <jsp:body>
-        <div class="" style="margin: 0 auto">
-            <div class="row">
+        <div class="" style="margin: 0 auto;display: flex;flex-wrap: wrap;">
+            <div class="row" style="margin: 0 auto">
                 <div class="row" style="width: 126rem">
                     <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -129,11 +129,11 @@
                 </div>
                 </div>
             </div>
-            <div class="row p-custom">
-                <div class="card-header bg-white mb-1 sticky-top" style="width:99%; height: 35px">
+            <div class="row">
+                <div class="card-header bg-white mb-1 sticky-top" style="width: 100%;height: 35px;margin: 0 auto;margin-left: 1.3%;">
                     <h3 class="my-auto" style="text-align: center; cursor: default; text-transform: uppercase">SẢN PHẨM GỢI Ý</h3>
                 </div>
-                <div class="bao1caigido" style="display: flex; max-width: 1200px; flex-wrap: wrap">
+                <div class="bao1caigido" style="display: flex;max-width: 1110px;flex-wrap: wrap;margin: 0 auto;">
                     <c:forEach begin="0" end="14" varStatus="loop" var="i">
                         <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
                             <img src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 343px; height: 200px" alt="${products[i].proName}"/>

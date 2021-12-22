@@ -16,10 +16,10 @@
     <jsp:body>
         <div class="">
             <div class="row p-custom">
-                <div class="card-header bg-white mb-1 sticky-top" style="width:99%; height: 35px">
+                <div class="card-header bg-white mb-1 sticky-top" style="width: 100%;height: 35px;margin: 0 auto;">
                     <h3 class="my-auto" style="text-align: center; cursor: default; text-transform: uppercase">SẢN PHẨM HIỆN CÓ</h3>
                 </div>
-                <div class="bao1caigido" style="display: flex; max-width: 1200px; flex-wrap: wrap">
+                <div class="bao1caigido" style="display: flex;max-width: 1110px;flex-wrap: wrap;margin: 0 auto;">
                     <c:forEach begin="0" end="${products.size()-1}" varStatus="loop" var="i">
                         <div class="card card border-secondary h-60" style="width: 350px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 400px;">
                             <img src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 343px; height: 200px" alt="${products[i].proName}"/>
