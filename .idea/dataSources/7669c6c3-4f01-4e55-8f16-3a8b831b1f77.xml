@@ -1337,88 +1337,92 @@ ProID</ColNames>
       <Position>14</Position>
       <DataType>tinyint(1)|0s</DataType>
     </column>
-    <key id="378" parent="339" name="PRIMARY">
+    <index id="378" parent="339" name="ProName">
+      <ColNames>ProName</ColNames>
+      <Type>fulltext</Type>
+    </index>
+    <key id="379" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ProID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="379" parent="340" name="ID">
+    <column id="380" parent="340" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="380" parent="340" name="refreshToken">
+    <column id="381" parent="340" name="refreshToken">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="381" parent="340" name="rdt">
+    <column id="382" parent="340" name="rdt">
       <Position>3</Position>
       <DataType>datetime(6)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="382" parent="340" name="PRIMARY">
+    <key id="383" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="383" parent="341" name="id">
+    <column id="384" parent="341" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="384" parent="341" name="password">
+    <column id="385" parent="341" name="password">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="385" parent="341" name="name">
+    <column id="386" parent="341" name="name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="386" parent="341" name="email">
+    <column id="387" parent="341" name="email">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="387" parent="341" name="dob">
+    <column id="388" parent="341" name="dob">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="388" parent="341" name="permission">
+    <column id="389" parent="341" name="permission">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="389" parent="341" name="Upgrade">
+    <column id="390" parent="341" name="Upgrade">
       <Position>7</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="390" parent="341" name="StartDate">
+    <column id="391" parent="341" name="StartDate">
       <Position>8</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="391" parent="341" name="EndDate">
+    <column id="392" parent="341" name="EndDate">
       <Position>9</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="392" parent="341" name="ProID">
+    <column id="393" parent="341" name="ProID">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="393" parent="341" name="AuctionID">
+    <column id="394" parent="341" name="AuctionID">
       <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="394" parent="341" name="PRIMARY">
+    <key id="395" parent="341" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id
 ProID

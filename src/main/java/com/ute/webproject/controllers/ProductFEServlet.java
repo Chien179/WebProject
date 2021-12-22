@@ -29,12 +29,7 @@ public class ProductFEServlet extends HttpServlet {
                 request.setAttribute("categories", cat);
                 ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
                 break;
-//            case "/WithName":
-//                String proName = request.getParameter("pro");
-//                List<Product> search = ProductModel.searchPro(proName);
-//                request.setAttribute("pro", search);
-//                ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
-//                break;
+
 //            case "/Detail":
 //                int proId = Integer.parseInt(request.getParameter("id"));
 //                Product product = ProductModel.findById(proId);
@@ -59,10 +54,6 @@ public class ProductFEServlet extends HttpServlet {
             case "/WithName":
                 searchPro(request, response);
                 break;
-
-//            case "/Logout":
-//                logout(request, response);
-//                break;
 
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);

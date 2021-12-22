@@ -84,7 +84,7 @@ public class ProductModel {
                 "from products " +
                 "INNER JOIN users " +
                 "ON products.UserID = users.id " +
-                "INNER JOIN categories c on products.ProID = c.ProID where ProName = :ProName";
+                "INNER JOIN categories c on products.ProID = c.ProID where match(ProName) against(:proName)";
         try (Connection con = DbUtils.getConnection()) {
             List<Product> list =  con.createQuery(query)
                     .addParameter("ProName", proName).throwOnMappingFailure(false)//Tam thoi
