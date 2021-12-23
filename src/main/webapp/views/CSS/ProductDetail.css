@@ -105,6 +105,9 @@
 .product-detail__info-shop-btn{
     margin: 0 auto;
 }
+.product-detail__info-shop-button{
+    text-transform: capitalize;
+}
 .product-detail__info-halfdown{
     justify-content: space-evenly;
     margin-top: 10px;
@@ -152,4 +155,21 @@
     font-size: 1.5rem;
     text-align: justify;
     padding: 12px;
+}
+.product-detail__modal.open{
+    display: flex;
+}
+.modal__overlay{
+    z-index: -1;
+}
+.modal__container{
+    margin: auto;
+    width: 650px;
+    background-color: var(--white-color);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    z-index: 1;
+}
+.modal__img{
+    width: 100%;
 }

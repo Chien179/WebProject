@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix cate">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/JS/ProductDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/Category.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/Category.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +189,7 @@
       <workItem from="1640071791364" duration="3633000" />
       <workItem from="1640161151444" duration="5435000" />
       <workItem from="1640186489534" duration="1752000" />
-      <workItem from="1640272340009" duration="309000" />
+      <workItem from="1640272340009" duration="6200000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -307,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640262930453</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fix cate">
+      <created>1640272778602</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1640272778602</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +352,8 @@
     <MESSAGE value="Complete the login, add query for full-text search" />
     <MESSAGE value="Complete the login, add query for search" />
     <MESSAGE value="reup ProductDetail" />
-    <option name="LAST_COMMIT_MESSAGE" value="reup ProductDetail" />
+    <MESSAGE value="Fix cate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix cate" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

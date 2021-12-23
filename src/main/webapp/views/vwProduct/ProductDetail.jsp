@@ -7,21 +7,24 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/ProductDetail.css">
     </jsp:attribute>
+    <jsp:attribute name="js">
+        <script src="${pageContext.request.contextPath}/views/JS/ProductDetail.js"></script>
+    </jsp:attribute>
     <jsp:body>
         <div class="product-detail__container">
             <div class=" product-detail__body">
                 <div class=" product-detail__halfup">
                 <div class=" product-detail__image-container">
-                    <img class="product-detail__image-main" src="../../Img/download.png">
+                    <img class="product-detail__image-main JS-product-detail__image" src="../../Img/download.png">
                     <div class="product-detail__image-otherimage">
                         <c:forEach begin="0" end="2" varStatus="loop" var="i">
-                            <img class="product-detail__image-otherimage-img" src="../../Img/download.png">
+                            <img class="product-detail__image-otherimage-img JS-product-detail__image" src="../../Img/download.png">
                         </c:forEach>
                     </div>
                 </div>
                 <div class=" product-detail__info">
                     <div class=" product-detail__heading">
-                        <h4 class="product-detail__header">Nhà di động thế hệ 8 của tương lai không bố con thằng nào có chỉ để trưng không thể sử dụng hết biết làm rồi huuhuhuhuhuhuhuhu</h4>
+                        <h4 title="Nhà di động thế hệ 8 của tương lai không bố con thằng nào có chỉ để trưng không thể sử dụng hết biết làm rồi huuhuhuhuhuhuhuhu" class="product-detail__header">Nhà di động thế hệ 8 của tương lai không bố con thằng nào có chỉ để trưng không thể sử dụng hết biết làm rồi huuhuhuhuhuhuhuhu</h4>
                     </div>
                     <div class="line"></div>
                     <div class=" product-detail__info-body">
@@ -55,7 +58,7 @@
                                 <div class=" product-detail__info-shop-heading">Shop name</div>
                                 <p class=" product-detail__info-shop-describe">shop bán điện thoại đâm thằng tên Trí</p>
                                 <div class="product-detail__info-shop-btn-container">
-                                    <a href="#" class="product-detail__info-shop-btn"><button class="btn btn--primary">Xem shop</button></a>
+                                    <a href="#" class="product-detail__info-shop-btn"><button class="btn btn--primary product-detail__info-shop-button">Xem shop</button></a>
                                 </div>
                             </div>
                         </div>
@@ -102,6 +105,11 @@
             </div>
             </div>
         </div>
-<%--        <div class="modal"></div>--%>
+        <div class="modal product-detail__modal js-product-detail__modal">
+            <div class="modal__overlay js-product-detail-modal__overlay"></div>
+            <div class="modal__body">
+                <img class="modal__img" src="../../Img/download.png" alt="">
+            </div>
+        </div>
     </jsp:body>
 </t:main>

@@ -116,6 +116,10 @@ ul{
     color: var(--white-color);
     background-color: var(--primary-color);
 }
+.btn--primary:focus{
+    border: none;
+    outline: none;
+}
 .btn.btn--primary:hover{
     color: var(--text-color);
 }
@@ -145,4 +149,5 @@ ul{
     position: relative;
     z-index: 1;
     animation: grow linear 0.2s;
+    display: flex;
 }
