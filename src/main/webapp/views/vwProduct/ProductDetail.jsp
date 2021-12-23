@@ -9,74 +9,60 @@
     </jsp:attribute>
     <jsp:body>
         <div class="product-detail__container">
-            <div class="row p-5 product-detail__body">
-                <div class="row product-detail__halfup">
-                <div class="col-md-5 product-detail__image-container">
-                    <div id="carouselExampleIndicators" class="carousel slide">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="${pageContext.request.contextPath}/Img/download.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="${pageContext.request.contextPath}/Img/download.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="${pageContext.request.contextPath}/Img/download.png" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
+            <div class=" product-detail__body">
+                <div class=" product-detail__halfup">
+                <div class=" product-detail__image-container">
+                    <img class="product-detail__image-main" src="../../Img/download.png">
+                    <div class="product-detail__image-otherimage">
+                        <c:forEach begin="0" end="2" varStatus="loop" var="i">
+                            <img class="product-detail__image-otherimage-img" src="../../Img/download.png">
+                        </c:forEach>
                     </div>
                 </div>
-                <div class="col-md-7 product-detail__info">
-                    <div class="row product-detail__heading">
-                        <div class="d-flex card-header h-auto bg-white border product-detail__header">
-                            <h4>Nhà di động thế hệ 8 của tương lai không bố con thằng nào có chỉ để trưng không thể sử dụng hết biết làm rồi huuhuhuhuhuhuhuhu</h4>
-                        </div>
+                <div class=" product-detail__info">
+                    <div class=" product-detail__heading">
+                        <h4 class="product-detail__header">Nhà di động thế hệ 8 của tương lai không bố con thằng nào có chỉ để trưng không thể sử dụng hết biết làm rồi huuhuhuhuhuhuhuhu</h4>
                     </div>
-                    <div class="row product-detail__info-body">
-                        <div class="col-md-8 mt-5 product-detail__info-halfleft">
-                            <div class="card border-0">
-                                <div class="card-header text-primary product-detail__info-price">
-                                    <div class="text-body bg-light product-detail__info-pricebid">
-                                        <h5>Giá hiện tại: 9.000.000.000 VND</h5>
-                                    </div>
-                                    <div class="text-body bg-light product-detail__info-pricenow">
-                                        <h5>Giá mua ngay: 15.000.000.000 VND</h5>
-                                    </div>
+                    <div class="line"></div>
+                    <div class=" product-detail__info-body">
+                        <div class="product-detail__info-halfup">
+                            <div class=" product-detail__info-halfleft">
+                                <div class="  product-detail__info-price">
+                                    <div title="GIÁ HIỆN TẠI" class="product-detail__info-pricebid"> 9.000.000.000 VND</div>
+                                    <div title="GIÁ MUA NGAY" class="product-detail__info-pricenow"> 15.000.000.000 VND</div>
                                 </div>
-                                <div class="card-body product-detail__info-datenpoint">
+                                <div class=" product-detail__info-datenpoint">
                                     <div class="text-body product-detail__info-update">
                                         <h4>Ngày đăng:</h4>
                                     </div>
-                                    <div class="text-body product-detail__info-enddate">
+                                    <div class=" product-detail__info-enddate">
                                         <h4>Ngày kết thúc:</h4>
                                     </div>
-                                    <div class="text-body product-detail__info-dateleft">
+                                    <div class=" product-detail__info-dateleft">
                                         <h4>Còn lại: 3 ngày</h4>
                                     </div>
                                     <div class="d-flex d-inline-block justify-content-between product-detail__info-owner">
-                                        <div class="text-body">
+                                        <div class="">
                                             <h4>Đang sở hữu: **í</h4>
                                         </div>
-                                        <div class="text-body product-detail__info-point">
+                                        <div class=" product-detail__info-point">
                                             <h4>Điểm đánh giá: 192đ</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card product-detail__info-halfright">
-                                <div class="card-body">
-                                    <h5 class="card-title product-detail__info-shop-heading">Ipad</h5>
-                                    <p class="card-text product-detail__info-shop-describe">shop bán điện thoại đâm thằng tên Trí</p>
-                                    <a href="#" class="btn btn-primary product-detail__info-shop-btn">Xem shop</a>
+                            <div class=" product-detail__info-halfright">
+                                <div class=" product-detail__info-shop-heading">Shop name</div>
+                                <p class=" product-detail__info-shop-describe">shop bán điện thoại đâm thằng tên Trí</p>
+                                <div class="product-detail__info-shop-btn-container">
+                                    <a href="#" class="product-detail__info-shop-btn"><button class="btn btn--primary">Xem shop</button></a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="product-detail__info-halfdown product-detail__info-shop-btn-container">
+                            <button class="btn product-detail__info-shop-btn-now">MUA NGAY</button>
+                            <button class="btn btn--primary product-detail__info-shop-btn-normal">MUA THEO BID</button>
                         </div>
                     </div>
                 </div>
@@ -85,34 +71,20 @@
                 <div class="col-md-9">
                     <div class="row h-auto w-auto product-detail__topbidder">
                         <div class="mt-5 mx-2 product-detail__topbidder-heading">
-                            <h4 class="product-detail__topbidder-header">Top Bidder</h4>
+                            <h3 class="product-detail__topbidder-header">Top Bidder</h3>
                         </div>
                         <ul class="list-group list-group-flush w-100 mx-4 product-detail__topbidder-list">
-                            <li class="list-group-item list-group-item-danger d-flex justify-content-between product-detail__topbidder-bidder">
-                                <div>top</div>
-                                <div>tien</div>
-                            </li>
-                            <li class="list-group-item list-group-item-success d-flex justify-content-between">
-                                <div>top</div>
-                                <div>tien</div>
-                            </li>
-                            <li class="list-group-item list-group-item-warning d-flex justify-content-between">
-                                <div>top</div>
-                                <div>tien</div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <div>top</div>
-                                <div>tien</div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <div>top</div>
-                                <div>tien</div>
-                            </li>
+                            <c:forEach begin="0" end="4" varStatus="loop" var="i">
+                                <li class="list-group-item list-group-item d-flex justify-content-between product-detail__topbidder-bidder">
+                                    <div class="product-detail__topbidder-name">top</div>
+                                    <div class="product-detail__topbidder-money">tien</div>
+                                </li>
+                            </c:forEach>
                         </ul>
                     </div>
                     <div class="row h-auto w-auto product-detail__Describe">
                         <div class="mt-5 mx-2 product-detail__Describe-heading">
-                            <h4>Description</h4>
+                            <h3>Description</h3>
                         </div>
                         <div class="d-flex bg-white mx-4 product-detail__Describe-body">
                             <p>
@@ -130,5 +102,6 @@
             </div>
             </div>
         </div>
+<%--        <div class="modal"></div>--%>
     </jsp:body>
 </t:main>
