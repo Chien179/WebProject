@@ -49,6 +49,27 @@ public class ProductFEServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String path = request.getPathInfo();
+        switch (path) {
+            case "/WithName":
+                searchPro(request, response);
+                break;
 
+            default:
+                ServletUtils.forward("/views/404.jsp", request, response);
+                break;
+        }
+    }
+    private void searchPro (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String proName = request.getParameter("pro");
+        Product prod = ProductModel.searchPro(proName);
+        if (prod != null) {
+            String url = "/Home";
+            ServletUtils.redirect(url, request, response);
+        }
+
+        else{
+            ServletUtils.forward("/views/404.jsp", request, response);
+        }
     }
 }

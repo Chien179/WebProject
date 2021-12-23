@@ -15,7 +15,7 @@
     </jsp:attribute>
     <jsp:body>
         <div class="">
-            <div class="row product__container">
+            <div class="row product__container" style="margin: 0 auto">
                 <div class="card-header bg-white mb-1 sticky-top product__header">
                     <h3 class="my-auto product__heading">SẢN PHẨM HIỆN CÓ</h3>
                 </div>

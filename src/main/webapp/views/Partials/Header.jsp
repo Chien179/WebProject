@@ -3,6 +3,7 @@
 
 <jsp:useBean id="categories" scope="request" type="java.util.List<com.ute.webproject.beans.Category>"/>
 <jsp:useBean id="authUser" scope="session" type="com.ute.webproject.beans.User" />
+<jsp:useBean id="products" scope="request" type="java.util.List<com.ute.webproject.beans.Product>"/>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
@@ -65,7 +66,17 @@
                     </li>
                     <c:choose>
                         <c:when test="${auth}">
-                            hehe
+                            <li class="nav-item nav-item--separate">
+                                <a href="#" class="nav-item-link nav-item-strong">
+                                    <i class="fa-solid fa-user"></i>
+                                    ${authUser.name}
+                                </a>
+                            </li>
+                            <li class="nav-item nav-item-strong">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <a class="js-login nav-item-link nav-item-strong" href="#" onclick="document.getElementById('frmLogout').submit();">Đăng xuất</a>
+                            </li>
+                            <form style="width: 0px" id="frmLogout" method="post" action="${pageContext.request.contextPath}/Account/Logout"></form>
                         </c:when>
                         <c:otherwise>
                             <li class="nav-item nav-item--separate">
@@ -90,9 +101,10 @@
                 <div class="header__logo">
                     <a href="${pageContext.request.contextPath}/Home"><img class="header__logo-img" src="${pageContext.request.contextPath}/Img/download.png" alt="Logo"></a>
                 </div>
+                <form id="searchForm" style="width: 0px" action="${pageContext.request.contextPath}/Product/" method="post"></form>
                 <div class="header__search">
                     <div class="header__search-input-wrap">
-                        <input type="text" class="header__search-input" placeholder="Tìm kiếm...">
+                        <input type="text" class="header__search-input" placeholder="Tìm kiếm..." name="pro">
                         <!-- Search history -->
                         <div class="header__search-history">
                             <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
@@ -124,9 +136,11 @@
                             </li>
                         </ul>
                     </div>
+                    <a href="#" onclick="document.getElementById('searchForm').submit();">
                     <button class="header__search-btn">
                         <i class="fas fa-search header__search-btn-icon"></i>
                     </button>
+                    </a>
                 </div>
                 <!-- Cart layout -->
                 <div class="header__cart">
@@ -279,6 +293,7 @@
 </div>
 <div class="error" hidden>${hasError}</div>
 <script src="${pageContext.request.contextPath}/views/JS/Header.js"></script>
+<script src="jquery-1.8.2.js"></script>
 <script>
     const loginError= Boolean(document.querySelector('.error').innerHTML);
 

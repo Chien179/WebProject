@@ -70,6 +70,32 @@ public class ProductModel {
                     .executeAndFetch(Product.class);
         }
     }
+    public static Product searchPro (String proName) {
+        final String query = "select products.ProID, " +
+                "products.ProName, " +
+                "products.TinyDes, " +
+                "products.FullDes, " +
+                "products.Price, " +
+                "products.Quantity, " +
+                "products.StartDateTime, " +
+                "products.EndDateTime, " +
+                "products.StartPrice, " +
+                "users.name " +
+                "from products " +
+                "INNER JOIN users " +
+                "ON products.UserID = users.id " +
+                "INNER JOIN categories c on products.ProID = c.ProID where match(ProName) against(:proName)";
+        try (Connection con = DbUtils.getConnection()) {
+            List<Product> list =  con.createQuery(query)
+                    .addParameter("ProName", proName).throwOnMappingFailure(false)//Tam thoi
+                    .executeAndFetch(Product.class);
+            if (list.size() == 0) {
+                return null;
+            }
+
+            return list.get(0);
+        }
+    }
 //    public static Product findById(int id) {
 //        final String query = "select * from products where ProID = :ProID";
 //        try (Connection con = DbUtils.getConnection()) {
