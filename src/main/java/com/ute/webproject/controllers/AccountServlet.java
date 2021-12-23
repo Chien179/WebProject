@@ -9,6 +9,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -17,11 +18,28 @@ public class AccountServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
-        if (path == null || path.equals("/")) {
-            path = "/Register.jsp";
-        }
+        switch (path) {
+            case "/Register":
+                ServletUtils.forward("/views/vwAccount/Register.jsp", request, response);
+                break;
 
-        ServletUtils.forward("/views/vwAccount/Register.jsp", request, response);
+            case "/IsAvailable":
+                String email = request.getParameter("user");
+                User user = UserModel.findByEmail(email);
+                boolean isAvailable = (user == null);
+
+                PrintWriter out = response.getWriter();
+                response.setContentType("application/json");
+                response.setCharacterEncoding("utf-8");
+
+                out.print(isAvailable);
+                out.flush();
+                break;
+
+            default:
+                ServletUtils.forward("/views/404.jsp", request, response);
+                break;
+        }
     }
 
     @Override

@@ -1,67 +1,93 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Đăng Ký</title>
+
+<t:main>
+ <jsp:attribute name="css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Register.css">
-</head>
-<body style="margin: 0;">
-<table>
-  <tr>
-    <div style="background-image: linear-gradient( #1ab7ea, #48c5ee, #6dd1f1, #8adaf4); display: flex; align-items: center;">
-      <h2 class="logo">AUCTION</h2>
-    </div>
-  </tr>
-  <tr>
-    <div class="container-signup">
-      <img src="${pageContext.request.contextPath}/Img/auction.png" class="signup-more" alt="auction" style="height: 871px">
-      <div class="wrap-signup">
-        <form class="signup-form">
-          <span class="signup-form-title">Đăng Ký</span>
+  </jsp:attribute>
+  <jsp:attribute name="js">
+    <script>
+      $('#frmRegister').on('submit', function (e) {
+        e.preventDefault();
 
-          <div class="wrap-input">
-            <span class="lable-input">Họ và tên</span>
-            <input class="input" type="text" name="name" placeholder="Họ và tên của bạn" required>
-            <span class="focus-input"></span>
-          </div>
+        const email = $('#txtEmail').val();
+        if (email.length === 0) {
+          alert('Invalid email.');
+          return;
+        }
 
-          <div class="wrap-input">
-            <span class="lable-input">Email</span>
-            <input class="input" type="email" name="email" placeholder="Email của bạn" required>
-            <span class="focus-input"></span>
-          </div>
+        $.getJSON('${pageContext.request.contextPath}/Account/IsAvailable?user=' + email, function (data) {
+          if (data === true) {
+            $('#frmRegister').off('submit').submit();
+          } else {
+            alert('Email is not available.');
+          }
+        });
+      });
 
-          <div class="wrap-input">
-            <span class="lable-input">Ngày sinh</span>
-            <input class="input" type="date" name="dob" placeholder="Ngày sinh của bạn" required>
-            <span class="focus-input"></span>
-          </div>
 
-          <div class="wrap-input">
-            <span class="lable-input">Địa chỉ</span>
-            <input class="input" type="text" name="address" placeholder="Địa chỉ của bạn" required>
-            <span class="focus-input"></span>
-          </div>
+      $('#txtName').select();
+    </script>
+  </jsp:attribute>
+  <jsp:body>
+    <table>
+      <tr>
+        <div style="background-image: linear-gradient( #1ab7ea, #48c5ee, #6dd1f1, #8adaf4); display: flex; align-items: center;">
+          <h2 class="logo">AUCTION</h2>
+        </div>
+      </tr>
+      <tr>
+        <div class="container-signup">
+          <img src="${pageContext.request.contextPath}/Img/auction.png" class="signup-more" alt="auction" style="height: 871px">
+          <div class="wrap-signup">
 
-          <div class="wrap-input">
-            <span class="lable-input">Mật khẩu</span>
-            <input class="input" type="password" name="password" placeholder="Mật khẩu của bạn" required>
-            <span class="focus-input"></span>
+            <form class="signup-form" action="" method="post" id="frmRegister">
+              <span class="signup-form-title">Đăng Ký</span>
+
+              <div class="wrap-input">
+                <span class="lable-input">Họ và tên</span>
+                <input class="input" type="text" id="txtName" name="name" placeholder="Họ và tên của bạn"  required>
+                <span class="focus-input"></span>
+              </div>
+
+              <div class="wrap-input">
+                <span class="lable-input">Email</span>
+                <input class="input" type="email" id="txtEmail" name="email" placeholder="Email của bạn" required>
+                <span class="focus-input"></span>
+              </div>
+
+              <div class="wrap-input">
+                <span class="lable-input">Ngày sinh</span>
+                <input class="input" type="date" id="txtDOB" name="dob" placeholder="Ngày sinh của bạn" required>
+                <span class="focus-input"></span>
+              </div>
+
+              <div class="wrap-input">
+                <span class="lable-input">Mật khẩu</span>
+                <input class="input" type="password" id="txtPassword" name="rawpwd" placeholder="Mật khẩu của bạn" required>
+                <span class="focus-input"></span>
+              </div>
+
+              <div class="wrap-input">
+                <span class="lable-input">Xác nhận mật khẩu</span>
+                <input class="input" type="password"  placeholder="Xác nhận lại mật khẩu" required>
+                <span class="focus-input"></span>
+              </div>
+
+              <div class="container-signup-form-btn">
+                <div class="wrap-signup-form-btn">
+                  <button type="submit" class="signup-form-btn">
+                    Đăng ký ngay
+                  </button>
+                </div>
+              </div>
+
+            </form>
           </div>
-          <div class="wrap-input">
-            <span class="lable-input">Xác nhận mật khẩu</span>
-            <input class="input" type="password" name="password" placeholder="Xác nhận lại mật khẩu" required>
-            <span class="focus-input"></span>
-          </div>
-          <div class="container-signup-form-btn">
-            <div class="wrap-signup-form-btn">
-              <button class="signup-form-btn">Đăng ký ngay</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </tr>
-</table>
-</body>
-</html>
+        </div>
+      </tr>
+    </table>
+  </jsp:body>
+</t:main>
