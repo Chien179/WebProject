@@ -3,7 +3,7 @@
 
 <jsp:useBean id="categories" scope="request" type="java.util.List<com.ute.webproject.beans.Category>"/>
 <jsp:useBean id="authUser" scope="session" type="com.ute.webproject.beans.User" />
-<jsp:useBean id="products" scope="request" type="java.util.List<com.ute.webproject.beans.Product>"/>
+<jsp:useBean id="subCate" scope="request" type="java.util.List<com.ute.webproject.beans.Product>"/>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
@@ -236,8 +236,20 @@
                             <a href="${pageContext.request.contextPath}/Product/ByCate/ProductByCat?id=${c.catID}">
                                 <li class="category__item js-category__item">
                                         ${c.catName}
+                                    </a>
+                                        <div class="js-sub-category sub-category">
+                                            <c:forEach items="${subCate}" var="s">
+                                                <c:if test="${s.catID == c.catID}">
+                                                    <ul class="sub-category__list">
+                                                        <a href="${pageContext.request.contextPath}/Product/ByCate/SubCate?proid=${s.proID}">
+                                                            <li class="sub-category__item">${s.proName}</li>
+                                                        </a>
+                                                        <div class="line"></div>
+                                                    </ul>
+                                                </c:if>
+                                            </c:forEach>
+                                        </div>
                                 </li>
-                            </a>
                         </c:forEach>
                     </c:otherwise>
                 </c:choose>

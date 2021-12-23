@@ -27,7 +27,9 @@ public class ProductFilter implements Filter {
     public void productFilter(ServletRequest request){
         List<Category> cat = CategoryModel.findAll();
         List<Product> list = ProductModel.findAll();
+        List<Product> subCate = ProductModel.subCatePro();
         request.setAttribute("products", list);
         request.setAttribute("categories", cat);
+        request.setAttribute("subCate", subCate);
     }
 }

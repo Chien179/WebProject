@@ -40,6 +40,12 @@ public class ProductFEServlet extends HttpServlet {
 //                    ServletUtils.forward("/views/vwProduct/Detail.jsp", request, response);
 //                }
 //                break;
+            case "/SubCate":
+                int proID = Integer.parseInt(request.getParameter("proid"));
+                List<Product> byPro = ProductModel.findByProID(proID);
+                request.setAttribute("products", byPro);
+                ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
+                break;
 
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
