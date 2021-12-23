@@ -25,6 +25,14 @@ public class ProductModel {
         }
     }
 
+    public static List<Product> subCatePro () {
+        final String query = "select ProName, CatID, products.ProID from products inner join categories c on products.ProID = c.ProID";
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(query)
+                    .executeAndFetch(Product.class);
+        }
+    }
+
     public static List<Product> findByCatId(int catId) {
         final String query = "select products.ProID, " +
                                 "products.ProName, " +
@@ -43,6 +51,27 @@ public class ProductModel {
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("CatID", catId).throwOnMappingFailure(false)//Tam thoi
+                    .executeAndFetch(Product.class);
+        }
+    }
+    public static List<Product> findByProID(int proID) {
+        final String query = "select products.ProID," +
+                " products.ProName, " +
+                "products.TinyDes, " +
+                "products.FullDes, " +
+                "products.Price, " +
+                "products.Quantity, " +
+                "products.StartDateTime, " +
+                "products.EndDateTime, " +
+                "products.StartPrice, " +
+                "users.name " +
+                "from products " +
+                "INNER JOIN users " +
+                "ON products.UserID = users.id " +
+                "INNER JOIN categories c on products.ProID = c.ProID where products.ProID = :ProID";
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(query)
+                    .addParameter("ProID", proID)//Tam thoi
                     .executeAndFetch(Product.class);
         }
     }
