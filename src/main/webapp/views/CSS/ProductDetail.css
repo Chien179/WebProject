@@ -50,6 +50,9 @@
 .product-detail__heading{
     padding: 5px;
 }
+.product-detail__info-point{
+    margin-left: 10px;
+}
 .product-detail__header{
     font-size: 2.5rem;
     text-transform: capitalize;

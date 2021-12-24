@@ -22,9 +22,10 @@
                 <div class=" product-detail__image-container">
                     <img class="product-detail__image-main JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
                     <div class="product-detail__image-otherimage">
-                        <c:forEach begin="0" end="2" varStatus="loop" var="i">
-                            <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
-                        </c:forEach>
+                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
+                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/2.png">
+                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/3.png">
+
                     </div>
                 </div>
                 <div class=" product-detail__info">
@@ -47,7 +48,7 @@
                                         <h4>Ngày kết thúc: ${product.endDateTime}</h4>
                                     </div>
                                     <div class=" product-detail__info-dateleft">
-                                        <h4>Còn lại: 3 ngày</h4>
+                                        <h4 hidden class="time">${product.timeFormat}</h4> <h4>Còn lại: <span class="remaining float-end" style="color: black"></span></h4>
                                     </div>
                                     <div class="d-flex d-inline-block justify-content-between product-detail__info-owner">
                                         <div class="">
@@ -56,9 +57,8 @@
                                             <c:set var = "name" value="${fn:substring(fullname,lengthname/2,lengthname)}"/>
                                             <h4>Đang sở hữu: ***${name}</h4>
                                         </div>
-                                        <br>
                                         <div class=" product-detail__info-point">
-                                            <h4>Điểm đánh giá: 0đ</h4>
+                                            <h4> Đánh giá: 0đ</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@
         <div class="modal product-detail__modal js-product-detail__modal">
             <div class="modal__overlay js-product-detail-modal__overlay"></div>
             <div class="modal__body">
-                <img class="modal__img" src="../../Img/download.png" alt="">
+                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1_thumbs.png" alt="">
             </div>
         </div>
     </jsp:body>
