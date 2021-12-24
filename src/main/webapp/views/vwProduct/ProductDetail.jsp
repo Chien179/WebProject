@@ -51,11 +51,12 @@
                                     </div>
                                     <div class="d-flex d-inline-block justify-content-between product-detail__info-owner">
                                         <div class="">
-<%--                                            <c:set var="fullname" value="${product.name}"/>--%>
-<%--                                            <c:set var="lengthname" value="${fn:length(fullname)}"/>--%>
-<%--                                            <c:set var = "name" value="${fn:substring(fullname,lengthname/2,lengthname)}"/>--%>
-                                            <h4>Đang sở hữu: PA</h4>
+                                            <c:set var="fullname" value="${product.name}"/>
+                                            <c:set var="lengthname" value="${fn:length(fullname)}"/>
+                                            <c:set var = "name" value="${fn:substring(fullname,lengthname/2,lengthname)}"/>
+                                            <h4>Đang sở hữu: ***${name}</h4>
                                         </div>
+                                        <br>
                                         <div class=" product-detail__info-point">
                                             <h4>Điểm đánh giá: 0đ</h4>
                                         </div>
