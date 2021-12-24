@@ -22,12 +22,9 @@
                 <div class=" product-detail__image-container">
                     <img class="product-detail__image-main JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
                     <div class="product-detail__image-otherimage">
-                        <c:forEach begin="1" end="3" varStatus="loop" var="i">
-                            <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/${i}.png">
-                        </c:forEach>
-<%--                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">--%>
-<%--                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/2.png">--%>
-<%--                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/3.png">--%>
+                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
+                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/2.png">
+                        <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/3.png">
 
                     </div>
                 </div>
@@ -113,8 +110,8 @@
         </div>
         <div class="modal product-detail__modal js-product-detail__modal">
             <div class="modal__overlay js-product-detail-modal__overlay"></div>
-            <div class="modal__body js-product-detail-modal__body">
-                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png" alt="">
+            <div class="modal__body">
+                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1_thumbs.png" alt="">
             </div>
         </div>
     </jsp:body>

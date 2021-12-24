@@ -154,6 +154,19 @@
                     </button>
                     </a>
                 </div>
+                <!-- Account layout -->
+                <div class="header__account">
+<%--                    <div class="header__account-wrap">--%>
+<%--                        <i class="fas fa-user header__account-icon"></i>--%>
+<%--                        <span class="header__account-username">Nguyen Van Son Tung</span>--%>
+<%--                        <i class="fas fa-sort-down"></i>--%>
+<%--                    </div>--%>
+<%--                    <div class="header__account-list">--%>
+<%--                        <ul class="header__account-list-heading">--%>
+<%--                            <li class="header__account-list-item">Tài khoản</li>--%>
+<%--                            <li class="header__account-list-item">Đăng xuất</li>--%>
+<%--                        </ul>--%>
+
                 </div>
             </div>
         </div>
@@ -248,7 +261,6 @@
 </div>
 <div class="error" hidden>${hasError}</div>
 <script src="${pageContext.request.contextPath}/views/JS/Header.js"></script>
-<script src="jquery-1.8.2.js"></script>
 <script>
     const loginError= Boolean(document.querySelector('.error').innerHTML);
 
