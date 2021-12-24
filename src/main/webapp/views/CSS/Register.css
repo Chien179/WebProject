@@ -1,3 +1,10 @@
+.signup-form-title.register__heading{
+    color: var(--primary-color);
+}
+.wrap-signup-form-btn,
+.signup-form-btn{
+    width: 100%;
+}
 .logo{
     color: red;
     font-size: 35px;
@@ -106,16 +113,6 @@ input,textarea{
     display: block;
     position: relative;
     padding-bottom: 10px;
-}
-.signup-form-btn{
-    width: 245px;
-    height: 50px;
-    padding: 10px 30px;
-    border-radius: 25px;
-    font-size: 26px;
-    background:lightblue;
-    font-family: sans-serif;
-    cursor: pointer;
 }
 input::-webkit-calendar-picker-indicator {
     cursor: pointer;

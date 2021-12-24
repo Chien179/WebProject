@@ -9,7 +9,7 @@
     <h2>Oops! Page not found</h2>
     <h1>404</h1>
     <p>Sorry, an error has occured. The requested page not found.</p>
-    <a href="#">Go back home</a>
+    <a href="/WebProject/Home">Go back home</a>
 </div>
 </body>
 </html>
