@@ -66,7 +66,7 @@ function hideCate(){
 loginBtn.addEventListener('click', showLoginModal)
 // modalOverlay.addEventListener('click', hideLoginModal)
 // escapeBtn.addEventListener('click', hideLoginModal)
-cateBtn.addEventListener('click', showhideCate)
+// cateBtn.addEventListener('click', showhideCate)
 // for(var i=0; i<cateItems.length; i++)
 // {
 //     var cateItem=cateItems[i];

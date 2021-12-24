@@ -74,7 +74,7 @@
                             </li>
                             <li class="nav-item nav-item-strong">
                                 <i class="fa-solid fa-right-from-bracket"></i>
-                                <a class="js-login nav-item-link nav-item-strong" href="#" onclick="document.getElementById('frmLogout').submit();">Đăng xuất</a>
+                                <a class="nav-item-link nav-item-strong" href="#" onclick="document.getElementById('frmLogout').submit();">Đăng xuất</a>
                             </li>
 <%--                        <div class="header__account">--%>
 <%--                            <div class="header__account-wrap">--%>
@@ -107,7 +107,7 @@
             </nav>
             <!-- Header search -->
             <div class="header-with-search">
-                <div class="header__cate-btn js-cate-btn">
+                <div class="header__cate-btn js-cate-btn" onclick="showhideCate()">
                     <i class="fas fa-bars header__cate-icon"></i>
                 </div>
                 <div class="header__logo">
