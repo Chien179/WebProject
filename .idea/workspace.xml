@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="detail remaining time">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" afterDir="false" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="fix category">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640333313343</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix category">
+      <created>1640333595005</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1640333595005</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +381,8 @@
     <MESSAGE value="proDetail 1" />
     <MESSAGE value="fix" />
     <MESSAGE value="detail remaining time" />
-    <option name="LAST_COMMIT_MESSAGE" value="detail remaining time" />
+    <MESSAGE value="fix category" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix category" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
