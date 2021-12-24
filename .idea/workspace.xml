@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="detail remaining time">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix 404, Register.jsp, ProductDetail.css re up" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -374,7 +370,8 @@
     <MESSAGE value="proDetail 1" />
     <MESSAGE value="fix" />
     <MESSAGE value="detail remaining time" />
-    <option name="LAST_COMMIT_MESSAGE" value="detail remaining time" />
+    <MESSAGE value="Fix 404, Register.jsp, ProductDetail.css re up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix 404, Register.jsp, ProductDetail.css re up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
