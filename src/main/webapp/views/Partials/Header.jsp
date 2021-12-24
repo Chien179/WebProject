@@ -74,7 +74,7 @@
                             </li>
                             <li class="nav-item nav-item-strong">
                                 <i class="fa-solid fa-right-from-bracket"></i>
-                                <a class="js-login nav-item-link nav-item-strong" href="#" onclick="document.getElementById('frmLogout').submit();">Đăng xuất</a>
+                                <a class="nav-item-link nav-item-strong" href="#" onclick="document.getElementById('frmLogout').submit();">Đăng xuất</a>
                             </li>
 <%--                        <div class="header__account">--%>
 <%--                            <div class="header__account-wrap">--%>
