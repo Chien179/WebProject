@@ -184,7 +184,7 @@
                                             <c:forEach items="${subCate}" var="s">
                                                 <c:if test="${s.catID == c.catID}">
                                                     <ul class="sub-category__list">
-                                                        <a href="${pageContext.request.contextPath}/Product/ByCate/SubCate?proid=${s.proID}">
+                                                        <a href="${pageContext.request.contextPath}/Product/ByCate/Detail?id=${s.proID}">
                                                             <li class="sub-category__item">${s.proName}</li>
                                                         </a>
                                                         <div class="line"></div>

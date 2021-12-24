@@ -54,27 +54,27 @@ public class ProductModel {
                     .executeAndFetch(Product.class);
         }
     }
-    public static List<Product> findByProID(int proID) {
-        final String query = "select products.ProID," +
-                " products.ProName, " +
-                "products.TinyDes, " +
-                "products.FullDes, " +
-                "products.Price, " +
-                "products.Quantity, " +
-                "products.StartDateTime, " +
-                "products.EndDateTime, " +
-                "products.StartPrice, " +
-                "users.name " +
-                "from products " +
-                "INNER JOIN users " +
-                "ON products.UserID = users.id " +
-                "INNER JOIN categories c on products.ProID = c.ProID where products.ProID = :ProID";
-        try (Connection con = DbUtils.getConnection()) {
-            return con.createQuery(query)
-                    .addParameter("ProID", proID)//Tam thoi
-                    .executeAndFetch(Product.class);
-        }
-    }
+//    public static List<Product> findByProID(int proID) {
+//        final String query = "select products.ProID," +
+//                " products.ProName, " +
+//                "products.TinyDes, " +
+//                "products.FullDes, " +
+//                "products.Price, " +
+//                "products.Quantity, " +
+//                "products.StartDateTime, " +
+//                "products.EndDateTime, " +
+//                "products.StartPrice, " +
+//                "users.name " +
+//                "from products " +
+//                "INNER JOIN users " +
+//                "ON products.UserID = users.id " +
+//                "INNER JOIN categories c on products.ProID = c.ProID where products.ProID = :ProID";
+//        try (Connection con = DbUtils.getConnection()) {
+//            return con.createQuery(query)
+//                    .addParameter("ProID", proID)//Tam thoi
+//                    .executeAndFetch(Product.class);
+//        }
+//    }
 
     public static List<Product> top5Time () {
         final String query = "select * from products order by timediff(now(),EndDateTime) DESC limit 5";
