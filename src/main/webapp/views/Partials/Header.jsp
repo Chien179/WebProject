@@ -142,74 +142,18 @@
                     </button>
                     </a>
                 </div>
-                <!-- Cart layout -->
-                <div class="header__cart">
-                    <div class="header__cart-wrap">
-                        <i class="fas fa-shopping-cart header__cart-icon"></i>
-                        <span class="header__cart-notify">3</span>
-                        <!-- No cart:  Add header__cart-list--no-cart-->
-                        <div class="header__cart-list">
-                            <!-- Chua co hinh -->
-                            <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-no-cart-img">
-                            <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
-
-                            <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
-                            <ul class="header__cart-list-item">
-                                <!-- Cart item -->
-                                <li class="header__cart-item">
-                                    <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Item-name</h5>
-                                            <div class="header__cart-item-name-wrap">
-                                                <span class="header__cart-item-price">Item-price</span>
-                                                <span class="header__cart-item-multi">x</span>
-                                                <span class="header__cart-item-quantity">Item-quantity</span>
-                                            </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-describtion">Item-describtion</span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Item-name</h5>
-                                            <div class="header__cart-item-name-wrap">
-                                                <span class="header__cart-item-price">Item-price</span>
-                                                <span class="header__cart-item-multi">x</span>
-                                                <span class="header__cart-item-quantity">Item-quantity</span>
-                                            </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-describtion">Item-describtion</span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="${pageContext.request.contextPath}/Img/download.png" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Item-name</h5>
-                                            <div class="header__cart-item-name-wrap">
-                                                <span class="header__cart-item-price">Item-price</span>
-                                                <span class="header__cart-item-multi">x</span>
-                                                <span class="header__cart-item-quantity">Item-quantity</span>
-                                            </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-describtion">Item-describtion</span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#"><button class="btn btn--primary header__cart-view-btn">Xem giỏ hàng</button></a>
-                        </div>
+                <!-- Account layout -->
+                <div class="header__account">
+                    <div class="header__account-wrap">
+                        <i class="fas fa-user header__account-icon"></i>
+                        <span class="header__account-username">Nguyen Van Son Tung</span>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                    <div class="header__account-list">
+                        <ul class="header__account-list-heading">
+                            <li class="header__account-list-item">Tài khoản</li>
+                            <li class="header__account-list-item">Đăng xuất</li>
+                        </ul>
                     </div>
                 </div>
             </div>
