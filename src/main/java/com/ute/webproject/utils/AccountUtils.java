@@ -23,10 +23,9 @@ public class AccountUtils {
                 session.setAttribute("auth", true);
                 session.setAttribute("authUser", user);
 
-//                String url = (String) session.getAttribute("retUrl");
-                String url = "/Home";
-//                if (url == null)
-//                    url = "/Home";
+                String url = (String) session.getAttribute("retUrl");
+                if (url == null)
+                    url = "/Home";
                 ServletUtils.redirect(url, request, response);
             } else {
                 request.setAttribute("hasError", true);

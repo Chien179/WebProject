@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix cate">
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix 404, Register.jsp, ProductDetail.css re up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/Product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/Product.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/JS/ProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/JS/ProductDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -355,21 +353,7 @@
       <option name="project" value="LOCAL" />
       <updated>1640339848817</updated>
     </task>
-    <task id="LOCAL-00023" summary="Fix ProductDetail.jsp">
-      <created>1640352029310</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1640352029310</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Fix cate">
-      <created>1640357245011</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1640357245011</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,13 +388,12 @@
     <MESSAGE value="Complete the login, add query for full-text search" />
     <MESSAGE value="Complete the login, add query for search" />
     <MESSAGE value="reup ProductDetail" />
+    <MESSAGE value="Fix cate" />
     <MESSAGE value="proDetail 1" />
     <MESSAGE value="fix" />
     <MESSAGE value="detail remaining time" />
     <MESSAGE value="Fix 404, Register.jsp, ProductDetail.css re up" />
-    <MESSAGE value="Fix ProductDetail.jsp" />
-    <MESSAGE value="Fix cate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix cate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix 404, Register.jsp, ProductDetail.css re up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

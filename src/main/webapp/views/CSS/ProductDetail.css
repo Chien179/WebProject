@@ -176,3 +176,6 @@
 .modal__img{
     width: 100%;
 }
+.modal__body{
+    max-width: 500px;
+}
