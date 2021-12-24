@@ -9,7 +9,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix 404, Register.jsp, ProductDetail.css re up" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix 404, Register.jsp, ProductDetail.css re up">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple AirPods Pro/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple AirPods Pro/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple Watch Series 3/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple Watch Series 3/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Chảo Chống Dính/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Chảo Chống Dính/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Exciter 155/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Exciter 155/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Ford Ranger/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Ford Ranger/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Jacket/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Jacket/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/3_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Lò vi sóng Samsung MS23K3513AS/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Lò vi sóng Samsung MS23K3513AS/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Mazda 3/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Mazda 3/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Máy Hút Bụi Cầm Tay Không Dây/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Máy Hút Bụi Cầm Tay Không Dây/4_thumbs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Quạt Sưởi Ấm Đa Năng/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Quạt Sưởi Ấm Đa Năng/4_thumbs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_10_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_10_06__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_16_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_16_03__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +84,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../data/auction_users.sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/Img/Quạt Sưởi Ấm Đa Năng" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -63,6 +92,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\IdeaProjects\WebProject\src\main\webapp\Img\Ấm Siêu Tốc" />
+      <recent name="C:\Users\Admin\IdeaProjects\WebProject\src\main\webapp\Img\Đồng Hồ Hublot" />
+      <recent name="C:\Users\Admin\IdeaProjects\WebProject\src\main\webapp\Img\Đồng Hồ Channel" />
+      <recent name="C:\Users\Admin\IdeaProjects\WebProject\src\main\webapp\Img\Đồng Hồ Casio" />
+      <recent name="C:\Users\Admin\IdeaProjects\WebProject\src\main\webapp\Img\Áo Khoác Blazer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\IdeaProjects\WebProject\src\main\webapp\Img\Apple AirPods Pro" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ute.webproject.filters" />
     </key>
@@ -183,6 +222,7 @@
       <workItem from="1640161151444" duration="5435000" />
       <workItem from="1640186489534" duration="1752000" />
       <workItem from="1640272340009" duration="6200000" />
+      <workItem from="1640347466311" duration="1395000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
