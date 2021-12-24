@@ -10,34 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix 404, Register.jsp, ProductDetail.css re up">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple AirPods Pro/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple AirPods Pro/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple Watch Series 3/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Apple Watch Series 3/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Chảo Chống Dính/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Chảo Chống Dính/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Exciter 155/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Exciter 155/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Ford Ranger/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Ford Ranger/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Jacket/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Jacket/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/3_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Loa Bluetooth JBL/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Lò vi sóng Samsung MS23K3513AS/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Lò vi sóng Samsung MS23K3513AS/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Mazda 3/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Mazda 3/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Máy Hút Bụi Cầm Tay Không Dây/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Máy Hút Bụi Cầm Tay Không Dây/4_thumbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Quạt Sưởi Ấm Đa Năng/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Img/Quạt Sưởi Ấm Đa Năng/4_thumbs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_10_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_10_06__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_16_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_21_16_03__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +82,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.55" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/WebProject/Home" />
       <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
       <option name="UPDATING_POLICY" value="update-resources" />
@@ -371,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640333313343</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fix 404, Register.jsp, ProductDetail.css re up">
+      <created>1640339848817</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1640339848817</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

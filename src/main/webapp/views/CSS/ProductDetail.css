@@ -169,7 +169,7 @@
 .modal__overlay{
     z-index: -1;
 }
-.js-product-detail-modal__body{
+.modal__body{
     max-width: 500px;
 }
 .modal__img{
