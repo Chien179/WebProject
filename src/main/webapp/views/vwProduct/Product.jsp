@@ -22,7 +22,7 @@
                 <div class="product__body">
                     <c:forEach begin="0" end="${products.size()-1}" varStatus="loop" var="i">
                         <div class="card card border-secondary h-60 product__body-item">
-                            <img class="product__body-img" src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" alt="${products[i].proName}"/>
+                            <img class="product__body-img" src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" alt="${products[i].proName}" onclick="location.href='${pageContext.request.contextPath}/Product/ByCate/Detail?id=${products[i].proID}'"/>
                             <div class="card-body product__body-img-body">
                                 <h1 class="card-title pt-0 txtOverflow product__body-img-heading">${products[i].proName}</h1>
                                 <p class="card-text card-text-config product__body-img-date">Ngày đăng: ${products[i].startDateTime}<span><button class="float-end buy-button"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>

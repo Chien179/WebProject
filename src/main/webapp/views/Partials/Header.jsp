@@ -76,6 +76,18 @@
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 <a class="js-login nav-item-link nav-item-strong" href="#" onclick="document.getElementById('frmLogout').submit();">Đăng xuất</a>
                             </li>
+<%--                        <div class="header__account">--%>
+<%--                            <div class="header__account-wrap">--%>
+<%--                                <i class="fas fa-user header__account-icon"></i>--%>
+<%--                                <span class="header__account-username"> ${authUser.name}</span>--%>
+<%--                                <i class="fas fa-sort-down"></i>--%>
+<%--                            </div>--%>
+<%--                            <div class="header__account-list">--%>
+<%--                                <ul class="header__account-list-heading">--%>
+<%--                                    <li class="header__account-list-item">Tài khoản</li>--%>
+<%--                                    <li class="header__account-list-item"><a class="js-login nav-item-link nav-item-strong" href="#" onclick="document.getElementById('frmLogout').submit();">Đăng xuất</a></li>--%>
+<%--                                </ul>--%>
+<%--                            </div>--%>
                             <form style="width: 0px" id="frmLogout" method="post" action="${pageContext.request.contextPath}/Account/Logout"></form>
                         </c:when>
                         <c:otherwise>
@@ -142,19 +154,6 @@
                     </button>
                     </a>
                 </div>
-                <!-- Account layout -->
-                <div class="header__account">
-                    <div class="header__account-wrap">
-                        <i class="fas fa-user header__account-icon"></i>
-                        <span class="header__account-username">Nguyen Van Son Tung</span>
-                        <i class="fas fa-sort-down"></i>
-                    </div>
-                    <div class="header__account-list">
-                        <ul class="header__account-list-heading">
-                            <li class="header__account-list-item">Tài khoản</li>
-                            <li class="header__account-list-item">Đăng xuất</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

@@ -27,7 +27,6 @@
         });
       });
 
-
       $('#txtName').select();
     </script>
   </jsp:attribute>

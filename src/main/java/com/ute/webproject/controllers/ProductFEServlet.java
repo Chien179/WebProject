@@ -30,16 +30,16 @@ public class ProductFEServlet extends HttpServlet {
                 ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
                 break;
 
-//            case "/Detail":
-//                int proId = Integer.parseInt(request.getParameter("id"));
-//                Product product = ProductModel.findById(proId);
-//                if (product == null) {
-//                    ServletUtils.redirect("/Home", request, response);
-//                } else {
-//                    request.setAttribute("product", product);
-//                    ServletUtils.forward("/views/vwProduct/Detail.jsp", request, response);
-//                }
-//                break;
+            case "/Detail":
+                int proId = Integer.parseInt(request.getParameter("id"));
+                Product product = ProductModel.proDetail(proId);
+                if (product == null) {
+                    ServletUtils.redirect("/Home", request, response);
+                } else {
+                    request.setAttribute("product", product);
+                    ServletUtils.forward("/views/vwProduct/ProductDetail.jsp", request, response);
+                }
+                break;
             case "/SubCate":
                 int proID = Integer.parseInt(request.getParameter("proid"));
                 List<Product> byPro = ProductModel.findByProID(proID);

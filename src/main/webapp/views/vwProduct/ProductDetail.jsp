@@ -1,6 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
+<jsp:useBean id="product" scope="request" type="com.ute.webproject.beans.Product"/>
+
 
 <t:main>
     <jsp:attribute name="css">
@@ -9,54 +13,58 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script src="${pageContext.request.contextPath}/views/JS/ProductDetail.js"></script>
+         <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
     </jsp:attribute>
     <jsp:body>
         <div class="product-detail__container">
             <div class=" product-detail__body">
                 <div class=" product-detail__halfup">
                 <div class=" product-detail__image-container">
-                    <img class="product-detail__image-main JS-product-detail__image" src="../../Img/download.png">
+                    <img class="product-detail__image-main JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
                     <div class="product-detail__image-otherimage">
                         <c:forEach begin="0" end="2" varStatus="loop" var="i">
-                            <img class="product-detail__image-otherimage-img JS-product-detail__image" src="../../Img/download.png">
+                            <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
                         </c:forEach>
                     </div>
                 </div>
                 <div class=" product-detail__info">
                     <div class=" product-detail__heading">
-                        <h4 title="Nhà di động thế hệ 8 của tương lai không bố con thằng nào có chỉ để trưng không thể sử dụng hết biết làm rồi huuhuhuhuhuhuhuhu" class="product-detail__header">Nhà di động thế hệ 8 của tương lai không bố con thằng nào có chỉ để trưng không thể sử dụng hết biết làm rồi huuhuhuhuhuhuhuhu</h4>
+                        <h4 title="${product.proName}" class="product-detail__header">${product.proName}</h4>
                     </div>
                     <div class="line"></div>
                     <div class=" product-detail__info-body">
                         <div class="product-detail__info-halfup">
                             <div class=" product-detail__info-halfleft">
                                 <div class="  product-detail__info-price">
-                                    <div title="GIÁ HIỆN TẠI" class="product-detail__info-pricebid"> 9.000.000.000 VND</div>
-                                    <div title="GIÁ MUA NGAY" class="product-detail__info-pricenow"> 15.000.000.000 VND</div>
+                                    <div title="GIÁ HIỆN TẠI" class="product-detail__info-pricebid"><fmt:formatNumber value="${product.price}" type="currency"/></div>
+                                    <div title="GIÁ MUA NGAY" class="product-detail__info-pricenow"> N/A</div>
                                 </div>
                                 <div class=" product-detail__info-datenpoint">
                                     <div class="text-body product-detail__info-update">
-                                        <h4>Ngày đăng:</h4>
+                                        <h4>Ngày đăng: ${product.startDateTime}</h4>
                                     </div>
                                     <div class=" product-detail__info-enddate">
-                                        <h4>Ngày kết thúc:</h4>
+                                        <h4>Ngày kết thúc: ${product.endDateTime}</h4>
                                     </div>
                                     <div class=" product-detail__info-dateleft">
                                         <h4>Còn lại: 3 ngày</h4>
                                     </div>
                                     <div class="d-flex d-inline-block justify-content-between product-detail__info-owner">
                                         <div class="">
-                                            <h4>Đang sở hữu: **í</h4>
+<%--                                            <c:set var="fullname" value="${product.name}"/>--%>
+<%--                                            <c:set var="lengthname" value="${fn:length(fullname)}"/>--%>
+<%--                                            <c:set var = "name" value="${fn:substring(fullname,lengthname/2,lengthname)}"/>--%>
+                                            <h4>Đang sở hữu: PA</h4>
                                         </div>
                                         <div class=" product-detail__info-point">
-                                            <h4>Điểm đánh giá: 192đ</h4>
+                                            <h4>Điểm đánh giá: 0đ</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class=" product-detail__info-halfright">
                                 <div class=" product-detail__info-shop-heading">Shop name</div>
-                                <p class=" product-detail__info-shop-describe">shop bán điện thoại đâm thằng tên Trí</p>
+                                <p class=" product-detail__info-shop-describe">HIHI</p>
                                 <div class="product-detail__info-shop-btn-container">
                                     <a href="#" class="product-detail__info-shop-btn"><button class="btn btn--primary product-detail__info-shop-button">Xem shop</button></a>
                                 </div>
@@ -91,13 +99,7 @@
                         </div>
                         <div class="d-flex bg-white mx-4 product-detail__Describe-body">
                             <p>
-                                Good descriptive writing creates an impression in the reader's mind of an event, a place, a person, or a thing. The writing will be such that it will set a mood or describe something in such detail that if the reader saw it, they would recognize it.
-
-                                To be good, descriptive writing has to be concrete, evocative and plausible.
-
-                                To be concrete, descriptive writing has to offer specifics the reader can envision. Rather than “Her eyes were the color of blue rocks” (Light blue? Dark blue? Marble? Slate?), try instead, “Her eyes sparkled like sapphires in the dark.”
-                                To be evocative, descriptive writing has to unite the concrete image with phrasing that evokes the impression the writer wants the reader to have. Consider “her eyes shone like sapphires, warming my night” versus “the woman’s eyes had a light like sapphires, bright and hard.” Each phrase uses the same concrete image, then employs evocative language to create different impressions.
-                                To be plausible, the descriptive writer has to constrain the concrete, evocative image to suit the reader’s knowledge and attention span. “Her eyes were brighter than the sapphires in the armrests of the Tipu Sultan’s golden throne, yet sharper than the tulwars of his cruelest executioners” will have the reader checking their phone halfway through. “Her eyes were sapphires, bright and hard” creates the same effect in a fraction of the reading time. As always in the craft of writing: when in doubt, write less.
+                                ${product.fullDes}
                             </p>
                         </div>
                     </div>

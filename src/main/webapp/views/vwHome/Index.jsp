@@ -36,7 +36,7 @@
                                 <div class="d-flex">
                                     <c:forEach items="${top5Time}" var="t">
                                         <div class="card card card-hover border-secondary h-60" style="width: 222px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
-                                            <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}" >
+                                            <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}" onclick="location.href='${pageContext.request.contextPath}/Product/ByCate/Detail?id=${t.proID}'">
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
                                                 <p class="card-text card-text-config" style="font-size: 6px; font-weight: bold">
@@ -69,7 +69,7 @@
                                 <div class="d-flex">
                                     <c:forEach items="${top5Price}" var="t">
                                         <div class="card card card-hover border-secondary h-60" style="width: 222px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
-                                            <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}">
+                                            <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}" onclick="location.href='${pageContext.request.contextPath}/Product/ByCate/Detail?id=${t.proID}'"/>
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
                                                 <p class="card-text card-text-config" style="font-size: 6px; font-weight: bold">Ngày đăng: ${t.startDateTime}<span><button class="float-end buy-button-small"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>
@@ -97,7 +97,7 @@
                                 <div class="d-flex">
                                     <c:forEach items="${top5Turn}" var="t">
                                         <div class="card card card-hover border-secondary h-60" style="width: 222px; margin: 10px 0px 10px 20px; box-sizing: border-box; height: 300px;">
-                                            <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}">
+                                            <img src="${pageContext.request.contextPath}/Img/${t.proName}/1_thumbs.png" style="padding: 20px 10px 0px 12px; width: 214px; height: 130px" alt="${t.proName}" onclick="location.href='${pageContext.request.contextPath}/Product/ByCate/Detail?id=${t.proID}'"/>
                                             <div class="card-body">
                                                 <h5 class="card-title pt-0 txtOverflow" style="color: #337ab7; font-size: 20px">${t.proName}</h5>
                                                 <p class="card-text card-text-config" style="font-size: 6px; font-weight: bold">Ngày đăng: ${t.startDateTime}<span><button class="float-end buy-button-small"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>
@@ -136,7 +136,7 @@
                 <div class="product__body">
                     <c:forEach begin="0" end="14" varStatus="loop" var="i">
                         <div class="card card border-secondary h-60 product__body-item">
-                            <img class="product__body-img" src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" alt="${products[i].proName}"/>
+                            <img class="product__body-img" src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" alt="${products[i].proName}" onclick="location.href='${pageContext.request.contextPath}/Product/ByCate/Detail?id=${products[i].proID}'"/>
                             <div class="card-body product__body-img-body">
                                 <h1 class="card-title pt-0 txtOverflow product__body-img-heading">${products[i].proName}</h1>
                                 <p class="card-text card-text-config product__body-img-date">Ngày đăng: ${products[i].startDateTime}<span><button class="float-end buy-button"><i class="fas fa-cart-plus"></i> Mua ngay</button></span></p>
