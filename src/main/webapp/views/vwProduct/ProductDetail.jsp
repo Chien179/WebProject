@@ -20,10 +20,10 @@
             <div class=" product-detail__body">
                 <div class=" product-detail__halfup">
                 <div class=" product-detail__image-container">
-                    <img class="product-detail__image-main JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
+                    <img class="product-detail__image-main JS-product-detail__image" onclick="showImg(1)" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png">
                     <div class="product-detail__image-otherimage">
                         <c:forEach begin="2" end="4" varStatus="loop" var="i">
-                            <img class="product-detail__image-otherimage-img JS-product-detail__image" src="${pageContext.request.contextPath}/Img/${product.proName}/${i}.png">
+                            <img class="product-detail__image-otherimage-img JS-product-detail__image" onclick="showImg(${i})" src="${pageContext.request.contextPath}/Img/${product.proName}/${i}.png">
                         </c:forEach>
                     </div>
                 </div>
@@ -109,8 +109,8 @@
         </div>
         <div class="modal product-detail__modal js-product-detail__modal">
             <div class="modal__overlay js-product-detail-modal__overlay"></div>
-            <div class="modal__body">
-                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png" alt="">
+            <div class="modal__body js-modal__body">
+<%--                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png" alt="">--%>
             </div>
         </div>
     </jsp:body>
