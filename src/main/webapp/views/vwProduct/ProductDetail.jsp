@@ -13,28 +13,7 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script src="${pageContext.request.contextPath}/views/JS/ProductDetail.js"></script>
-        <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
-        <script src="${pageContext.request.contextPath}/views/JS/Header.js"></script>
-        <script>
-            const loginError= Boolean(document.querySelector('.error').innerHTML);
-
-            if (loginError){
-                document.getElementById('loginError').hidden = false
-                window.addEventListener('load', showLoginModal)
-            }
-
-            if ( window.history.replaceState ) {
-                window.history.replaceState( null, null, window.location.href );
-            }
-
-            function hideLoginModal(){
-                document.getElementById('loginError').hidden = true
-                modal.classList.remove('open')
-            }
-
-            modalOverlay.addEventListener('click', hideLoginModal)
-            escapeBtn.addEventListener('click', hideLoginModal)
-        </script>
+         <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
     </jsp:attribute>
     <jsp:body>
         <div class="product-detail__container">
@@ -134,52 +113,5 @@
                 <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1_thumbs.png" alt="">
             </div>
         </div>
-        <!-- Modal -->
-        <div class="modal login-modal js-modal">
-            <div class="modal__overlay js-modal__overlay">
-
-            </div>
-            <div class="modal__body">
-                <form class="login-form" method="post">
-                    <div class="login-form__container js-login-form__container">
-                        <div class="login__header">
-                            <h3 class="login__heading">Đăng nhập</h3>
-                            <div class="js-escape-btn">
-                                <i class="fas fa-times escape-btn"></i>
-                            </div>
-                        </div>
-                        <div class="login-form__form">
-                            <input type="text" class="login-form__input" placeholder="Tài khoản" name="email">
-                        </div>
-                        <div class="login-form__form">
-                            <input type="password" class="login-form__input" placeholder="Mật khẩu" name="password">
-                            <div class="text-danger" style="font-size: 12px" id="loginError" hidden>
-                                Your account and/or password is incorrect, please try again
-                            </div>
-                            <div class="login-form__more">
-                                <a href="" class="login-form__more-link login-form__more-forgetpass">Quên mật khẩu</a>
-                                <a href="" class="login-form__more-link">Cần trợ giúp?!</a>
-                            </div>
-                        </div>
-                        <div class="login-form__btn">
-                            <button class="btn btn--primary btn--login" id="submit">ĐĂNG NHẬP</button>
-                        </div>
-                        <div class="login-form__socials">
-                            <div class="-or-">
-                                <div class="line"></div>
-                                <span class="text-between">HOẶC</span>
-                                <div class="line"></div>
-                            </div>
-                            <div class="login-form__socials-icon">
-                                <a href=""><i class="fab fa-facebook login-form__socials-icon-fb"></i></a>
-                                <a href=""><i class="fab fa-google"></i></a>
-                                <a href=""><i class="fab fa-apple login-form__socials-icon-apple"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="error" hidden>${hasError}</div>
     </jsp:body>
 </t:main>
