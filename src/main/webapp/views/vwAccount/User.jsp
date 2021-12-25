@@ -16,8 +16,12 @@
             </div>
             <div class="User__info-container">
                 <div class="User__info User__info-name-container">
-                    <label class="User__info User__info-name">Tên:</label>
-                    <input type="text" class="User__info-name-input">
+                    <label class="User__info User__info-name">Họ và Tên:</label>
+                    <input type="text" class="User__info-name-input" placeholder="Tên của bạn">
+                </div>
+                <div class="User__info User__info-mail-container">
+                    <label class="User__info User__info-mail">Email:</label>
+                    <input type="text" class="User__info-mail-input" placeholder="Email của bạn">
                 </div>
                 <div class="User__info User__info-dateofBirth-container">
                     <label class="User__info-dateofBirth">Ngày sinh: </label>

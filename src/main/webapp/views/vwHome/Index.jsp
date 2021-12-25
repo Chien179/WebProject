@@ -18,7 +18,7 @@
         <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
     </jsp:attribute>
     <jsp:body>
-        <div class="" style="margin: 0 auto;display: flex;flex-wrap: wrap;">
+        <div class="" style="margin: 0 auto;display: flex;flex-wrap: wrap; justify-content: center">
             <div class="row" style="margin: 0 auto">
                 <div class="row" style="width: 126rem">
                     <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">

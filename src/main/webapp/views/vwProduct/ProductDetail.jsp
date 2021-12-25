@@ -113,5 +113,34 @@
 <%--                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png" alt="">--%>
             </div>
         </div>
+        <script>
+            const productImgs=document.querySelectorAll('.JS-product-detail__image');
+            const productdetailModal=document.querySelector('.js-product-detail__modal');
+            const productdetailModalOverlay=document.querySelector('.js-product-detail-modal__overlay');
+            const modalImg=document.querySelector('.js-modal__body');
+            function showImg(i){
+                switch (i)
+                {
+                    case (1):
+                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png" alt="">';
+                        break;
+                    case (2):
+                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/2.png" alt="">';
+                        break;
+                    case (3):
+                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/3.png" alt="">';
+                        break;
+                    case (4):
+                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/4.png" alt="">';
+                        break;
+                }
+                productdetailModal.classList.add('open')
+            }
+            function  hideImg(){
+                productdetailModal.classList.remove('open')
+            }
+
+            productdetailModalOverlay.addEventListener('click', hideImg)
+        </script>
     </jsp:body>
 </t:main>

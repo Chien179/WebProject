@@ -17,7 +17,7 @@
         <div class="">
             <div class="row product__container">
                 <div class="card-header bg-white mb-1 sticky-top product__header">
-                    <h3 class="my-auto product__heading">SẢN PHẨM GỢI Ý</h3>
+                    <h3 class="my-auto product__heading">SẢN PHẦM HIỆN CÓ</h3>
                 </div>
                 <div class="product__body">
                     <c:forEach begin="0" end="${products.size()-1}" varStatus="loop" var="i">
