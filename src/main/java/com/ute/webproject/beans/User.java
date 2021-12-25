@@ -12,7 +12,11 @@ public class User {
 
     public User() {
     }
-
+    public User(String name, String password, int id){
+        this.name = name;
+        this.password = password;
+        this.id = id;
+    }
     public User(int id, String password, String name, String email, LocalDateTime dob, int permission){
         this.id = id;
         this.password = password;

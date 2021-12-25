@@ -67,7 +67,7 @@
                     <c:choose>
                         <c:when test="${auth}">
                             <li class="nav-item nav-item--separate">
-                                <a href="#" class="nav-item-link nav-item-strong">
+                                <a href="${pageContext.request.contextPath}/Account/User?id=${authUser.id}" class="nav-item-link nav-item-strong">
                                     <i class="fa-solid fa-user"></i>
                                     ${authUser.name}
                                 </a>
@@ -98,8 +98,10 @@
                                 </a>
                             </li>
                             <li class="nav-item nav-item-strong">
-                                <i class="fas fa-sign-in-alt"></i>
-                                <a class="js-login nav-item-link nav-item-strong">Đăng nhập</a>
+                                <a class="js-login nav-item-link nav-item-strong">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Đăng nhập
+                                </a>
                             </li>
                         </c:otherwise>
                     </c:choose>

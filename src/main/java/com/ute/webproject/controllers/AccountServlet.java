@@ -35,7 +35,12 @@ public class AccountServlet extends HttpServlet {
                 out.print(isAvailable);
                 out.flush();
                 break;
-
+            case "/User":
+                int id = Integer.parseInt(request.getParameter("id"));
+                User userpass = UserModel.getUserInfo(id);
+                request.setAttribute("users", userpass);
+                ServletUtils.forward("/views/vwAccount/User.jsp", request, response);
+                break;
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
                 break;
@@ -49,11 +54,20 @@ public class AccountServlet extends HttpServlet {
             case "/Register":
                 registerUser(request, response);
                 break;
-
             case "/Logout":
                 logout(request, response);
                 break;
-
+            case "/UserUpdate":
+                String nameviethoa = request.getParameter("name");
+                String password = request.getParameter("password");
+                int id=Integer.parseInt(request.getParameter("id"));
+                DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+//                LocalDateTime dateofBirth = LocalDateTime.parse(request.getParameter("dob"), df);
+                User user = new User(nameviethoa, password, id);
+                UserModel.updateUser(user);
+//                String url = request.getHeader("referer");
+                ServletUtils.redirect("/Home", request, response);
+                break;
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
                 break;
