@@ -17,8 +17,8 @@ public class ProductModel {
                                 "products.StartDateTime, " +
                                 "products.EndDateTime, " +
                                 "products.StartPrice, " +
-                                "users.name " +
-                                "from products INNER JOIN users ON products.UserID = users.id";
+                                "users.name, CatID " +
+                                "from products INNER JOIN users ON products.UserID = users.id INNER JOIN categories c on products.ProID = c.ProID";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query).throwOnMappingFailure(false)//Tam thoi
                     .executeAndFetch(Product.class);
@@ -43,7 +43,7 @@ public class ProductModel {
                                 "products.StartDateTime, " +
                                 "products.EndDateTime, " +
                                 "products.StartPrice, " +
-                                "users.name " +
+                                "users.name, CatID " +
                                 "from products " +
                                 "INNER JOIN users " +
                                 "ON products.UserID = users.id " +
@@ -99,7 +99,7 @@ public class ProductModel {
                     .executeAndFetch(Product.class);
         }
     }
-    public static Product searchPro (String proName) {
+    public static List<Product> searchPro (String proName) {
         final String query = "select products.ProID, " +
                 "products.ProName, " +
                 "products.TinyDes, " +
@@ -115,14 +115,9 @@ public class ProductModel {
                 "ON products.UserID = users.id " +
                 "INNER JOIN categories c on products.ProID = c.ProID where match(ProName) against(:proName)";
         try (Connection con = DbUtils.getConnection()) {
-            List<Product> list =  con.createQuery(query)
+            return con.createQuery(query)
                     .addParameter("ProName", proName).throwOnMappingFailure(false)//Tam thoi
                     .executeAndFetch(Product.class);
-            if (list.size() == 0) {
-                return null;
-            }
-
-            return list.get(0);
         }
     }
     public static Product proDetail (int proId) {
@@ -135,7 +130,7 @@ public class ProductModel {
                 "products.StartDateTime, " +
                 "products.EndDateTime, " +
                 "products.StartPrice, " +
-                "users.name " +
+                "users.name, CatID " +
                 "from products " +
                 "INNER JOIN users " +
                 "ON products.UserID = users.id " +
