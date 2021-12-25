@@ -33,10 +33,12 @@ public class ProductFEServlet extends HttpServlet {
             case "/Detail":
                 int proId = Integer.parseInt(request.getParameter("id"));
                 Product product = ProductModel.proDetail(proId);
+                List<Product> proHint = ProductModel.findAll();
                 if (product == null) {
                     ServletUtils.redirect("/Home", request, response);
                 } else {
                     request.setAttribute("product", product);
+                    request.setAttribute("products", proHint);
                     ServletUtils.forward("/views/vwProduct/ProductDetail.jsp", request, response);
                 }
                 break;
@@ -68,7 +70,7 @@ public class ProductFEServlet extends HttpServlet {
     }
     private void searchPro (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String proName = request.getParameter("pro");
-        Product prod = ProductModel.searchPro(proName);
+        List<Product> prod = ProductModel.searchPro(proName);
         if (prod != null) {
             String url = "/Home";
             ServletUtils.redirect(url, request, response);
