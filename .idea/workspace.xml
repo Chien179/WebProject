@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix 404, Register.jsp, ProductDetail.css re up">
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/User.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/vwAccount/User.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/ProductDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,8 @@
       <list>
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -60,11 +63,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/Img/Quạt Sưởi Ấm Đa Năng" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -198,6 +202,7 @@
       <workItem from="1640186489534" duration="1752000" />
       <workItem from="1640272340009" duration="6200000" />
       <workItem from="1640347466311" duration="1395000" />
+      <workItem from="1640401600582" duration="4197000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -353,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640339848817</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="reup">
+      <created>1640360378780</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1640360378780</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +405,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="detail remaining time" />
     <MESSAGE value="Fix 404, Register.jsp, ProductDetail.css re up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix 404, Register.jsp, ProductDetail.css re up" />
+    <MESSAGE value="reup" />
+    <option name="LAST_COMMIT_MESSAGE" value="reup" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
