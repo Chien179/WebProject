@@ -30,7 +30,7 @@
                     </div>
                     <div class="User__info User__info-dateofBirth-container">
                         <label class="User__info-dateofBirth">Ngày sinh: </label>
-                        <input type="date" class="User__info-dateofBirth-input">
+                        <input name="dob" type="date" class="User__info-dateofBirth-input">
                     </div>
                     <div class="User__info User__info-password-container">
                         <label class="User__info-password">Mật khẩu: </label>
@@ -58,17 +58,17 @@
 
         </div>
         <script>
-            const submitForm=document.querySelector('.User__info-form');
+            const submitForm = document.querySelector('.User__info-form');
+            const dateofBirth = document.querySelector('.User__info-dateofBirth-input');
             const passwordInput = document.querySelector('.User__info-password-input');
             const newpasswordInput = document.querySelector('.User__info-new-password-input');
             const newpasswordContainer = document.querySelector('.User__info-new-password-container');
             const repassowrdInput = document.querySelector('.User__info-retype-password-input');
             const repassowrdContainer = document.querySelector('.User__info-retype-password-container');
             const button = document.querySelector('.User__info-btn');
-            const checkBox=document.querySelector('.User__info-checkbox');
-            const checkBoxLabel=document.querySelector('.User__info-checkbox-label');
+            const checkBox = document.querySelector('.User__info-checkbox');
+            const checkBoxLabel = document.querySelector('.User__info-checkbox-label');
 
-            function showhideInputpassowrd(){
                 if(checkBox.checked == true){
                     newpasswordContainer.classList.add('show')
                     repassowrdContainer.classList.add('show')
@@ -85,16 +85,18 @@
                     passwordInput.name = "password"
                     newpasswordInput.removeAttribute("name")
                 }
-            }
+
             function validateMyForm()
             {
+                if(dateofBirth.value === null || dateofBirth.value === ""){
+                    dateofBirth.value = "2001-01-01"
+                }
                 if(checkBox.checked == true){
                     if(!(passwordInput.value === "${users.password}" && newpasswordInput.value === repassowrdInput.value)) {
                         alert("Mật khẩu không chính xác");
                         // returnToPreviousPage();
                         return false;
                     }
-
                     alert("Chỉnh sửa thông tin thành công!");
                     return true;
                 }

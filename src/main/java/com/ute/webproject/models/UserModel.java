@@ -21,12 +21,13 @@ public class UserModel {
         }
     }
     public static void updateUser(User user){
-        String sql="update users set name = :name, password = :password where id = :id";
+        String sql="update users set name = :name, password = :password, dob = :dob where id = :id";
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(sql)
                     .addParameter("name", user.getName())
                     .addParameter("password", user.getPassword())
                     .addParameter("id", user.getId())
+                    .addParameter("dob", user.getDoB())
                     .executeUpdate();
         }
     }

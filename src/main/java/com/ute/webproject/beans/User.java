@@ -1,10 +1,12 @@
 package com.ute.webproject.beans;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class User {
     private int id;
     private String password, name, email;
+    private LocalDate Dob;
     private LocalDateTime dob, StartDate, EndDate;
     private int permission;
     private boolean Upgrade;
@@ -12,10 +14,11 @@ public class User {
 
     public User() {
     }
-    public User(String name, String password, int id){
+    public User(String name, String password, int id, LocalDate Dob){
         this.name = name;
         this.password = password;
         this.id = id;
+        this.Dob = Dob;
     }
     public User(int id, String password, String name, String email, LocalDateTime dob, int permission){
         this.id = id;
@@ -42,10 +45,8 @@ public class User {
         return email;
     }
 
-    public LocalDateTime getDob() {
-        return dob;
-    }
-
+    public LocalDateTime getDob() { return dob; }
+    public LocalDate getDoB(){ return Dob; }
     public int getPermission() {
         return permission;
     }

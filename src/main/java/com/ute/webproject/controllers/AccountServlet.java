@@ -10,6 +10,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -61,9 +62,9 @@ public class AccountServlet extends HttpServlet {
                 String nameviethoa = request.getParameter("name");
                 String password = request.getParameter("password");
                 int id=Integer.parseInt(request.getParameter("id"));
-                DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-//                LocalDateTime dateofBirth = LocalDateTime.parse(request.getParameter("dob"), df);
-                User user = new User(nameviethoa, password, id);
+                DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                LocalDate Dob = LocalDate.parse(request.getParameter("dob"), df);
+                User user = new User(nameviethoa, password, id, Dob);
                 UserModel.updateUser(user);
 //                String url = request.getHeader("referer");
                 ServletUtils.redirect("/Home", request, response);

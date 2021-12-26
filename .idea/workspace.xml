@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="User.jsp, change password form, query database">
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Thêm lựa chọn chỉnh sửa mật khẩu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/User.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwAccount/User.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwAccount/User.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +69,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -203,7 +206,8 @@
       <workItem from="1640347466311" duration="1395000" />
       <workItem from="1640401600582" duration="4197000" />
       <workItem from="1640436645156" duration="18287000" />
-      <workItem from="1640485553871" duration="5791000" />
+      <workItem from="1640485553871" duration="6053000" />
+      <workItem from="1640505318941" duration="6708000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -373,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640455061617</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Thêm lựa chọn chỉnh sửa mật khẩu">
+      <created>1640491658522</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1640491658522</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +426,8 @@
     <MESSAGE value="Fix 404, Register.jsp, ProductDetail.css re up" />
     <MESSAGE value="reup" />
     <MESSAGE value="User.jsp, change password form, query database" />
-    <option name="LAST_COMMIT_MESSAGE" value="User.jsp, change password form, query database" />
+    <MESSAGE value="Thêm lựa chọn chỉnh sửa mật khẩu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thêm lựa chọn chỉnh sửa mật khẩu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
