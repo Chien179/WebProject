@@ -30,6 +30,28 @@
 .User__info-name{
 
 }
+.User__info-new-password-container,
+.User__info-retype-password-container{
+    display: none;
+}
+.User__info-new-password-container.show,
+.User__info-retype-password-container.show{
+    display: block;
+}
+.User__info-checkbox-container{
+    /*width: 563px;*/
+    display: flex;
+    justify-content: flex-start;
+}
+.User__info .User__info-checkbox{
+    margin: 0 0 0 6px;
+    min-width: 0;
+}
+.User__info-container .User__info-checkbox-label{
+    min-width: 0;
+    font-size: 1.5rem;
+    margin: auto 0 auto 2px;
+}
 .User__info-btn{
     text-transform: uppercase;
     font-size: 1.5rem;

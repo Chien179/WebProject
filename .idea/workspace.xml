@@ -9,13 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="Fix UI">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="User.jsp, change password form, query database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/CSS/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/CSS/User.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwAccount/User.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwAccount/User.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +202,8 @@
       <workItem from="1640272340009" duration="6200000" />
       <workItem from="1640347466311" duration="1395000" />
       <workItem from="1640401600582" duration="4197000" />
-      <workItem from="1640436645156" duration="17878000" />
+      <workItem from="1640436645156" duration="18287000" />
+      <workItem from="1640485553871" duration="5791000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -369,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640360378780</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="User.jsp, change password form, query database">
+      <created>1640455061617</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1640455061617</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +414,8 @@
     <MESSAGE value="detail remaining time" />
     <MESSAGE value="Fix 404, Register.jsp, ProductDetail.css re up" />
     <MESSAGE value="reup" />
-    <option name="LAST_COMMIT_MESSAGE" value="reup" />
+    <MESSAGE value="User.jsp, change password form, query database" />
+    <option name="LAST_COMMIT_MESSAGE" value="User.jsp, change password form, query database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
