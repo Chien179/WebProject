@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Header.css">
 
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=3065483810387728&autoLogAppEvents=1" nonce="cThLha4R"></script>
+<meta name="google-signin-client_id" content="477326920799-ue1c2om427obpj9bt1j7qsgulmmdi3nj.apps.googleusercontent.com">
+
 <div class="app">
     <!-- Header -->
     <div id="header">
@@ -221,7 +224,7 @@
 
     </div>
     <div class="modal__body">
-        <form class="login-form" method="post">
+        <form class="login-form" method="post" id="login-submit">
             <div class="login-form__container js-login-form__container">
                 <div class="login__header">
                     <h3 class="login__heading">Đăng nhập</h3>
@@ -234,6 +237,9 @@
                 </div>
                 <div class="login-form__form">
                     <input type="password" class="login-form__input" placeholder="Mật khẩu" name="password">
+                    <input id="gg-name" name="gg-name" hidden/>
+                    <input id="gg-image" name="gg-image" hidden/>
+                    <input id="gg-email" name="gg-email" hidden/>
                     <div class="text-danger" style="font-size: 12px" id="loginError" hidden>
                         Your account and/or password is incorrect, please try again
                     </div>
@@ -243,7 +249,7 @@
                     </div>
                 </div>
                 <div class="login-form__btn">
-                    <button class="btn btn--primary btn--login" id="submit">ĐĂNG NHẬP</button>
+                    <button class="btn btn--primary btn--login" id="login-button" type="submit">ĐĂNG NHẬP</button>
                 </div>
                 <div class="login-form__socials">
                     <div class="-or-">
@@ -252,8 +258,8 @@
                         <div class="line"></div>
                     </div>
                     <div class="login-form__socials-icon">
-                        <a href=""><i class="fab fa-facebook login-form__socials-icon-fb"></i></a>
-                        <a href=""><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-facebook login-form__socials-icon-fb"></i></a>
+                        <a href="#" class="g-signin2" data-onsuccess="onSignIn" id="gg-button" onclick=""></a>
                         <a href=""><i class="fab fa-apple login-form__socials-icon-apple"></i></a>
                     </div>
                 </div>
@@ -261,14 +267,15 @@
         </form>
     </div>
 </div>
-<div class="error" hidden>${hasError}</div>
+<div id="error" hidden>${hasError}</div>
+<div id="auth" hidden>${auth}</div>
 <script src="${pageContext.request.contextPath}/views/JS/Header.js"></script>
 <script>
-    const loginError= Boolean(document.querySelector('.error').innerHTML);
+    const loginError= (document.querySelector('#error').innerHTML === 'true');
 
     if (loginError){
-        document.getElementById('loginError').hidden = false
         window.addEventListener('load', showLoginModal)
+        document.getElementById('loginError').hidden = false
     }
 
     if ( window.history.replaceState ) {
@@ -283,3 +290,33 @@
     modalOverlay.addEventListener('click', hideLoginModal)
     escapeBtn.addEventListener('click', hideLoginModal)
 </script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+    const auth = (document.getElementById('auth').innerHTML === 'true');
+    console.log(auth);
+
+    function onSignIn(googleUser) {
+        var auth2 = gapi.auth2.getAuthInstance();
+        var isSigned = auth2.isSignedIn.get();
+
+        if (!auth){
+            console.log(isSigned);
+            var profile = googleUser.getBasicProfile();
+            let name = profile.getName();
+            let image = profile.getImageUrl();
+            let email = profile.getEmail();
+            console.log(name);
+
+            console.log('tets');
+            document.querySelector('#gg-name').value = name;
+            document.querySelector('#gg-image').value = image;
+            document.querySelector('#gg-email').value = email;
+        }
+    }
+
+    function sub(){
+        // document.getElementById('login-button').click();
+        document.getElementById('login-submit').submit();
+    }
+</script>
+

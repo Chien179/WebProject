@@ -1,15 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 
-<t:main>
- <jsp:attribute name="css">
-     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
+<html>
+<header>
+  <title>Chilldingo</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Register.css">
-  </jsp:attribute>
-  <jsp:attribute name="js">
-    <script>
+  <script>
       $('#frmRegister').on('submit', function (e) {
         e.preventDefault();
 
@@ -30,19 +27,21 @@
 
       $('#txtName').select();
     </script>
-  </jsp:attribute>
-  <jsp:body>
-    <table>
+</header>
+<body style="margin: 0">
+  <table>
       <tr>
+        <div style="background-image: linear-gradient( #1ab7ea, #48c5ee, #6dd1f1, #8adaf4); display: flex; align-items: center;">
+          <h2 class="logo">AUCTION</h2>
         </div>
       </tr>
       <tr>
-        <div class="container-signup">
+        <div class="container-signup" style="margin: 0">
           <img src="${pageContext.request.contextPath}/Img/auction.png" class="signup-more" alt="auction" style="height: 871px">
           <div class="wrap-signup">
 
             <form class="signup-form" action="" method="post" id="frmRegister">
-              <span class="signup-form-title register__heading">Đăng Ký</span>
+              <span class="signup-form-title">Đăng Ký</span>
 
               <div class="wrap-input">
                 <span class="lable-input">Họ và tên</span>
@@ -76,15 +75,16 @@
 
               <div class="container-signup-form-btn">
                 <div class="wrap-signup-form-btn">
-                  <button type="submit" class="signup-form-btn btn btn--primary">
+                  <button type="submit" class="signup-form-btn">
                     Đăng ký ngay
                   </button>
                 </div>
               </div>
+
             </form>
           </div>
         </div>
       </tr>
     </table>
-  </jsp:body>
-</t:main>
+</body>
+</html>

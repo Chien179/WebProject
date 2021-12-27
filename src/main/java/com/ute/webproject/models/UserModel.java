@@ -47,14 +47,25 @@ public class UserModel {
     }
 
     public static void add(User c) {
-        String insertSql = "INSERT INTO users (username, password, name, email, dob, permission) VALUES (:username,:password,:name,:email,:dob,:permission)";
+        String insertSql = "INSERT INTO users (password, name, email, dob, permission) VALUES (:password,:name,:email,:dob,:permission)";
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(insertSql)
-                    .addParameter("email", c.getEmail())
                     .addParameter("password", c.getPassword())
                     .addParameter("name", c.getName())
                     .addParameter("email", c.getEmail())
                     .addParameter("dob", c.getDob())
+                    .addParameter("permission", c.getPermission())
+                    .executeUpdate();
+        }
+    }
+
+    public static void ggAdd(User c){
+        String insertSql = "INSERT INTO users (name, email, permission, ProID, AuctionID) VALUES (:name,:email,:permission, 50, 50)";
+
+        try (Connection con = DbUtils.getConnection()) {
+            con.createQuery(insertSql)
+                    .addParameter("name", c.getName())
+                    .addParameter("email", c.getEmail())
                     .addParameter("permission", c.getPermission())
                     .executeUpdate();
         }

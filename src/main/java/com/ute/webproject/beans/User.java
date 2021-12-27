@@ -29,6 +29,13 @@ public class User {
         this.permission = permission;
     }
 
+    public User(int id, String name, String email, int permission){
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.permission = permission;
+    }
+
     public int getId() {
         return id;
     }

@@ -12,6 +12,7 @@
 <t:main>
     <jsp:attribute name="css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Index.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Main.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Product.css">
     </jsp:attribute>
     <jsp:attribute name="js">
