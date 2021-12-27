@@ -8,7 +8,7 @@ import java.util.List;
 
 public class UserModel {
     public static User getUserInfo(int id){
-        final String query="select id, password, email, name from users where id = :id";
+        final String query="select id, password, email, name from bidders where id = :id";
         try(Connection con = DbUtils.getConnection()){
             List<User> list = con.createQuery(query)
                     .addParameter("id", id)
@@ -21,7 +21,7 @@ public class UserModel {
         }
     }
     public static void updateUser(User user){
-        String sql="update users set name = :name, password = :password, dob = :dob where id = :id";
+        String sql="update bidders set name = :name, password = :password, dob = :dob where id = :id";
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(sql)
                     .addParameter("name", user.getName())
@@ -32,7 +32,7 @@ public class UserModel {
         }
     }
     public static User findByEmail(String email) {
-        final String query = "select * from users where email = :email";
+        final String query = "select * from bidders where email = :email";
         try (Connection con = DbUtils.getConnection()) {
             List<User> list = con.createQuery(query)
                     .addParameter("email", email)
@@ -47,7 +47,7 @@ public class UserModel {
     }
 
     public static void add(User c) {
-        String insertSql = "INSERT INTO users (password, name, email, dob, permission) VALUES (:password,:name,:email,:dob,:permission)";
+        String insertSql = "INSERT INTO bidders (password, name, email, dob, permission) VALUES (:password,:name,:email,:dob,:permission)";
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(insertSql)
                     .addParameter("password", c.getPassword())
@@ -60,7 +60,7 @@ public class UserModel {
     }
 
     public static void ggAdd(User c){
-        String insertSql = "INSERT INTO users (name, email, permission, ProID, AuctionID) VALUES (:name,:email,:permission, 50, 50)";
+        String insertSql = "INSERT INTO bidders (name, email, permission, ProID, AuctionID) VALUES (:name,:email,:permission, 50, 50)";
 
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(insertSql)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-212.5080.55">
+  <component name="dataSourceStorageLocal" created-in="IU-212.5457.46">
     <data-source name="@localhost" uuid="3b19b98a-d4ca-4113-afc5-453641abef2a">
       <database-info product="MySQL" version="5.5.5-10.4.20-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MARIADB" exact-version="10.4.20" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
@@ -25,7 +25,10 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="auction" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

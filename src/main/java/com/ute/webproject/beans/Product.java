@@ -15,13 +15,13 @@ public class Product {
     private int StartPrice, Step;
     private boolean auto;
     private String name;
-    private int CatID;
+    private int sellers_idseller ,CatID, bidders_id;
 
     public Product (){
 
     }
 
-    public Product (int ProID, String ProName, String TinyDes, String FullDes, int Price, int Quantity, int UserID, LocalDateTime StartDateTime, LocalDateTime EndDateTime, int rate, String CMT, int StartPrice, int Step, boolean auto, String name, int CatID){
+    public Product (int ProID, String ProName, String TinyDes, String FullDes, int Price, int Quantity, int UserID, LocalDateTime StartDateTime, LocalDateTime EndDateTime, int rate, String CMT, int StartPrice, int Step, boolean auto, String name, int sellers_idseller , int CatID, int bidders_id){
         this.ProID = ProID;
         this.ProName = ProName;
         this.TinyDes = TinyDes;
@@ -37,7 +37,9 @@ public class Product {
         this.Step = Step;
         this.auto = auto;
         this.name = name;
+        this.sellers_idseller = sellers_idseller;
         this.CatID = CatID;
+        this.bidders_id = bidders_id;
     }
 
     public int getProID() {
@@ -100,7 +102,17 @@ public class Product {
         return name;
     }
 
-    public int getCatID() { return CatID; }
+    public int getSellers_idseller() {
+        return sellers_idseller;
+    }
+
+    public int getCatID() {
+        return CatID;
+    }
+
+    public int getBidders_id() {
+        return bidders_id;
+    }
 
     public String getTimeFormat() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

@@ -8,17 +8,29 @@ import java.util.List;
 
 public class ProductModel {
     public static List<Product> findAll() {
-        final String query = "select products.ProID, " +
-                                "products.ProName, " +
-                                "products.TinyDes, " +
-                                "products.FullDes, " +
-                                "products.Price, " +
-                                "products.Quantity, " +
-                                "products.StartDateTime, " +
-                                "products.EndDateTime, " +
-                                "products.StartPrice, " +
-                                "users.name, CatID " +
-                                "from products INNER JOIN users ON products.UserID = users.id INNER JOIN categories c on products.ProID = c.ProID";
+//        final String query = "select products.ProID, " +
+//                                "products.ProName, " +
+//                                "products.TinyDes, " +
+//                                "products.FullDes, " +
+//                                "products.Price, " +
+//                                "products.Quantity, " +
+//                                "products.StartDateTime, " +
+//                                "products.EndDateTime, " +
+//                                "products.StartPrice, " +
+//                                "bidders.name, CatID " +
+//                                "from products INNER JOIN bidders ON products.bidders_id = bidders.id INNER JOIN categories c on products.ProID = c.ProID";
+        final String query = "select products.ProID," +
+                            "products.ProName," +
+                            "products.TinyDes," +
+                            "products.FullDes," +
+                            "products.Price," +
+                            "products.Quantity, " +
+                            "products.StartDateTime," +
+                            "products.EndDateTime," +
+                            "products.StartPrice, " +
+                            "bidders.name, categories.CatID " +
+                            "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
+                            "INNER JOIN categories ON products.CatID = categories.CatID";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query).throwOnMappingFailure(false)//Tam thoi
                     .executeAndFetch(Product.class);
@@ -26,7 +38,7 @@ public class ProductModel {
     }
 
     public static List<Product> subCatePro () {
-        final String query = "select ProName, CatID, products.ProID from products inner join categories c on products.ProID = c.ProID";
+        final String query = "select products.ProName, c.CatID, products.ProID from products inner join categories c on products.CatID = c.CatID";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .executeAndFetch(Product.class);
@@ -34,20 +46,18 @@ public class ProductModel {
     }
 
     public static List<Product> findByCatId(int catId) {
-        final String query = "select products.ProID, " +
-                                "products.ProName, " +
-                                "products.TinyDes, " +
-                                "products.FullDes, " +
-                                "products.Price, " +
-                                "products.Quantity, " +
-                                "products.StartDateTime, " +
-                                "products.EndDateTime, " +
-                                "products.StartPrice, " +
-                                "users.name, CatID " +
-                                "from products " +
-                                "INNER JOIN users " +
-                                "ON products.UserID = users.id " +
-                                "INNER JOIN categories c on products.ProID = c.ProID where CatID = :CatID";
+        final String query = "select products.ProID,  " +
+                            "products.ProName, " +
+                            "products.TinyDes, " +
+                            "products.FullDes, " +
+                            "products.Price, " +
+                            "products.Quantity, " +
+                            "products.StartDateTime, " +
+                            "products.EndDateTime, " +
+                            "products.StartPrice, " +
+                            "bidders.name " +
+                            "from products INNER JOIN bidders ON products.UserID = bidders.id " +
+                            "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName)";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("CatID", catId).throwOnMappingFailure(false)//Tam thoi
@@ -100,20 +110,7 @@ public class ProductModel {
         }
     }
     public static List<Product> searchPro (String proName) {
-        final String query = "select products.ProID, " +
-                "products.ProName, " +
-                "products.TinyDes, " +
-                "products.FullDes, " +
-                "products.Price, " +
-                "products.Quantity, " +
-                "products.StartDateTime, " +
-                "products.EndDateTime, " +
-                "products.StartPrice, " +
-                "users.name " +
-                "from products " +
-                "INNER JOIN users " +
-                "ON products.UserID = users.id " +
-                "INNER JOIN categories c on products.ProID = c.ProID where match(ProName) against(:proName)";
+        final String query = "";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("proName", proName).throwOnMappingFailure(false)//Tam thoi
@@ -121,20 +118,18 @@ public class ProductModel {
         }
     }
     public static Product proDetail (int proId) {
-        final String query = "select products.ProID, " +
-                "products.ProName, " +
-                "products.TinyDes, " +
-                "products.FullDes, " +
-                "products.Price, " +
-                "products.Quantity, " +
-                "products.StartDateTime, " +
-                "products.EndDateTime, " +
-                "products.StartPrice, " +
-                "users.name, CatID " +
-                "from products " +
-                "INNER JOIN users " +
-                "ON products.UserID = users.id " +
-                "INNER JOIN categories c on products.ProID = c.ProID where products.ProID = :ProID";
+        final String query = "select products.ProID," +
+                            "products.ProName," +
+                            "products.TinyDes," +
+                            "products.FullDes," +
+                            "products.Price, " +
+                            "products.Quantity, " +
+                            "products.StartDateTime, " +
+                            "products.EndDateTime," +
+                            "products.StartPrice, " +
+                            "bidders.name, c.CatID " +
+                            "from products INNER JOIN bidders ON products.UserID = bidders.id " +
+                            "INNER JOIN categories c on products.CatID = c.CatID where products.ProID = :ProID";
         try (Connection con = DbUtils.getConnection()) {
             List<Product> list =  con.createQuery(query)
                     .addParameter("ProID", proId).throwOnMappingFailure(false)//Tam thoi

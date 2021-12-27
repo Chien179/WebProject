@@ -74,7 +74,7 @@
                         <div class="line"></div>
                         <div class="product-detail__info-halfdown product-detail__info-shop-btn-container">
                             <button class="btn product-detail__info-shop-btn-now">MUA NGAY</button>
-                            <input id="bid" type="number" style="width: 100%; height: 100px; font-size: 50px">
+                            <input name="bid" type="number" style="width: 100%; height: 100px; font-size: 50px"/>
                             <button class="btn btn--primary product-detail__info-shop-btn-normal">MUA THEO BID</button>
                         </div>
                     </div>

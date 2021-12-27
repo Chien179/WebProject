@@ -8,7 +8,8 @@ import java.util.List;
     public class CategoryModel {
         public static List<Category> findAll(){
             try (Connection con = DbUtils.getConnection()) {
-                final String query = "SELECT CatID, CatName from categories inner join products p on categories.ProID = p.ProID group by CatID";
+                final String query = "SELECT CatID, CatName from categories group by CatID";
+//                final String query = "SELECT CatID, CatName from categories inner join products p on categories.ProID = p.ProID group by CatID";
 
                 return con.createQuery(query)
                         .executeAndFetch(Category.class);

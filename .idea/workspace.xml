@@ -10,7 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="full-text search">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/CategoryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +46,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7669c6c3-4f01-4e55-8f16-3a8b831b1f77/console_5.sql" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="JsBowerSettings">
     <bower-package value="" />
     <bower.json value="" />
@@ -59,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/views/vwProduct" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AuctionData/auction.sql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
