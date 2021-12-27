@@ -1405,19 +1405,23 @@ auction_AuctionID</ColNames>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="383" parent="340" name="fk_products_sellers1_idx">
+    <index id="383" parent="340" name="ProName">
+      <ColNames>ProName</ColNames>
+      <Type>fulltext</Type>
+    </index>
+    <index id="384" parent="340" name="fk_products_sellers1_idx">
       <ColNames>sellers_idseller</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="384" parent="340" name="fk_products_categories1_idx">
+    <index id="385" parent="340" name="fk_products_categories1_idx">
       <ColNames>CatID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="385" parent="340" name="fk_products_bidders1_idx">
+    <index id="386" parent="340" name="fk_products_bidders1_idx">
       <ColNames>bidders_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="386" parent="340" name="PRIMARY">
+    <key id="387" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ProID
 sellers_idseller
@@ -1425,52 +1429,52 @@ CatID
 bidders_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="387" parent="341" name="idseller">
+    <column id="388" parent="341" name="idseller">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="388" parent="341" name="password">
+    <column id="389" parent="341" name="password">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="389" parent="341" name="name">
+    <column id="390" parent="341" name="name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="390" parent="341" name="email">
+    <column id="391" parent="341" name="email">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="391" parent="341" name="dob">
+    <column id="392" parent="341" name="dob">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="392" parent="341" name="permission">
+    <column id="393" parent="341" name="permission">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="393" parent="341" name="Upgrade">
+    <column id="394" parent="341" name="Upgrade">
       <Position>7</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="394" parent="341" name="StartDate">
+    <column id="395" parent="341" name="StartDate">
       <Position>8</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="395" parent="341" name="EndDate">
+    <column id="396" parent="341" name="EndDate">
       <Position>9</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="396" parent="341" name="PRIMARY">
+    <key id="397" parent="341" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idseller</ColNames>
       <Primary>1</Primary>

@@ -110,7 +110,18 @@ public class ProductModel {
         }
     }
     public static List<Product> searchPro (String proName) {
-        final String query = "";
+        final String query ="select products.ProID," +
+                            "products.ProName," +
+                            "products.TinyDes," +
+                            "products.FullDes," +
+                            "products.Price," +
+                            "products.Quantity, " +
+                            "products.StartDateTime," +
+                            "products.EndDateTime," +
+                            "products.StartPrice, " +
+                            "bidders.name, c.CatID " +
+                            "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
+                            "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName)";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("proName", proName).throwOnMappingFailure(false)//Tam thoi

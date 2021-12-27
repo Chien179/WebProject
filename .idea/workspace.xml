@@ -9,16 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="full-text search">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="sửa database và sửa lại truy vấn">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/CategoryModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -402,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640603172409</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="sửa database và sửa lại truy vấn">
+      <created>1640625396158</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1640625396158</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +422,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sửa register&#10;điều chỉnh 1 số chức năng" />
     <MESSAGE value="đưa ảnh thumbnail lên" />
     <MESSAGE value="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp" />
     <MESSAGE value="- tách file chức năng login&#10;- tạo login cho product&#10;- thêm 2 filter cho index và product" />
@@ -446,7 +446,8 @@
     <MESSAGE value="User.jsp, change password form, query database" />
     <MESSAGE value="Thêm lựa chọn chỉnh sửa mật khẩu" />
     <MESSAGE value="full-text search" />
-    <option name="LAST_COMMIT_MESSAGE" value="full-text search" />
+    <MESSAGE value="sửa database và sửa lại truy vấn" />
+    <option name="LAST_COMMIT_MESSAGE" value="sửa database và sửa lại truy vấn" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
