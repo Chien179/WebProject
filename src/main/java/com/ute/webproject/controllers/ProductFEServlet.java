@@ -42,6 +42,18 @@ public class ProductFEServlet extends HttpServlet {
                     ServletUtils.forward("/views/vwProduct/ProductDetail.jsp", request, response);
                 }
                 break;
+            case "/WithName":
+                String proName = request.getParameter("name");
+                List<Category> cate = CategoryModel.findAll();
+                List<Product> search = ProductModel.searchPro(proName);
+                if (search.isEmpty()) {
+                    ServletUtils.redirect("/Home", request, response);
+                } else {
+                    request.setAttribute("products", search);
+                    request.setAttribute("categories", cate);
+                    ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
+                }
+                break;
 //            case "/SubCate":
 //                int proID = Integer.parseInt(request.getParameter("proid"));
 //                List<Product> byPro = ProductModel.findByProID(proID);
@@ -57,27 +69,15 @@ public class ProductFEServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String path = request.getPathInfo();
-        switch (path) {
-            case "/WithName":
-                searchPro(request, response);
-                break;
-
-            default:
-                ServletUtils.forward("/views/404.jsp", request, response);
-                break;
-        }
-    }
-    private void searchPro (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String proName = request.getParameter("pro");
-        List<Product> prod = ProductModel.searchPro(proName);
-        if (prod != null) {
-            String url = "/Home";
-            ServletUtils.redirect(url, request, response);
-        }
-
-        else{
-            ServletUtils.forward("/views/404.jsp", request, response);
-        }
+//        String path = request.getPathInfo();
+//        switch (path) {
+//            case "/WithName":
+//                searchPro(request, response);
+//                break;
+//
+//            default:
+//                ServletUtils.forward("/views/404.jsp", request, response);
+//                break;
+//        }
     }
 }

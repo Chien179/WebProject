@@ -118,25 +118,25 @@
                 <div class="header__logo">
                     <a href="${pageContext.request.contextPath}/Home"><img class="header__logo-img" src="${pageContext.request.contextPath}/Img/download.png" alt="Logo"></a>
                 </div>
-                <form id="searchForm" style="width: 0px" action="${pageContext.request.contextPath}/Product/" method="post"></form>
+<%--                <form id="searchForm" style="width: 0px" action="${pageContext.request.contextPath}/Product/ByCate/WithName?name=Jacket" method=""></form>--%>
                 <div class="header__search">
                     <div class="header__search-input-wrap">
                         <input type="text" class="header__search-input" placeholder="Tìm kiếm..." name="pro">
                         <!-- Search history -->
-                        <div class="header__search-history">
-                            <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
-                            <ul class="header__search-history-list">
-                                <li class="header__search-history-item">
-                                    <a href="">Item 1</a>
-                                </li>
-                                <li class="header__search-history-item">
-                                    <a href="">Item 2</a>
-                                </li>
-                                <li class="header__search-history-item">
-                                    <a href="">Item 3</a>
-                                </li>
-                            </ul>
-                        </div>
+<%--                        <div class="header__search-history">--%>
+<%--                            <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>--%>
+<%--                            <ul class="header__search-history-list">--%>
+<%--                                <li class="header__search-history-item">--%>
+<%--                                    <a href="">Item 1</a>--%>
+<%--                                </li>--%>
+<%--                                <li class="header__search-history-item">--%>
+<%--                                    <a href="">Item 2</a>--%>
+<%--                                </li>--%>
+<%--                                <li class="header__search-history-item">--%>
+<%--                                    <a href="">Item 3</a>--%>
+<%--                                </li>--%>
+<%--                            </ul>--%>
+<%--                        </div>--%>
                     </div>
                     <div class="header__search-select">
                         <span class="header__search-select-label">Trong shop</span>
@@ -153,8 +153,9 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="#" onclick="document.getElementById('searchForm').submit();">
-                    <button class="header__search-btn">
+<%--                    <a href="#" onclick="document.getElementById('searchForm').submit();">--%>
+                    <a class="search_forward" href="${pageContext.request.contextPath}/Product/ByCate/WithName?name=">
+                    <button id="search_button" class="header__search-btn" onclick="getSearch()">
                         <i class="fas fa-search header__search-btn-icon"></i>
                     </button>
                     </a>
@@ -292,7 +293,11 @@
 </script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
+
     const auth = (document.getElementById('auth').innerHTML === 'true');
+    const forward = document.querySelector('.search_forward');
+    const inputVal = document.querySelector('.header__search-input');
+
     console.log(auth);
 
     function onSignIn(googleUser) {
@@ -318,5 +323,22 @@
         // document.getElementById('login-button').click();
         document.getElementById('login-submit').submit();
     }
+
+    function getSearch() {
+        let searchVal = inputVal.value;
+        if(searchVal === null || searchVal ===""){
+            //Noi chuoi
+            forward.attributes[1].value = "${pageContext.request.contextPath}/Home";
+        }
+        else
+            forward.attributes[1].value += searchVal;
+    }
+
+    document.addEventListener("keypress", function (event){
+        if (event.keyCode === 13){
+            document.getElementById('search_button').click();
+        }
+    })
+
 </script>
 

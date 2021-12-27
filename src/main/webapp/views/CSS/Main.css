@@ -23,6 +23,7 @@ html, body{
     line-height: 1.6rem;
     background-color: var(--background-color);
     position: relative;
+    min-height: 500px;
 }
 #content{
     position: relative;
