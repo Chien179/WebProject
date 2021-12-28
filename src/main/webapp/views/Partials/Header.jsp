@@ -94,7 +94,7 @@
                         </c:when>
                         <c:otherwise>
                             <li class="nav-item nav-item--separate">
-                                <a href="${pageContext.request.contextPath}/views/vwAccount/Register.jsp" class="nav-item-link nav-item-strong">
+                                <a href="http://localhost:8081/WebProject/Account/Register" class="nav-item-link nav-item-strong">
                                     <i class="fas fa-user-plus"></i>
                                     Đăng ký
                                 </a>
@@ -340,4 +340,3 @@
         }
     })
 </script>
-

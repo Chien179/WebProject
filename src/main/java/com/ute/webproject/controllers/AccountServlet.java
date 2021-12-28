@@ -97,7 +97,7 @@ public class AccountServlet extends HttpServlet {
 
         User c = new User(bcryptHashString, name, email, dob, permission, 0);
         UserModel.add(c);
-        ServletUtils.forward("/views/vwHome/Index.jsp", request, response);
+        ServletUtils.redirect("/Home", request, response);
     }
 
     private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

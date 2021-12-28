@@ -6,6 +6,19 @@
 <header>
   <title>Chilldingo</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Register.css">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      alert("grecaptcha is ready!");
+    };
+  </script>
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      grecaptcha.render('captcha', {
+        'sitekey' : '6Le1gdQdAAAAAPq80moWg3VdIyceo5jl2QFotdhI',
+      });
+    };
+  </script>
   <script>
       $('#frmRegister').on('submit', function (e) {
         e.preventDefault();
@@ -72,7 +85,7 @@
                 <input class="input" type="password"  placeholder="Xác nhận lại mật khẩu" required>
                 <span class="focus-input"></span>
               </div>
-
+              <div id="captcha"></div>
               <div class="container-signup-form-btn">
                 <div class="wrap-signup-form-btn">
                   <button type="submit" class="signup-form-btn">
@@ -85,5 +98,6 @@
         </div>
       </tr>
     </table>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </body>
 </html>
