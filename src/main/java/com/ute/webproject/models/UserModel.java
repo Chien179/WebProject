@@ -4,6 +4,7 @@ import com.ute.webproject.beans.User;
 import com.ute.webproject.utils.DbUtils;
 import org.sql2o.Connection;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class UserModel {
@@ -47,7 +48,8 @@ public class UserModel {
     }
 
     public static void add(User c) {
-        String insertSql = "INSERT INTO bidders (password, name, email, dob, permission) VALUES (:password,:name,:email,:dob,:permission)";
+        String insertSql = "INSERT INTO bidders (password, name, email, dob, permission, Upgrade) VALUES (:password,:name,:email,:dob,:permission,:upgrade)";
+
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(insertSql)
                     .addParameter("password", c.getPassword())
@@ -55,18 +57,20 @@ public class UserModel {
                     .addParameter("email", c.getEmail())
                     .addParameter("dob", c.getDob())
                     .addParameter("permission", c.getPermission())
+                    .addParameter("upgrade", c.getUpgrade())
                     .executeUpdate();
         }
     }
 
     public static void ggAdd(User c){
-        String insertSql = "INSERT INTO bidders (name, email, permission) VALUES (:name,:email,:permission)";
+        String insertSql = "INSERT INTO bidders (name, email, permission, Upgrade) VALUES (:name,:email,:permission,:upgrade)";
 
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(insertSql)
                     .addParameter("name", c.getName())
                     .addParameter("email", c.getEmail())
                     .addParameter("permission", c.getPermission())
+                    .addParameter("Upgrade", c.getUpgrade())
                     .executeUpdate();
         }
     }

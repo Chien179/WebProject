@@ -9,31 +9,32 @@ public class User {
     private LocalDate Dob;
     private LocalDateTime dob, StartDate, EndDate;
     private int permission;
-    private boolean Upgrade;
+    private int Upgrade;
     private int ProID, AuctionID;
 
     public User() {
     }
-    public User(String name, String password, int id, LocalDate Dob){
+    public User(String name, String password, int id, LocalDate Dob, int Upgrade){
         this.name = name;
         this.password = password;
         this.id = id;
         this.Dob = Dob;
+        this.Upgrade = Upgrade;
     }
-    public User(int id, String password, String name, String email, LocalDateTime dob, int permission){
-        this.id = id;
+    public User(String password, String name, String email, LocalDateTime dob, int permission, int Upgrade){
         this.password = password;
         this.name = name;
         this.email = email;
         this.dob = dob;
         this.permission = permission;
+        this.Upgrade = Upgrade;
     }
 
-    public User(int id, String name, String email, int permission){
-        this.id = id;
+    public User(String name, String email, int permission, int Upgrade){
         this.name = name;
         this.email = email;
         this.permission = permission;
+        this.Upgrade = Upgrade;
     }
 
     public int getId() {
@@ -53,12 +54,14 @@ public class User {
     }
 
     public LocalDateTime getDob() { return dob; }
+
     public LocalDate getDoB(){ return Dob; }
+
     public int getPermission() {
         return permission;
     }
 
-    public boolean isUpgrade() {
+    public int getUpgrade() {
         return Upgrade;
     }
 

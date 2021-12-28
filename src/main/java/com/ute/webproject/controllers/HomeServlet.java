@@ -1,6 +1,5 @@
 package com.ute.webproject.controllers;
 
-import com.ute.webproject.utils.AccountUtils;
 import com.ute.webproject.utils.ServletUtils;
 
 import javax.servlet.*;

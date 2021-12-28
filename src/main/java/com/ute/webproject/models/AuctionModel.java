@@ -19,4 +19,13 @@ public class AuctionModel {
                     .executeAndFetch(Auction.class);
         }
     }
+
+    public static List<Auction> addAuction(int ProID){
+        final String query = "";
+
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(query)
+                    .executeAndFetch(Auction.class);
+        }
+    }
 }

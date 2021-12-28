@@ -40,7 +40,7 @@
           <img src="${pageContext.request.contextPath}/Img/auction.png" class="signup-more" alt="auction" style="height: 871px">
           <div class="wrap-signup">
 
-            <form class="signup-form" action="" method="post" id="frmRegister">
+            <form class="signup-form" action="${pageContext.request.contextPath}/Account/Register" method="post" id="frmRegister">
               <span class="signup-form-title">Đăng Ký</span>
 
               <div class="wrap-input">
@@ -80,7 +80,6 @@
                   </button>
                 </div>
               </div>
-
             </form>
           </div>
         </div>
