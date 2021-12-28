@@ -55,7 +55,6 @@ public class AccountServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
-        System.out.println("path: "+path);
         switch (path) {
             case "/Register":
                 registerUser(request, response);
@@ -111,7 +110,6 @@ public class AccountServlet extends HttpServlet {
 
         User user = UserModel.findByEmail(email);
         HttpSession session = request.getSession();
-        session.setAttribute("hasError", false);
         String url = request.getHeader("referer");
         if (user != null) {
             if(Objects.equals(email, user.getEmail()) && Objects.equals(password, user.getPassword())){
@@ -126,6 +124,36 @@ public class AccountServlet extends HttpServlet {
             session.setAttribute("hasError", true);
         }
         ServletUtils.redirect(url, request, response);
+    }
+
+    private static String convertURItoPath(String url){
+        String[] urls = url.split("/");
+        int len = urls.length;
+        if(Objects.equals(urls[4], "Home")){
+            if(len == 6){
+                return "/views/vwHome/About.jsp";
+            }else {
+                return "/views/vwHome/Index.jsp";
+            }
+        }else {
+            if (Objects.equals(urls[4], "Product")){
+                if (len == 6){
+                    String[] childUrl = urls[5].split("/?");
+                    if (Objects.equals(childUrl[0], "Detail")){
+                        return "/views/vwProduct/ProductDetail.jsp";
+                    }else {
+                        return "/views/vwProduct/ProductByCat.jsp";
+                    }
+                }else {
+                    if (urls[4].equals("Product")){
+                        return "/views/vwProduct/Product.jsp";
+                    }else {
+                        return "/views/vwProduct/ProductDetail.jsp";
+                    }
+                }
+            }
+        }
+        return "/views/404.jsp";
     }
 
     private static String ggLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -150,7 +178,6 @@ public class AccountServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("auth", false);
         session.setAttribute("authUser", new User());
-        session.setAttribute("hasError", false);
 
         String url = request.getHeader("referer");
 

@@ -8,17 +8,6 @@ import java.util.List;
 
 public class ProductModel {
     public static List<Product> findAll() {
-//        final String query = "select products.ProID, " +
-//                                "products.ProName, " +
-//                                "products.TinyDes, " +
-//                                "products.FullDes, " +
-//                                "products.Price, " +
-//                                "products.Quantity, " +
-//                                "products.StartDateTime, " +
-//                                "products.EndDateTime, " +
-//                                "products.StartPrice, " +
-//                                "bidders.name, CatID " +
-//                                "from products INNER JOIN bidders ON products.bidders_id = bidders.id INNER JOIN categories c on products.ProID = c.ProID";
         final String query = "select products.ProID," +
                             "products.ProName," +
                             "products.TinyDes," +

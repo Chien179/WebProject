@@ -224,7 +224,7 @@
 
     </div>
     <div class="modal__body">
-        <form class="login-form" method="post" id="login-submit" action="${pageContext.request.contextPath}/Account/Login">
+        <form class="login-form" method="post" id="login-submit" action="">
             <div class="login-form__container js-login-form__container">
                 <div class="login__header">
                     <h3 class="login__heading">Đăng nhập</h3>
@@ -294,6 +294,10 @@
     const forward = document.querySelector('.search_forward');
     const inputVal = document.querySelector('.header__search-input');
 
+    console.log(auth);
+    console.log(loginError);
+
+    //Đăng nhập bằng google
     window.onload = function(){
         gapi.load('auth2', function() {
             console.log('load');
@@ -319,6 +323,7 @@
         });
     }
 
+    //Full text search
     function getSearch() {
         let searchVal = inputVal.value;
         if(searchVal === null || searchVal ===""){

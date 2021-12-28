@@ -5,6 +5,7 @@
 <%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
 <jsp:useBean id="product" scope="request" type="com.ute.webproject.beans.Product"/>
 <jsp:useBean id="products" scope="request" type="java.util.List<com.ute.webproject.beans.Product>"/>
+<jsp:useBean id="topBidder" scope="request" type="java.util.List<com.ute.webproject.beans.Auction>"/>
 
 <t:main>
     <jsp:attribute name="css">
@@ -87,10 +88,17 @@
                             <h3 class="product-detail__topbidder-header">Top Bidder</h3>
                         </div>
                         <ul class="list-group list-group-flush w-100 mx-4 product-detail__topbidder-list">
-                            <c:forEach begin="0" end="4" varStatus="loop" var="i">
+                            <c:forEach begin="0" end="4" var="i">
                                 <li class="list-group-item list-group-item d-flex justify-content-between product-detail__topbidder-bidder">
-                                    <div class="product-detail__topbidder-name">top</div>
-                                    <div class="product-detail__topbidder-money">tien</div>
+                                    <c:choose>
+                                        <c:when test="${topBidder[i] != null}">
+                                            <div class="product-detail__topbidder-name">${topBidder[i].name}</div>
+                                            <div class="product-detail__topbidder-money">${topBidder[i].curPrice}</div>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <div class="product-detail__topbidder-name">Trống</div>
+                                        </c:otherwise>
+                                    </c:choose>
                                 </li>
                             </c:forEach>
                         </ul>

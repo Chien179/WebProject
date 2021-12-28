@@ -1,5 +1,7 @@
 package com.ute.webproject.controllers;
 
+import com.ute.webproject.beans.Auction;
+import com.ute.webproject.models.AuctionModel;
 import com.ute.webproject.models.CategoryModel;
 import com.ute.webproject.utils.ServletUtils;
 import com.ute.webproject.beans.Product;
@@ -34,11 +36,13 @@ public class ProductFEServlet extends HttpServlet {
                 int proId = Integer.parseInt(request.getParameter("id"));
                 Product product = ProductModel.proDetail(proId);
                 List<Product> proHint = ProductModel.findAll();
+                List<Auction> topBidder = AuctionModel.topBidder(proId);
                 if (product == null) {
                     ServletUtils.redirect("/Home", request, response);
                 } else {
                     request.setAttribute("product", product);
                     request.setAttribute("products", proHint);
+                    request.setAttribute("topBidder", topBidder);
                     ServletUtils.forward("/views/vwProduct/ProductDetail.jsp", request, response);
                 }
                 break;
@@ -54,12 +58,6 @@ public class ProductFEServlet extends HttpServlet {
                     ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
                 }
                 break;
-//            case "/SubCate":
-//                int proID = Integer.parseInt(request.getParameter("proid"));
-//                List<Product> byPro = ProductModel.findByProID(proID);
-//                request.setAttribute("products", byPro);
-//                ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
-//                break;
 
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
