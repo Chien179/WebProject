@@ -57,7 +57,7 @@ public class ProductModel {
                             "products.StartPrice, " +
                             "bidders.name " +
                             "from products INNER JOIN bidders ON products.UserID = bidders.id " +
-                            "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName)";
+                            "INNER JOIN categories c on products.CatID = c.CatID where c.CatID = :CatID";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("CatID", catId).throwOnMappingFailure(false)//Tam thoi
@@ -121,7 +121,7 @@ public class ProductModel {
                             "products.StartPrice, " +
                             "bidders.name, c.CatID " +
                             "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
-                            "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName)";
+                            "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName WITH QUERY EXPANSION)";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("proName", proName).throwOnMappingFailure(false)//Tam thoi
