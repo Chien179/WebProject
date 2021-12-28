@@ -33,6 +33,13 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        AccountUtils.login(request, response, "/views/vwHome/Index.jsp");
+        String path = request.getPathInfo();
+        switch (path) {
+            case "/Login":
+                AccountUtils.login(request,response,"/views/vwHome/Index.jsp");
+                break;
+            case "/Logout":
+                break;
+        }
     }
 }

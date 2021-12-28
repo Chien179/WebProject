@@ -41,7 +41,7 @@ public class AccountUtils {
         }
     }
 
-    public static String ggLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private static String ggLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("gg-name");
         String image = request.getParameter("gg-image");
         String email = request.getParameter("gg-email");

@@ -60,7 +60,7 @@ public class UserModel {
     }
 
     public static void ggAdd(User c){
-        String insertSql = "INSERT INTO bidders (name, email, permission, ProID, AuctionID) VALUES (:name,:email,:permission, 50, 50)";
+        String insertSql = "INSERT INTO bidders (name, email, permission) VALUES (:name,:email,:permission)";
 
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(insertSql)

@@ -9,9 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="sửa truy vấn full text search">
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="-sửa database&#10;-còn lỗi ở bảng auctions">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/utils/AccountUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/utils/AccountUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/main.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/main.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +219,7 @@
       <workItem from="1640552187002" duration="3278000" />
       <workItem from="1640559082667" duration="2360000" />
       <workItem from="1640575312784" duration="915000" />
+      <workItem from="1640653948146" duration="6017000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -410,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640626049118</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="-sửa database&#10;-còn lỗi ở bảng auctions">
+      <created>1640633242126</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1640633242126</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +443,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- chức năng login cho Index&#10;- thêm 1 đoạn script ở Header.jsp" />
     <MESSAGE value="- tách file chức năng login&#10;- tạo login cho product&#10;- thêm 2 filter cho index và product" />
     <MESSAGE value="Sửa các thứ đồ" />
     <MESSAGE value="Commit gì đó" />
@@ -454,7 +467,8 @@
     <MESSAGE value="full-text search" />
     <MESSAGE value="sửa database và sửa lại truy vấn" />
     <MESSAGE value="sửa truy vấn full text search" />
-    <option name="LAST_COMMIT_MESSAGE" value="sửa truy vấn full text search" />
+    <MESSAGE value="-sửa database&#10;-còn lỗi ở bảng auctions" />
+    <option name="LAST_COMMIT_MESSAGE" value="-sửa database&#10;-còn lỗi ở bảng auctions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
