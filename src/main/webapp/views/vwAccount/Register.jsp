@@ -9,37 +9,31 @@
   <script src="https://www.google.com/recaptcha/api.js"></script>
   <script type="text/javascript">
     var onloadCallback = function() {
-      alert("grecaptcha is ready!");
-    };
-  </script>
-  <script type="text/javascript">
-    var onloadCallback = function() {
       grecaptcha.render('captcha', {
         'sitekey' : '6Le1gdQdAAAAAPq80moWg3VdIyceo5jl2QFotdhI',
       });
     };
-  </script>
-  <script>
-      $('#frmRegister').on('submit', function (e) {
-        e.preventDefault();
 
-        const email = $('#txtEmail').val();
-        if (email.length === 0) {
-          alert('Invalid email.');
-          return;
+    $('#frmRegister').on('submit', function (e) {
+      e.preventDefault();
+
+      const email = $('#txtEmail').val();
+      if (email.length === 0) {
+        alert('Invalid email.');
+        return;
+      }
+
+      $.getJSON('${pageContext.request.contextPath}/Account/IsAvailable?user=' + email, function (data) {
+        if (data === true) {
+          $('#frmRegister').off('submit').submit();
+        } else {
+          alert('Email is not available.');
         }
-
-        $.getJSON('${pageContext.request.contextPath}/Account/IsAvailable?user=' + email, function (data) {
-          if (data === true) {
-            $('#frmRegister').off('submit').submit();
-          } else {
-            alert('Email is not available.');
-          }
-        });
       });
+    });
 
-      $('#txtName').select();
-    </script>
+    $('#txtName').select();
+  </script>
 </header>
 <body style="margin: 0">
   <table>

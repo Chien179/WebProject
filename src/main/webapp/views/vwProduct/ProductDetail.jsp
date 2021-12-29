@@ -75,8 +75,10 @@
                         <div class="line"></div>
                         <div class="product-detail__info-halfdown product-detail__info-shop-btn-container">
                             <button class="btn product-detail__info-shop-btn-now">MUA NGAY</button>
-                            <input name="bid" type="number" style="width: 100%; height: 100px; font-size: 50px"/>
-                            <button class="btn btn--primary product-detail__info-shop-btn-normal">MUA THEO BID</button>
+                            <form id="formBid" method="post" action="${pageContext.request.contextPath}/Product/ByCate/Detail">
+                                <input name="bid" type="number" style="width: 100%; height: 100px; font-size: 50px"/>
+                                <button class="btn btn--primary product-detail__info-shop-btn-normal" type="submit" id="bid-button">MUA THEO BID</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -182,6 +184,15 @@
             }
 
             productdetailModalOverlay.addEventListener('click', hideImg)
+
+            document.getElementById('bid-button').addEventListener('click',function (e) {
+                if (!auth){
+                    e.preventDefault();
+                    showLoginModal();
+                }else {
+                    document.getElementById('formBid').submit();
+                }
+            })
         </script>
     </jsp:body>
 </t:main>

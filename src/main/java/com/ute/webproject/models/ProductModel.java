@@ -27,7 +27,8 @@ public class ProductModel {
     }
 
     public static List<Product> subCatePro () {
-        final String query = "select products.ProName, c.CatID, products.ProID from products inner join categories c on products.CatID = c.CatID";
+        final String query = "select products.ProName, c.CatID, products.ProID " +
+                            "from products inner join categories c on products.CatID = c.CatID";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .executeAndFetch(Product.class);

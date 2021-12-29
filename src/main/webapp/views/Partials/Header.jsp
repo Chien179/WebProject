@@ -94,7 +94,7 @@
                         </c:when>
                         <c:otherwise>
                             <li class="nav-item nav-item--separate">
-                                <a href="http://localhost:8081/WebProject/Account/Register" class="nav-item-link nav-item-strong">
+                                <a href="${pageContext.request.contextPath}/Account/Register" class="nav-item-link nav-item-strong">
                                     <i class="fas fa-user-plus"></i>
                                     Đăng ký
                                 </a>
@@ -224,7 +224,7 @@
 
     </div>
     <div class="modal__body">
-        <form class="login-form" method="post" id="login-submit" action="">
+        <form class="login-form" method="post" id="login-submit" action="${pageContext.request.contextPath}/Account/Login">
             <div class="login-form__container js-login-form__container">
                 <div class="login__header">
                     <h3 class="login__heading">Đăng nhập</h3>

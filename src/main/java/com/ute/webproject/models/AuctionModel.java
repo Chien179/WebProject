@@ -21,7 +21,8 @@ public class AuctionModel {
     }
 
     public static List<Auction> addAuction(int ProID){
-        final String query = "";
+        final String query = "INSERT INTO auctions (AuctionID, MaxPrice, CurPrice, PriceHolderID, ProID, bidders_id) " +
+                            "VALUES (:auctionid,:maxprice,:curprice,:priceholderid,:proid,:biddersId)";
 
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)

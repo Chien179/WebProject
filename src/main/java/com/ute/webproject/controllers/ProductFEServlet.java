@@ -67,15 +67,15 @@ public class ProductFEServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String path = request.getPathInfo();
-//        switch (path) {
-//            case "/WithName":
-//                searchPro(request, response);
-//                break;
-//
-//            default:
-//                ServletUtils.forward("/views/404.jsp", request, response);
-//                break;
-//        }
+        String path = request.getPathInfo();
+        System.out.println("test");
+        switch (path) {
+            case "/Detail":
+                int bid = Integer.parseInt(request.getParameter("bid"));
+                break;
+            default:
+                ServletUtils.forward("/views/404.jsp", request, response);
+                break;
+        }
     }
 }

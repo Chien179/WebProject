@@ -9,11 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="chỉnh sửa chức năng đăng ký">
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="-google captcha cho đăng ký&#10;-sửa đường dẫn trang đăng ký">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2021_4_57_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_21_2021_4_57_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/AccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/AuctionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/AuctionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Partials/Header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwAccount/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwAccount/Register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +223,7 @@
       <workItem from="1640559082667" duration="2360000" />
       <workItem from="1640575312784" duration="915000" />
       <workItem from="1640653948146" duration="18012000" />
+      <workItem from="1640736397770" duration="4336000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -441,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640700096077</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="-google captcha cho đăng ký&#10;-sửa đường dẫn trang đăng ký">
+      <created>1640711855603</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1640711855603</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,8 +475,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="." />
-    <MESSAGE value="Reup" />
     <MESSAGE value="Up btn" />
     <MESSAGE value="Fix product" />
     <MESSAGE value="Product.css" />
@@ -485,7 +498,9 @@
     <MESSAGE value="fix query full text and pro data" />
     <MESSAGE value="hiển thị topBidder" />
     <MESSAGE value="chỉnh sửa chức năng đăng ký" />
-    <option name="LAST_COMMIT_MESSAGE" value="chỉnh sửa chức năng đăng ký" />
+    <MESSAGE value="google captcha cho đăng ký" />
+    <MESSAGE value="-google captcha cho đăng ký&#10;-sửa đường dẫn trang đăng ký" />
+    <option name="LAST_COMMIT_MESSAGE" value="-google captcha cho đăng ký&#10;-sửa đường dẫn trang đăng ký" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

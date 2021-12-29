@@ -112,9 +112,8 @@ public class AccountServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String url = request.getHeader("referer");
         if (user != null) {
-            if(Objects.equals(email, user.getEmail()) && Objects.equals(password, user.getPassword())){
-//            BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
-//            if (result.verified) {
+            BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
+            if (result.verified) {
                 session.setAttribute("auth", true);
                 session.setAttribute("authUser", user);
             } else {
