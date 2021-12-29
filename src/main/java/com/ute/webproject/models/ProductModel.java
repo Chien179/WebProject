@@ -13,6 +13,7 @@ public class ProductModel {
                             "products.TinyDes," +
                             "products.FullDes," +
                             "products.Price," +
+                            "products.Step," +
                             "products.Quantity, " +
                             "products.StartDateTime," +
                             "products.EndDateTime," +
@@ -20,6 +21,7 @@ public class ProductModel {
                             "bidders.name, categories.CatID " +
                             "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
                             "INNER JOIN categories ON products.CatID = categories.CatID";
+
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query).throwOnMappingFailure(false)//Tam thoi
                     .executeAndFetch(Product.class);
@@ -37,15 +39,16 @@ public class ProductModel {
 
     public static List<Product> findByCatId(int catId) {
         final String query = "select products.ProID,  " +
-                            "products.ProName, " +
-                            "products.TinyDes, " +
-                            "products.FullDes, " +
-                            "products.Price, " +
+                            "products.ProName," +
+                            "products.TinyDes," +
+                            "products.FullDes," +
+                            "products.Price," +
+                            "products.Step," +
                             "products.Quantity, " +
-                            "products.StartDateTime, " +
-                            "products.EndDateTime, " +
+                            "products.StartDateTime," +
+                            "products.EndDateTime," +
                             "products.StartPrice, " +
-                            "bidders.name " +
+                            "bidders.name "+
                             "from products INNER JOIN bidders ON products.UserID = bidders.id " +
                             "INNER JOIN categories c on products.CatID = c.CatID where c.CatID = :CatID";
         try (Connection con = DbUtils.getConnection()) {
@@ -105,6 +108,7 @@ public class ProductModel {
                             "products.TinyDes," +
                             "products.FullDes," +
                             "products.Price," +
+                            "products.Step," +
                             "products.Quantity, " +
                             "products.StartDateTime," +
                             "products.EndDateTime," +
@@ -123,9 +127,10 @@ public class ProductModel {
                             "products.ProName," +
                             "products.TinyDes," +
                             "products.FullDes," +
-                            "products.Price, " +
+                            "products.Price," +
+                            "products.Step," +
                             "products.Quantity, " +
-                            "products.StartDateTime, " +
+                            "products.StartDateTime," +
                             "products.EndDateTime," +
                             "products.StartPrice, " +
                             "bidders.name, c.CatID " +
@@ -171,19 +176,15 @@ public class ProductModel {
 //        }
 //    }
 //
-//    public static void update(Product p) {
-//        String sql = "UPDATE products SET  ProName = :proname, TinyDes = :tinydes, FullDes = :fulldes, Price = :price, CatID = :catid, Quantity = :quantity WHERE ProID = :proid";
-//        try (Connection con = DbUtils.getConnection()) {
-//            con.createQuery(sql)
-//                    .addParameter("proname", p.getProName())
-//                    .addParameter("tinydes", p.getTinyDes())
-//                    .addParameter("fulldes", p.getFullDes())
-//                    .addParameter("price", p.getPrice())
-//                    .addParameter("catid", p.getCatID())
-//                    .addParameter("proid", p.getProID())
-//                    .executeUpdate();
-//        }
-//    }
+    public static void updatePrice(int price, int proid) {
+        String sql = "UPDATE products SET Price = :price WHERE ProID = :proid";
+        try (Connection con = DbUtils.getConnection()) {
+            con.createQuery(sql)
+                    .addParameter("price", price)
+                    .addParameter("proid", proid)
+                    .executeUpdate();
+        }
+    }
 //
 //    public static void delete(int id) {
 //        String sql = "delete from products where ProID = :ProID";

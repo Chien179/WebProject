@@ -76,8 +76,12 @@
                         <div class="product-detail__info-halfdown product-detail__info-shop-btn-container">
                             <button class="btn product-detail__info-shop-btn-now">MUA NGAY</button>
                             <form id="formBid" method="post" action="${pageContext.request.contextPath}/Product/ByCate/Detail">
-                                <input name="bid" type="number" style="width: 100%; height: 100px; font-size: 50px"/>
-                                <button class="btn btn--primary product-detail__info-shop-btn-normal" type="submit" id="bid-button">MUA THEO BID</button>
+                                <input name="userID" value="${authUser.id}" hidden/>
+                                <input name="proID" value="${product.proID}" hidden>
+                                <input name="step" value="${product.step}" hidden>
+                                <input id="curPrice" name="curPrice" value="${product.price}" hidden>
+                                <input id="maxPrice" name="maxPrice" type="number" style="width: 100%; height: 100px; font-size: 50px"/>
+                                <button class="btn btn--primary product-detail__info-shop-btn-normal" id="bid-button">MUA THEO BID</button>
                             </form>
                         </div>
                     </div>
@@ -190,9 +194,18 @@
                     e.preventDefault();
                     showLoginModal();
                 }else {
-                    document.getElementById('formBid').submit();
+                    const maxPrice = parseInt(document.getElementById('maxPrice').value);
+                    const curPrice = parseInt(document.getElementById('curPrice').value);
+
+                    if (maxPrice < curPrice){
+                        e.preventDefault();
+                        window.alert('bạn không thể đặt giá thấp hơn giá trị hiện tại');
+                    }else {
+                        document.getElementById('formBid').submit();
+                    }
                 }
             })
+
         </script>
     </jsp:body>
 </t:main>

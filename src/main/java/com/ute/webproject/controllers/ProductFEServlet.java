@@ -1,6 +1,8 @@
 package com.ute.webproject.controllers;
 
+import com.mysql.cj.Session;
 import com.ute.webproject.beans.Auction;
+import com.ute.webproject.beans.User;
 import com.ute.webproject.models.AuctionModel;
 import com.ute.webproject.models.CategoryModel;
 import com.ute.webproject.utils.ServletUtils;
@@ -13,6 +15,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 @WebServlet(name = "ProductFEServlet", value = "/Product/ByCate/*")
 public class ProductFEServlet extends HttpServlet {
@@ -68,14 +71,54 @@ public class ProductFEServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
-        System.out.println("test");
         switch (path) {
             case "/Detail":
-                int bid = Integer.parseInt(request.getParameter("bid"));
+                auction(request, response);
                 break;
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
                 break;
         }
+    }
+
+    private static void auction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int curPrice = Integer.parseInt(request.getParameter("curPrice"));
+        int userID = Integer.parseInt(request.getParameter("userID"));
+        int proID = Integer.parseInt(request.getParameter("proID"));
+        int maxPrice = Integer.parseInt(request.getParameter("maxPrice"));
+        int step = Integer.parseInt(request.getParameter("step"));
+        Auction theBest = AuctionModel.getTheBestAuction(proID);
+        Auction bidder = new Auction(maxPrice, curPrice, userID, proID, userID);
+
+        int proPrice = 0;
+
+        if (theBest == null){
+            AuctionModel.addAuction(bidder);
+            proPrice = curPrice;
+        }else {
+            if (theBest.getBidders_id() == bidder.getBidders_id()){
+                theBest.setMaxPrice(maxPrice);
+                AuctionModel.updateAuction(theBest.getMaxPrice(), theBest.getAuctionID());
+                proPrice = theBest.getCurPrice();
+            }else {
+                if (maxPrice > theBest.getMaxPrice()){
+                    bidder.setCurPrice(theBest.getMaxPrice() + step);
+                    AuctionModel.addAuction(bidder);
+                    proPrice = bidder.getCurPrice();
+                }else {
+                    theBest.setCurPrice(maxPrice);
+                    bidder.setPriceHolderID(theBest.getBidders_id());
+                    bidder.setCurPrice(maxPrice);
+                    AuctionModel.addAuction(bidder);
+                    AuctionModel.updateAuction(theBest.getMaxPrice(), theBest.getAuctionID());
+                    proPrice = theBest.getCurPrice();
+                }
+            }
+        }
+
+        ProductModel.updatePrice(proPrice,proID);
+
+        String url = "/Product/ByCate/Detail?id=" + proID;
+        ServletUtils.redirect(url, request, response);
     }
 }

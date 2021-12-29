@@ -20,13 +20,46 @@ public class AuctionModel {
         }
     }
 
-    public static List<Auction> addAuction(int ProID){
+    public static void addAuction(Auction a){
         final String query = "INSERT INTO auctions (AuctionID, MaxPrice, CurPrice, PriceHolderID, ProID, bidders_id) " +
                             "VALUES (:auctionid,:maxprice,:curprice,:priceholderid,:proid,:biddersId)";
 
         try (Connection con = DbUtils.getConnection()) {
-            return con.createQuery(query)
+            con.createQuery(query)
+                    .addParameter("auctionid", a.getAuctionID())
+                    .addParameter("maxprice", a.getMaxPrice())
+                    .addParameter("curprice", a.getCurPrice())
+                    .addParameter("priceholderid", a.getPriceHolderID())
+                    .addParameter("proid", a.getProID())
+                    .addParameter("biddersId", a.getBidders_id())
+                    .executeUpdate();
+        }
+    }
+
+    public static void updateAuction(int maxPrice, int auctionID){
+        final String query = "UPDATE auctions SET  MaxPrice = :maxprice WHERE AuctionID = :auctionid;";
+
+        try (Connection con = DbUtils.getConnection()) {
+            con.createQuery(query)
+                    .addParameter("auctionid", auctionID)
+                    .addParameter("maxprice", maxPrice)
+                    .executeUpdate();
+        }
+    }
+
+    public static Auction getTheBestAuction(int ProID){
+        final String query = "SELECT AuctionID, MAX(MaxPrice) as MaxPrice, CurPrice, PriceHolderID, ProID, bidders_id " +
+                            "FROM auctions WHERE ProID = :proid GROUP BY ProID";
+
+        try (Connection con = DbUtils.getConnection()) {
+            List<Auction> list = con.createQuery(query)
+                    .addParameter("proid", ProID).throwOnMappingFailure(false)
                     .executeAndFetch(Auction.class);
+            if (list.size() == 0){
+                return null;
+            }
+
+            return list.get(0);
         }
     }
 }
