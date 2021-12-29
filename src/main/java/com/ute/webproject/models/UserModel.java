@@ -21,6 +21,7 @@ public class UserModel {
             return list.get(0);
         }
     }
+
     public static void updateUser(User user){
         String sql="update bidders set name = :name, password = :password, dob = :dob where id = :id";
         try (Connection con = DbUtils.getConnection()) {
@@ -32,6 +33,7 @@ public class UserModel {
                     .executeUpdate();
         }
     }
+
     public static User findByEmail(String email) {
         final String query = "select * from bidders where email = :email";
         try (Connection con = DbUtils.getConnection()) {

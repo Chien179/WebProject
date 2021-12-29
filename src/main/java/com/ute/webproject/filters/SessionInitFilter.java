@@ -24,6 +24,8 @@ public class SessionInitFilter implements Filter {
             session.setAttribute("auth", false);
             session.setAttribute("authUser", new User());
         }
+        res.setContentType("text/html; charset=UTF-8");
+        res.setCharacterEncoding("UTF-8");
 
         chain.doFilter(req, res);
     }

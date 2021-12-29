@@ -9,13 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="fix bug đăng nhập">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7669c6c3-4f01-4e55-8f16-3a8b831b1f77.xml" afterDir="false" />
+    <list default="true" id="763e8406-0519-4214-8390-f709406609df" name="Changes" comment="sơ bộ chức năng đấu giá tự động">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/beans/Auction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/controllers/ProductFEServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/AuctionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/AuctionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/SessionInitFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/filters/SessionInitFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ute/webproject/models/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwProduct/ProductDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,10 +25,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,6 +89,7 @@
       <recent name="C:\Users\Admin\IdeaProjects\WebProject\src\main\webapp\Img\Apple AirPods Pro" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ute.webproject.beans" />
       <recent name="com.ute.webproject.filters" />
     </key>
   </component>
@@ -97,8 +97,7 @@
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/WebProject/Home" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATING_POLICY" value="update-resources" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="WebProject:war exploded">
           <settings>
@@ -107,7 +106,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="2a8cc4ce-aca7-4146-bef0-9a3faeb7e311" />
+        <option name="BASE_DIRECTORY_NAME" value="0a7a3915-85c8-4bb7-8b74-6a937dd2851f" />
         <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
@@ -116,7 +115,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51511" />
+        <option name="DEBUG_PORT" value="54502" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -220,7 +219,8 @@
       <workItem from="1640559082667" duration="2360000" />
       <workItem from="1640575312784" duration="915000" />
       <workItem from="1640653948146" duration="18012000" />
-      <workItem from="1640736397770" duration="12065000" />
+      <workItem from="1640736397770" duration="13488000" />
+      <workItem from="1640758497143" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="sửa register&#10;điều chỉnh 1 số chức năng">
       <created>1638715062718</created>
@@ -460,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640748676177</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="sơ bộ chức năng đấu giá tự động">
+      <created>1640757172235</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1640757172235</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +486,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix product" />
     <MESSAGE value="Product.css" />
     <MESSAGE value="workspace" />
     <MESSAGE value="Complete the login, add query for full-text search" />
@@ -504,7 +510,8 @@
     <MESSAGE value="google captcha cho đăng ký" />
     <MESSAGE value="-google captcha cho đăng ký&#10;-sửa đường dẫn trang đăng ký" />
     <MESSAGE value="fix bug đăng nhập" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug đăng nhập" />
+    <MESSAGE value="sơ bộ chức năng đấu giá tự động" />
+    <option name="LAST_COMMIT_MESSAGE" value="sơ bộ chức năng đấu giá tự động" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

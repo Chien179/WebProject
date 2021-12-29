@@ -133,6 +133,7 @@ public class ProductModel {
                             "products.StartDateTime," +
                             "products.EndDateTime," +
                             "products.StartPrice, " +
+                            "products.sellers_idseller, " +
                             "bidders.name, c.CatID " +
                             "from products INNER JOIN bidders ON products.UserID = bidders.id " +
                             "INNER JOIN categories c on products.CatID = c.CatID where products.ProID = :ProID";
@@ -176,15 +177,18 @@ public class ProductModel {
 //        }
 //    }
 //
-    public static void updatePrice(int price, int proid) {
-        String sql = "UPDATE products SET Price = :price WHERE ProID = :proid";
+    public static void updatePriceAndBidder(int price, int bidder_id, int proid) {
+        String sql = "UPDATE products SET Price = :price, bidders_id = :bidder_id WHERE ProID = :proid";
+
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(sql)
                     .addParameter("price", price)
                     .addParameter("proid", proid)
+                    .addParameter("bidder_id", bidder_id)
                     .executeUpdate();
         }
     }
+
 //
 //    public static void delete(int id) {
 //        String sql = "delete from products where ProID = :ProID";

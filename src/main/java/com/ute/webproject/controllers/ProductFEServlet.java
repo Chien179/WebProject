@@ -1,13 +1,11 @@
 package com.ute.webproject.controllers;
 
 import com.mysql.cj.Session;
-import com.ute.webproject.beans.Auction;
-import com.ute.webproject.beans.User;
+import com.ute.webproject.beans.*;
 import com.ute.webproject.models.AuctionModel;
 import com.ute.webproject.models.CategoryModel;
+import com.ute.webproject.models.SellerModel;
 import com.ute.webproject.utils.ServletUtils;
-import com.ute.webproject.beans.Product;
-import com.ute.webproject.beans.Category;
 import com.ute.webproject.models.ProductModel;
 
 import javax.servlet.*;
@@ -40,12 +38,14 @@ public class ProductFEServlet extends HttpServlet {
                 Product product = ProductModel.proDetail(proId);
                 List<Product> proHint = ProductModel.findAll();
                 List<Auction> topBidder = AuctionModel.topBidder(proId);
+                Seller seller = SellerModel.getSellerInfo(product.getSellers_idseller());
                 if (product == null) {
                     ServletUtils.redirect("/Home", request, response);
                 } else {
                     request.setAttribute("product", product);
                     request.setAttribute("products", proHint);
                     request.setAttribute("topBidder", topBidder);
+                    request.setAttribute("seller", seller);
                     ServletUtils.forward("/views/vwProduct/ProductDetail.jsp", request, response);
                 }
                 break;
@@ -116,7 +116,7 @@ public class ProductFEServlet extends HttpServlet {
             }
         }
 
-        ProductModel.updatePrice(proPrice,proID);
+        ProductModel.updatePriceAndBidder(proPrice, userID, proID);
 
         String url = "/Product/ByCate/Detail?id=" + proID;
         ServletUtils.redirect(url, request, response);
