@@ -5,6 +5,7 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <jsp:useBean id="products" scope="request" type="java.util.List<com.ute.webproject.beans.Product>"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <t:main>
     <jsp:attribute name="css">
@@ -19,9 +20,9 @@
                 <div class="card-header bg-white mb-1 sticky-top product__header">
                     <h3 class="my-auto product__heading">SẢN PHẨM HIỆN CÓ</h3>
                 </div>
-                <div class="product__body">
-                    <c:forEach begin="0" end="${products.size()-1}" varStatus="loop" var="i">
-                        <div class="card card border-secondary h-60 product__body-item">
+                <div id="addMore" class="product__body">
+                    <c:forEach begin="0" end="8" varStatus="loop" var="i">
+                        <div class="product card card border-secondary h-60 product__body-item">
                             <img class="product__body-img" src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" alt="${products[i].proName}" onclick="location.href='${pageContext.request.contextPath}/Product/ByCate/Detail?id=${products[i].proID}'"/>
                             <div class="card-body product__body-img-body">
                                 <h1 class="card-title pt-0 txtOverflow product__body-img-heading">${products[i].proName}</h1>
@@ -41,7 +42,27 @@
                     </c:forEach>
                 </div>
             </div>
+            <button class="btn btn-primary" onclick="loadMore()">Load More</button>
         </div>
+        <script>
+            function loadMore(){
+                var amount = document.getElementsByClassName('product').length;
+                $.ajax({
+                    url: "/WebProject/Load",
+                    type: "get", //send it through get method
+                    data: {
+                        exists: amount,
+                    },
+                    success: function(response) {
+                        var load = document.getElementById('addMore');
+                        load.innerHTML += response;
+                    },
+                    error: function(xhr) {
+                        //Do Something to handle error
+                    }
+                });
+            }
+        </script>
     </jsp:body>
 </t:main>
 

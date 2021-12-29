@@ -148,6 +148,29 @@ public class ProductModel {
             return list.get(0);
         }
     }
+
+    public static List<Product> getNextTop6(int amount) {
+        final String query = "select products.ProID, " +
+                            "products.ProName, " +
+                            "products.TinyDes, " +
+                            "products.FullDes, " +
+                            "products.Price, " +
+                            "products.Step, " +
+                            "products.Quantity, " +
+                            "products.StartDateTime, " +
+                            "products.EndDateTime, " +
+                            "products.StartPrice, " +
+                            "bidders.name, categories.CatID " +
+                            "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
+                            "INNER JOIN categories ON products.CatID = categories.CatID " +
+                            "LIMIT "+amount+",3";
+
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(query).throwOnMappingFailure(false)//Tam thoi
+                    .executeAndFetch(Product.class);
+        }
+    }
+
 //    public static Product findById(int id) {
 //        final String query = "select * from products where ProID = :ProID";
 //        try (Connection con = DbUtils.getConnection()) {

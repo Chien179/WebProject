@@ -66,7 +66,7 @@
                                 </div>
                             </div>
                             <div class=" product-detail__info-halfright">
-                                <div class=" product-detail__info-shop-heading"></div>
+                                <div class=" product-detail__info-shop-heading">Shop Name</div>
                                 <p class=" product-detail__info-shop-describe">${seller.name}</p>
                                 <div class="product-detail__info-shop-btn-container">
                                     <a href="#" class="product-detail__info-shop-btn"><button class="btn btn--primary product-detail__info-shop-button">Xem shop</button></a>
