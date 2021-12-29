@@ -62,6 +62,28 @@ public class ProductFEServlet extends HttpServlet {
                 }
                 break;
 
+            case "/ByPrice":
+                String proByMoney = request.getParameter("name");
+                List<Product> byMoney = ProductModel.orderByMoney(proByMoney);
+                if (byMoney.isEmpty()) {
+                    ServletUtils.redirect("/Home", request, response);
+                } else {
+                    request.setAttribute("products", byMoney);
+                    ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
+                }
+                break;
+
+            case "/ByDate":
+                String proByDate = request.getParameter("name");
+                List<Product> byDate = ProductModel.orderByDate(proByDate);
+                if (byDate.isEmpty()) {
+                    ServletUtils.redirect("/Home", request, response);
+                } else {
+                    request.setAttribute("products", byDate);
+                    ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
+                }
+                break;
+
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
                 break;
