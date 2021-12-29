@@ -986,16 +986,16 @@
 <%--                        </div>--%>
                     </div>
                     <div class="header__search-select">
-                        <span class="header__search-select-label">Xếp theo</span>
+                        <span class="header__search-select-label">Trong shop</span>
                         <i class="fas fa-angle-down header__search-select-icon"></i>
                         <ul class="header__search-option">
                             <!-- Dấu tích đi js sau -->
                             <li class="header__search-option-item">
-                                <a class="byPrice" href="${pageContext.request.contextPath}/Product/ByCate/ByPrice?name="><span onclick="orderByPrice()">Giá</span></a>
+                                <span>Trong shop</span>
                                 <i class="fas fa-check"></i>
                             </li>
                             <li class="header__search-option-item">
-                                <a class="byDate" href="${pageContext.request.contextPath}/Product/ByCate/ByDate?name="><span onclick="orderByDate()">Ngày</span></a>
+                                <span>Ngoài shop</span>
                                 <i class="fas fa-check"></i>
                             </li>
                         </ul>
@@ -1141,8 +1141,6 @@
     const auth = (document.getElementById('auth').innerHTML === 'true');
     const forward = document.querySelector('.search_forward');
     const inputVal = document.querySelector('.header__search-input');
-    const byPrice = document.querySelector('.byPrice');
-    const byDate = document.querySelector('.byDate');
 
     console.log(auth);
     console.log(loginError);
@@ -1189,24 +1187,4 @@
             document.getElementById('search_button').click();
         }
     })
-
-    function orderByPrice(){
-        let searchVal = inputVal.value;
-        if(searchVal === null || searchVal ===""){
-            //Noi chuoi
-            byPrice.attributes[1].value = "${pageContext.request.contextPath}/Home";
-        }
-        else
-            byPrice.attributes[1].value += searchVal;
-    }
-
-    function orderByDate(){
-        let searchVal = inputVal.value;
-        if(searchVal === null || searchVal ===""){
-            //Noi chuoi
-            byDate.attributes[1].value = "${pageContext.request.contextPath}/Home";
-        }
-        else
-            byDate.attributes[1].value += searchVal;
-    }
 </script>

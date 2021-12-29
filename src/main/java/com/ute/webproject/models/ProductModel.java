@@ -171,48 +171,6 @@ public class ProductModel {
         }
     }
 
-    public static List<Product> orderByMoney(String proName){
-        final String query ="select products.ProID," +
-                "products.ProName," +
-                "products.TinyDes," +
-                "products.FullDes," +
-                "products.Price," +
-                "products.Step," +
-                "products.Quantity, " +
-                "products.StartDateTime," +
-                "products.EndDateTime," +
-                "products.StartPrice, " +
-                "bidders.name, c.CatID " +
-                "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
-                "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName WITH QUERY EXPANSION) order by Price DESC";
-        try (Connection con = DbUtils.getConnection()) {
-            return con.createQuery(query).addParameter("proName", proName).throwOnMappingFailure(false)
-                    .throwOnMappingFailure(false)//Tam thoi
-                    .executeAndFetch(Product.class);
-        }
-    }
-
-    public static List<Product> orderByDate(String proName){
-        final String query ="select products.ProID," +
-                "products.ProName," +
-                "products.TinyDes," +
-                "products.FullDes," +
-                "products.Price," +
-                "products.Step," +
-                "products.Quantity, " +
-                "products.StartDateTime," +
-                "products.EndDateTime," +
-                "products.StartPrice, " +
-                "bidders.name, c.CatID " +
-                "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
-                "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName WITH QUERY EXPANSION) order by timediff(now(),EndDateTime) DESC";
-        try (Connection con = DbUtils.getConnection()) {
-            return con.createQuery(query).addParameter("proName", proName).throwOnMappingFailure(false)
-                    .throwOnMappingFailure(false)//Tam thoi
-                    .executeAndFetch(Product.class);
-        }
-    }
-
 //    public static Product findById(int id) {
 //        final String query = "select * from products where ProID = :ProID";
 //        try (Connection con = DbUtils.getConnection()) {
