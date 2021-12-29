@@ -14,6 +14,133 @@
         <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
     </jsp:attribute>
     <jsp:body>
+        <style>
+            div.card:hover, div.card:active{
+                background-color: #e8e8e8; cursor: pointer;
+            }
+
+            .martop{
+                margin-top: 0px !important;
+            }
+
+            .card-text-config{
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .txtOverflow{
+                white-space: nowrap;
+                width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .sticky-top {
+                z-index: 1;
+                top: 118px;
+            }
+
+            .w-77 {
+                width: 77%;
+            }
+
+            .buy-button {
+                background-color: #1ab7ea;
+                border: 1px solid white;
+                color: white;
+                padding: 7px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: -5px 2px 1px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+            .buy-button-small {
+                background-color: #1ab7ea;
+                border: 1px solid white;
+                color: white;
+                padding: 0px 9px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 11px;
+                margin: -5px 2px 1px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+
+
+            .buy-button:hover{
+                border: 1px solid grey;
+                color: black;
+            }
+            .buy-button-small:hover{
+                border: 1px solid grey;
+            }
+
+            .scale {
+                height: 10em;
+            }
+            .product__container{
+                margin-top: 10px;
+            }
+            .product__header{
+                width: 100%;
+                height: 35px;
+                margin: 0 auto;
+                margin-left: 1.3%;
+            }
+            .product__heading{
+                text-align: center;
+                cursor: default;
+                text-transform: uppercase
+            }
+            .product__body{
+                display: flex;
+                max-width: 1110px;
+                flex-wrap: wrap;
+                margin: 0 auto;
+            }
+            .product__body-item{
+                width: 350px;
+                margin: 10px 0px 10px 20px;
+                box-sizing: border-box;
+                height: 400px;
+            }
+            .product__body-img{
+                padding: 20px 10px 0px 12px;
+                width: 343px;
+                height: 200px
+            }
+            .product__body-img-body{
+
+            }
+            .product__body-img-heading{
+                color: #337ab7;
+                font-size: 20px
+            }
+            .product__body-img-date{
+                font-size: 12px;
+                font-weight: bold
+            }
+            .product__body-img-info-type{
+                font-size: 1.4rem
+            }
+            .product__body-img-info{
+                font-size: 16px;
+                color: green;
+                font-weight: bold
+            }
+            .product__body-img-bid-price-type{
+                font-size: 14px
+            }
+            .product__body-img-bid-price{
+                font-size: 16px;
+                font-weight: bold
+            }
+        </style>
         <div class="">
             <div class="row product__container">
                 <div class="card-header bg-white mb-1 sticky-top product__header">

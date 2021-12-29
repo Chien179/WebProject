@@ -824,6 +824,7 @@
             const checkBox = document.querySelector('.User__info-checkbox');
             const checkBoxLabel = document.querySelector('.User__info-checkbox-label');
 
+
             function showhideInputpassowrd(){
                 if(checkBox.checked == true){
                     newpasswordContainer.classList.add('show')
@@ -862,6 +863,7 @@
 
             function validateMyForm()
             {
+
                 if(dateofBirth.value === null || dateofBirth.value === ""){
                     dateofBirth.value = "2001-01-01"
                 }
@@ -889,7 +891,7 @@
             }
 
             checkBox.addEventListener('click', showhideInputpassowrd);
-            window.addEventListener('click', showhideInputpassowrd);
+            // window.addEventListener('click', showhideInputpassowrd);
         </script>
     </jsp:body>
 </t:main>

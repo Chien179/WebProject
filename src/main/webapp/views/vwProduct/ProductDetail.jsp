@@ -625,36 +625,24 @@
         <div class="modal product-detail__modal js-product-detail__modal">
             <div class="modal__overlay js-product-detail-modal__overlay"></div>
             <div class="modal__body js-modal__body">
-<%--                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png" alt="">--%>
+                <img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/" alt="">
             </div>
         </div>
         <script>
             const productImgs=document.querySelectorAll('.JS-product-detail__image');
             const productdetailModal=document.querySelector('.js-product-detail__modal');
             const productdetailModalOverlay=document.querySelector('.js-product-detail-modal__overlay');
-            const modalImg=document.querySelector('.js-modal__body');
+            const modalImgContainer=document.querySelector('.js-modal__body');
+            const modalImg = document.querySelector('.modal__img');
+            const  x = modalImg.attributes[1].value;
             function showImg(i){
-                switch (i)
-                {
-                    case (1):
-                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/1.png" alt="">';
-                        break;
-                    case (2):
-                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/2.png" alt="">';
-                        break;
-                    case (3):
-                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/3.png" alt="">';
-                        break;
-                    case (4):
-                        modalImg.innerHTML='<img class="modal__img" src="${pageContext.request.contextPath}/Img/${product.proName}/4.png" alt="">';
-                        break;
-                }
+                modalImg.setAttribute("src", "${pageContext.request.contextPath}/Img/${product.proName}/" + i.toString() + ".png")
                 productdetailModal.classList.add('open')
             }
-            function  hideImg(){
+            function hideImg(){
                 productdetailModal.classList.remove('open')
+                modalImg.removeAttribute("src")
             }
-
             productdetailModalOverlay.addEventListener('click', hideImg)
 
             document.getElementById('bid-button').addEventListener('click',function (e) {

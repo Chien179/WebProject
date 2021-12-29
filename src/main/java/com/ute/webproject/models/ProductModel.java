@@ -115,7 +115,7 @@ public class ProductModel {
                             "products.StartPrice, " +
                             "bidders.name, c.CatID " +
                             "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
-                            "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName WITH QUERY EXPANSION)";
+                            "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName)";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .addParameter("proName", proName).throwOnMappingFailure(false)//Tam thoi

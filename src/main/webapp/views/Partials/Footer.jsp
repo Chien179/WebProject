@@ -1,7 +1,66 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Footer.css">
-
+<style>
+    #footer{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+    }
+    #footer .line{
+        margin: 10px 0;
+        background-color: var(--white-color);
+    }
+    .footer__container{
+        background-image: linear-gradient( 0, #1ab7ea, #48c5ee, #6dd1f1, #8adaf4);
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        bottom: 0;
+    }
+    .footer_spkt{
+        height: 120px;
+    }
+    .footer__info{
+        color: var(--white-color);
+        text-shadow: 2px 2px 5px black;
+        font-size: 1.5rem;
+        margin-top: 10px;
+        text-align: center;
+        cursor: default;
+    }
+    .footer__info-SV{
+        display: flex;
+        margin-top: 10px;
+    }
+    .footer__info-SV .width25 + .width25{
+        margin-left: 10px;
+    }
+    .footer__info-SV .width25:last-child{
+        width: 173px;
+    }
+    .footer__thamkhao{
+        margin-right: 36px;
+    }
+    .footer__thamkhao-heading{
+        font-size: 1.5rem;
+        margin-top: 10px;
+        display: block;
+        color: var(--white-color);
+        text-shadow: 2px 2px 5px black;
+    }
+    .footer__logo{
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer__logo-img{
+        width: 33px;
+    }
+</style>
 <div id="footer">
     <div class="footer__container">
         <div class="footer__logo">
