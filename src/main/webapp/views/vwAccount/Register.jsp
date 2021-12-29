@@ -35,6 +35,55 @@
     $('#txtName').select();
   </script>
 </header>
+<style>
+  :root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: rgb(26, 183, 234);
+    --border-color: #dbdbdb;
+    --background-color: #f5f5fa;
+
+    --header-height:120px;
+    --nav-height:34px;
+    --header-with-search-height: calc(var(--header-height) - var(--nav-height));
+  }
+  .btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--white-color);
+  }
+  .btn:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+  .btn--primary:focus{
+    border: none;
+    outline: none;
+  }
+  .btn.btn--primary:hover{
+    color: var(--text-color);
+  }
+  .btn.btn--disabled{
+    cursor: default;
+    background-color: #c3c3c3;
+    color: #949494;
+  }
+  .focus-input{
+    color: var(--primary-color);
+  }
+</style>
 <body style="margin: 0">
   <table>
       <tr>
@@ -81,9 +130,9 @@
               </div>
               <div id="captcha"></div>
               <div class="container-signup-form-btn">
-                <div class="wrap-signup-form-btn">
-                  <button type="submit" class="signup-form-btn">
-                    Đăng ký ngay
+                <div class="wrap-signup-form-btn" style="width: 100%">
+                  <button type="submit" class=" btn btn--primary signup-form-btn" style="width: 100%; margin-top: 10px">
+                    Đăng ký
                   </button>
                 </div>
               </div>
