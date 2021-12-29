@@ -135,7 +135,7 @@
                     <h3 class="my-auto product__heading">SẢN PHẨM GỢI Ý</h3>
                 </div>
                 <div class="product__body">
-                    <c:forEach begin="0" end="14" varStatus="loop" var="i">
+                    <c:forEach begin="0" end="12" varStatus="loop" var="i">
                         <div class="card card border-secondary h-60 product__body-item">
                             <img class="product__body-img" src="${pageContext.request.contextPath}/Img/${products[i].proName}/1_thumbs.png" alt="${products[i].proName}" onclick="location.href='${pageContext.request.contextPath}/Product/ByCate/Detail?id=${products[i].proID}'"/>
                             <div class="card-body product__body-img-body">
