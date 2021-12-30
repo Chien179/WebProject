@@ -17,7 +17,7 @@ public class ProductModel {
                             "products.Quantity, " +
                             "products.StartDateTime, " +
                             "products.EndDateTime, " +
-                            "products.StartPrice, " +
+                            "products.Turn," +
                             "bidders.name, categories.CatID " +
                             "from products INNER JOIN sellers ON products.sellers_idseller=sellers.idseller " +
                             "INNER JOIN bidders ON products.bidders_id = bidders.id " +
@@ -48,7 +48,7 @@ public class ProductModel {
                             "products.Quantity, " +
                             "products.StartDateTime," +
                             "products.EndDateTime," +
-                            "products.StartPrice, " +
+                            "products.Turn," +
                             "bidders.name "+
                             "from products INNER JOIN bidders ON products.UserID = bidders.id " +
                             "INNER JOIN categories c on products.CatID = c.CatID where c.CatID = :CatID";
@@ -113,7 +113,7 @@ public class ProductModel {
                             "products.Quantity, " +
                             "products.StartDateTime," +
                             "products.EndDateTime," +
-                            "products.StartPrice, " +
+                            "products.Turn," +
                             "bidders.name, c.CatID " +
                             "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
                             "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName)";
@@ -133,7 +133,7 @@ public class ProductModel {
                             "products.Quantity, " +
                             "products.StartDateTime," +
                             "products.EndDateTime," +
-                            "products.StartPrice, " +
+                            "products.Turn," +
                             "products.sellers_idseller, " +
                             "bidders.name, c.CatID " +
                             "from products INNER JOIN bidders ON products.UserID = bidders.id " +
@@ -160,7 +160,7 @@ public class ProductModel {
                             "products.Quantity, " +
                             "products.StartDateTime, " +
                             "products.EndDateTime, " +
-                            "products.StartPrice, " +
+                            "products.Turn," +
                             "bidders.name, categories.CatID " +
                             "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
                             "INNER JOIN categories ON products.CatID = categories.CatID " +
@@ -181,7 +181,7 @@ public class ProductModel {
                 "products.Quantity, " +
                 "products.StartDateTime," +
                 "products.EndDateTime," +
-                "products.StartPrice, " +
+                "products.Turn," +
                 "bidders.name, c.CatID " +
                 "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
                 "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName WITH QUERY EXPANSION) order by Price DESC";
@@ -202,7 +202,7 @@ public class ProductModel {
                 "products.Quantity, " +
                 "products.StartDateTime," +
                 "products.EndDateTime," +
-                "products.StartPrice, " +
+                "products.Turn," +
                 "bidders.name, c.CatID " +
                 "from products INNER JOIN bidders ON products.bidders_id=bidders.id " +
                 "INNER JOIN categories c on products.CatID = c.CatID where match(ProName) against(:proName WITH QUERY EXPANSION) order by timediff(now(),EndDateTime) DESC";

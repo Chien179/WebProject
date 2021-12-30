@@ -234,7 +234,7 @@
                                 <c:set var="fullname" value="${products[i].name}"/>
                                 <c:set var="lengthname" value="${fn:length(fullname)}"/>
                                 <c:set var = "name" value="${fn:substring(fullname,lengthname/2,lengthname)}"/>
-                                <p class="card-text card-text-config martop product__body-img-bid-price">10<span class="float-end">***${name}</span></p>
+                                <p class="card-text card-text-config martop product__body-img-bid-price">${products[i].turn}<span class="float-end">***${name}</span></p>
                             </div>
                         </div>
                     </c:forEach>

@@ -12,16 +12,17 @@ public class Product {
     private LocalDateTime StartDateTime, EndDateTime;
     private int rate;
     private String CMT;
-    private int StartPrice, Step;
+    private int Step;
     private boolean auto;
     private String name;
+    private int turn;
     private int sellers_idseller ,CatID, bidders_id;
 
     public Product (){
 
     }
 
-    public Product (int ProID, String ProName, String TinyDes, String FullDes, int Price, int Quantity, int UserID, LocalDateTime StartDateTime, LocalDateTime EndDateTime, int rate, String CMT, int StartPrice, int Step, boolean auto, String name, int sellers_idseller , int CatID, int bidders_id){
+    public Product (int ProID, String ProName, String TinyDes, String FullDes, int Price, int Quantity, int UserID, LocalDateTime StartDateTime, LocalDateTime EndDateTime, int rate, String CMT, int Step, boolean auto, String name, int sellers_idseller , int CatID, int bidders_id){
         this.ProID = ProID;
         this.ProName = ProName;
         this.TinyDes = TinyDes;
@@ -33,7 +34,6 @@ public class Product {
         this.EndDateTime = EndDateTime;
         this.rate = rate;
         this.CMT = CMT;
-        this.StartPrice = StartPrice;
         this.Step = Step;
         this.auto = auto;
         this.name = name;
@@ -86,10 +86,6 @@ public class Product {
         return CMT;
     }
 
-    public int getStartPrice() {
-        return StartPrice;
-    }
-
     public int getStep() {
         return Step;
     }
@@ -112,6 +108,10 @@ public class Product {
 
     public int getBidders_id() {
         return bidders_id;
+    }
+
+    public int getTurn() {
+        return turn;
     }
 
     public String getTimeFormat() {

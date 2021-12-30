@@ -43,7 +43,7 @@ public class LoadMoreServlet extends HttpServlet {
                     "                                    <span class=\"remaining float-end\" style=\"color: black\"></span>\n" +
                     "                                </p>\n" +
                     "                                <p class=\"card-text card-text-config product__body-img-bid-price-type\">SỐ LƯỢT RA GIÁ<span class=\"float-end\">BIDDER CAO NHẤT</span></p>\n" +
-                    "                                <p class=\"card-text card-text-config martop product__body-img-bid-price\">10<span class=\"float-end\">"+"***"+p.getName().substring(p.getName().length()/2)+"</span></p>\n" +
+                    "                                <p class=\"card-text card-text-config martop product__body-img-bid-price\">"+p.getTurn()+"<span class=\"float-end\">"+"***"+p.getName().substring(p.getName().length()/2)+"</span></p>\n" +
                     "                            </div>\n" +
                     "                        </div>\n");
         }
