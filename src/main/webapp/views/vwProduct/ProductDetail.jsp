@@ -542,7 +542,7 @@
                         </div>
                         <div class="line"></div>
                         <div class="product-detail__info-halfdown product-detail__info-shop-btn-container">
-                            <button class="btn product-detail__info-shop-btn-now">MUA NGAY</button>
+                            <button class="btn product-detail__info-shop-btn-now" style="margin-top: 6px">MUA NGAY</button>
                             <form id="formBid" method="post" action="${pageContext.request.contextPath}/Product/ByCate/Detail">
                                 <input name="userID" value="${authUser.id}" hidden/>
                                 <input name="proID" value="${product.proID}" hidden>
@@ -550,8 +550,8 @@
                                 <input id="curPrice" name="curPrice" value="${product.price}" hidden>
                                 <input id="bid" name="bid" value="false" hidden>
                                 <c:set var="rcmPrice" value="${product.price + product.step}"/>
-                                <input id="maxPrice" name="maxPrice" type="number" style="width: 50%; height: 50px; font-size: 25px" value="${rcmPrice}"/>
-                                <button class="btn btn--primary product-detail__info-shop-btn-normal" id="bid-button">MUA THEO BID</button>
+                                <input id="maxPrice" name="maxPrice" type="number" style="width: 50%; height: 50px; font-size: 25px; margin-left: 30px" value="${rcmPrice}"/>
+                                <button class="btn btn--primary product-detail__info-shop-btn-normal" id="bid-button" style="margin-top: -16px">ĐẶT BID</button>
                             </form>
                         </div>
                     </div>
