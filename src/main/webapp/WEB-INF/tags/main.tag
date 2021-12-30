@@ -22,7 +22,7 @@
             <div class="">
                 <jsp:include page="../../views/Partials/Category.jsp"/>
             </div>
-            <div class="col-sm-10" style="margin: 100px auto 0; display: flex; justify-content: center">
+            <div class="col-sm-10" style="margin: 100px auto 0; justify-content: center">
                 <jsp:doBody/>
             </div>
         </div>
