@@ -65,14 +65,15 @@ public class UserModel {
     }
 
     public static void ggAdd(User c){
-        String insertSql = "INSERT INTO bidders (name, email, permission, Upgrade) VALUES (:name,:email,:permission,:upgrade)";
+        String insertSql = "INSERT INTO bidders (name, email, password,permission, Upgrade) VALUES (:name,:email, :password,:permission,:upgrade)";
 
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(insertSql)
                     .addParameter("name", c.getName())
                     .addParameter("email", c.getEmail())
+                    .addParameter("password", c.getPassword())
                     .addParameter("permission", c.getPermission())
-                    .addParameter("Upgrade", c.getUpgrade())
+                    .addParameter("upgrade", c.getUpgrade())
                     .executeUpdate();
         }
     }

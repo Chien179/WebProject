@@ -30,9 +30,10 @@ public class User {
         this.Upgrade = Upgrade;
     }
 
-    public User(String name, String email, int permission, int Upgrade){
+    public User(String name, String email, String password,int permission, int Upgrade){
         this.name = name;
         this.email = email;
+        this.password = password;
         this.permission = permission;
         this.Upgrade = Upgrade;
     }

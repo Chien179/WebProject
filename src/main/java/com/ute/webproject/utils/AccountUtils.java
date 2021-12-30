@@ -22,7 +22,9 @@ public class AccountUtils {
         String password = request.getParameter("password");
 
         if (Objects.equals(email, "") && Objects.equals(password, "")){
-            email = ggLogin(request, response);
+            String[] infor = ggLogin(request, response);
+            email = infor[0];
+            password = infor[1];
         }
 
         User user = UserModel.findByEmail(email);
@@ -45,20 +47,20 @@ public class AccountUtils {
         }
     }
 
-    private static String ggLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private static String[] ggLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("gg-name");
         String image = request.getParameter("gg-image");
         String email = request.getParameter("gg-email");
+        String password = "1";
 
         User user = UserModel.findByEmail(email);
         if (user == null){
             int permission = 0;
-
-            User c = new User(name, email, permission, 0);
+            User c = new User(name, email, BCrypt.withDefaults().hashToString(12, "1".toCharArray()), permission, 0);
             UserModel.ggAdd(c);
         }
 
-        return email;
+        return new String[]{email, password};
     }
 
     private static String convertURItoPath(String url,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
