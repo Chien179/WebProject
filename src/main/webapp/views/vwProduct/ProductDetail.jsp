@@ -63,6 +63,7 @@
                     opacity: 1;
                 }
             }
+
             @keyframes grow{
                 from{
                     transform: scale(var(--grow-from));
