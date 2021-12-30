@@ -240,7 +240,9 @@
                     </c:forEach>
                 </div>
             </div>
-            <button class="btn btn--primary" onclick="loadMore()">Load More</button>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn--primary" onclick="loadMore()">Load More</button>
+            </div>
         </div>
     </jsp:body>
 </t:main>
