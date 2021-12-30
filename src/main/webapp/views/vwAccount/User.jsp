@@ -810,7 +810,6 @@
                     </div>
                 </div>
             </form>
-
         </div>
         <script>
             const submitForm = document.querySelector('.User__info-form');
@@ -844,22 +843,22 @@
                 }
             }
 
-                if(checkBox.checked == true){
-                    newpasswordContainer.classList.add('show')
-                    repassowrdContainer.classList.add('show')
-                    newpasswordInput.required = true
-                    repassowrdInput.required = true
-                    newpasswordInput.name = "password"
-                    passwordInput.removeAttribute("name")
-                }
-                else{
-                    newpasswordContainer.classList.remove('show')
-                    repassowrdContainer.classList.remove('show')
-                    newpasswordInput.required = false
-                    repassowrdInput.required = false
-                    passwordInput.name = "password"
-                    newpasswordInput.removeAttribute("name")
-                }
+            if(checkBox.checked == true){
+                newpasswordContainer.classList.add('show')
+                repassowrdContainer.classList.add('show')
+                newpasswordInput.required = true
+                repassowrdInput.required = true
+                newpasswordInput.name = "password"
+                passwordInput.removeAttribute("name")
+            }
+            else{
+                newpasswordContainer.classList.remove('show')
+                repassowrdContainer.classList.remove('show')
+                newpasswordInput.required = false
+                repassowrdInput.required = false
+                passwordInput.name = "password"
+                newpasswordInput.removeAttribute("name")
+            }
 
             function validateMyForm()
             {

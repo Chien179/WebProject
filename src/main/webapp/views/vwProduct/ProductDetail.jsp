@@ -548,7 +548,8 @@
                                 <input name="proID" value="${product.proID}" hidden>
                                 <input name="step" value="${product.step}" hidden>
                                 <input id="curPrice" name="curPrice" value="${product.price}" hidden>
-                                <input id="maxPrice" name="maxPrice" type="number" style="width: 100%; height: 100px; font-size: 50px"/>
+                                <c:set var="rcmPrice" value="${product.price + product.step}"/>
+                                <input id="maxPrice" name="maxPrice" type="number" style="width: 50%; height: 50px; font-size: 25px" value="${rcmPrice}"/>
                                 <button class="btn btn--primary product-detail__info-shop-btn-normal" id="bid-button">MUA THEO BID</button>
                             </form>
                         </div>

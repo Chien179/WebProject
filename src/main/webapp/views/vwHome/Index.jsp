@@ -333,7 +333,6 @@
         </style>
     </jsp:attribute>
     <jsp:attribute name="js">
-<%--        <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>--%>
         <script>
             let date = document.querySelectorAll('.time');
             let endDate = document.querySelectorAll('.remaining');

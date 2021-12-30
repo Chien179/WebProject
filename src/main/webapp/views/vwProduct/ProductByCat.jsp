@@ -9,11 +9,6 @@
 <t:main>
     <jsp:attribute name="css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Product.css">
-    </jsp:attribute>
-    <jsp:attribute name="js">
-        <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
-    </jsp:attribute>
-    <jsp:body>
         <style>
             div.card:hover, div.card:active{
                 background-color: #e8e8e8; cursor: pointer;
@@ -141,6 +136,11 @@
                 font-weight: bold
             }
         </style>
+    </jsp:attribute>
+    <jsp:attribute name="js">
+        <script src="${pageContext.request.contextPath}/views/JS/Product.js"></script>
+    </jsp:attribute>
+    <jsp:body>
         <div class="">
             <div class="row product__container">
                 <div class="card-header bg-white mb-1 sticky-top product__header">
