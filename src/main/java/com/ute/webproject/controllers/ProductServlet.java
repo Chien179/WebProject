@@ -1,5 +1,6 @@
 package com.ute.webproject.controllers;
 
+import com.ute.webproject.utils.AccountUtils;
 import com.ute.webproject.utils.ServletUtils;
 
 import javax.servlet.*;
@@ -30,6 +31,6 @@ public class ProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        AccountUtils.login(request,response);
     }
 }

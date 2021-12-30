@@ -1073,7 +1073,7 @@
 
     </div>
     <div class="modal__body">
-        <form class="login-form" method="post" id="login-submit" action="${pageContext.request.contextPath}/Account/Login">
+        <form class="login-form" method="post" id="login-submit" onsubmit="document.getElementById('login-submit').action = document.documentURI;">
             <div class="login-form__container js-login-form__container">
                 <div class="login__header">
                     <h3 class="login__heading">Đăng nhập</h3>
@@ -1145,10 +1145,6 @@
     const byPrice = document.querySelector('.byPrice');
     const byDate = document.querySelector('.byDate');
 
-
-    console.log(auth);
-    console.log(loginError);
-
     //Đăng nhập bằng google
     window.onload = function(){
         gapi.load('auth2', function() {
@@ -1167,7 +1163,7 @@
                     document.querySelector('#gg-name').value = name;
                     document.querySelector('#gg-image').value = image;
                     document.querySelector('#gg-email').value = email;
-                    document.getElementById('login-submit').submit();
+                    document.getElementById('login-submit').action = document.documentURI;
                 }).catch((error) => {
                     console.log('Google Sign Up or Login Error: ', error)
                 });

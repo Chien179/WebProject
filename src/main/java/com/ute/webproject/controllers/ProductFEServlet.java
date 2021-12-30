@@ -5,6 +5,7 @@ import com.ute.webproject.beans.*;
 import com.ute.webproject.models.AuctionModel;
 import com.ute.webproject.models.CategoryModel;
 import com.ute.webproject.models.SellerModel;
+import com.ute.webproject.utils.AccountUtils;
 import com.ute.webproject.utils.ServletUtils;
 import com.ute.webproject.models.ProductModel;
 
@@ -97,9 +98,9 @@ public class ProductFEServlet extends HttpServlet {
                 auction(request, response);
                 break;
             default:
-                ServletUtils.forward("/views/404.jsp", request, response);
-                break;
+                AccountUtils.login(request,response);
         }
+
     }
 
     private static void auction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

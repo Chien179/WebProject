@@ -45,59 +45,7 @@ public class LoadMoreServlet extends HttpServlet {
                     "                                <p class=\"card-text card-text-config product__body-img-bid-price-type\">SỐ LƯỢT RA GIÁ<span class=\"float-end\">BIDDER CAO NHẤT</span></p>\n" +
                     "                                <p class=\"card-text card-text-config martop product__body-img-bid-price\">10<span class=\"float-end\">"+"***"+p.getName().substring(p.getName().length()/2)+"</span></p>\n" +
                     "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                       <script>\n" +
-                    "            let date = document.querySelectorAll('.time');\n" +
-                    "            let endDate = document.querySelectorAll('.remaining');\n" +
-                    "            \n" +
-                    "            let x = setInterval(function() {\n" +
-                    "                for (let i =0; i < endDate.length; i++) {\n" +
-                    "                    // Set the date we're counting down to\n" +
-                    "                    let countDownDate = new Date(date[i].childNodes[0].nodeValue).getTime();\n" +
-                    "\n" +
-                    "                    // Get today's date and time\n" +
-                    "                    let now = new Date().getTime();\n" +
-                    "\n" +
-                    "                    // Find the distance between now and the count down date\n" +
-                    "                    let distance = countDownDate - now;\n" +
-                    "\n" +
-                    "                    // Time calculations for days, hours, minutes and seconds\n" +
-                    "                    let days = Math.floor(distance / (1000 * 60 * 60 * 24));\n" +
-                    "                    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n" +
-                    "                    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n" +
-                    "                    let seconds = Math.floor((distance % (1000 * 60)) / 1000);\n" +
-                    "\n" +
-                    "                    if (days > 3) {\n" +
-                    "                        // Output the result in an element with id=\"demo\"\n" +
-                    "                        endDate[i].innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;\n" +
-                    "                    }\n" +
-                    "                    else {\n" +
-                    "                        if (days > 0) {\n" +
-                    "                            endDate[i].innerHTML =`${days} ngày nữa`;\n" +
-                    "                        }\n" +
-                    "                        else {\n" +
-                    "                            if (hours > 0){\n" +
-                    "                                endDate[i].innerHTML =`${hours} tiếng nữa`;\n" +
-                    "                            }\n" +
-                    "                            else {\n" +
-                    "                                if (minutes > 0){\n" +
-                    "                                    endDate[i].innerHTML =`${minutes} phút nữa`;\n" +
-                    "                                }\n" +
-                    "                                else {\n" +
-                    "                                    endDate[i].innerHTML =`${seconds} giây nữa`;\n" +
-                    "                                }\n" +
-                    "                            }\n" +
-                    "                        }\n" +
-                    "                    }\n" +
-                    "\n" +
-                    "                    // If the count down is over, write some text\n" +
-                    "                    if (distance < 0) {\n" +
-                    "                        clearInterval(x);\n" +
-                    "                        endDate[i].innerHTML = \"Hết Thời Hạn\";\n" +
-                    "                    }\n" +
-                    "                }\n" +
-                    "            }, 1000);\n" +
-                    "        </script>");
+                    "                        </div>\n");
         }
     }
 

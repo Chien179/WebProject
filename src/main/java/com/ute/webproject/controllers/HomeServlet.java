@@ -1,11 +1,16 @@
 package com.ute.webproject.controllers;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
+import com.ute.webproject.beans.User;
+import com.ute.webproject.models.UserModel;
+import com.ute.webproject.utils.AccountUtils;
 import com.ute.webproject.utils.ServletUtils;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.Objects;
 
 @WebServlet(name = "HomeServlet", value = "/Home/*")
 public class HomeServlet extends HttpServlet {
@@ -31,6 +36,6 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        AccountUtils.login(request,response,"/views/vwHome/Index.jsp");
+        AccountUtils.login(request,response);
     }
 }
