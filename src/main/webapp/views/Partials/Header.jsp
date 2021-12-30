@@ -1148,7 +1148,6 @@
     //Đăng nhập bằng google
     window.onload = function(){
         gapi.load('auth2', function() {
-            console.log('load');
             var auth2 = gapi.auth2.init({
                 client_id: '477326920799-ue1c2om427obpj9bt1j7qsgulmmdi3nj.apps.googleusercontent.com',
                 cookiepolicy: 'single_host_origin',

@@ -548,6 +548,7 @@
                                 <input name="proID" value="${product.proID}" hidden>
                                 <input name="step" value="${product.step}" hidden>
                                 <input id="curPrice" name="curPrice" value="${product.price}" hidden>
+                                <input id="bid" name="bid" value="false" hidden>
                                 <c:set var="rcmPrice" value="${product.price + product.step}"/>
                                 <input id="maxPrice" name="maxPrice" type="number" style="width: 50%; height: 50px; font-size: 25px" value="${rcmPrice}"/>
                                 <button class="btn btn--primary product-detail__info-shop-btn-normal" id="bid-button">MUA THEO BID</button>
@@ -658,11 +659,11 @@
                         e.preventDefault();
                         window.alert('bạn không thể đặt giá thấp hơn giá trị hiện tại');
                     }else {
+                        document.getElementById('bid').value = true;
                         document.getElementById('formBid').submit();
                     }
                 }
             })
-
         </script>
     </jsp:body>
 </t:main>

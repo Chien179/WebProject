@@ -83,7 +83,6 @@ public class ProductFEServlet extends HttpServlet {
                     ServletUtils.forward("/views/vwProduct/ProductByCat.jsp", request, response);
                 }
                 break;
-
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
                 break;
@@ -95,10 +94,16 @@ public class ProductFEServlet extends HttpServlet {
         String path = request.getPathInfo();
         switch (path) {
             case "/Detail":
-                auction(request, response);
+                boolean bid = (Objects.equals(request.getParameter("bid"), "true"));
+                if (bid){
+                    auction(request, response);
+                }else {
+                    AccountUtils.login(request,response);
+                }
                 break;
             default:
-                AccountUtils.login(request,response);
+                ServletUtils.forward("/views/404.jsp", request, response);
+                break;
         }
 
     }
