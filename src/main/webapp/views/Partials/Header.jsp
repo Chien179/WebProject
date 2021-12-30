@@ -1082,10 +1082,10 @@
                     </div>
                 </div>
                 <div class="login-form__form">
-                    <input type="text" class="login-form__input" placeholder="Tài khoản" name="email">
+                    <input type="text" class="login-form__input" placeholder="Tài khoản" name="email" id="email">
                 </div>
                 <div class="login-form__form">
-                    <input type="password" class="login-form__input" placeholder="Mật khẩu" name="password">
+                    <input type="password" class="login-form__input" placeholder="Mật khẩu" name="password" id="password">
                     <input id="gg-name" name="gg-name" hidden/>
                     <input id="gg-image" name="gg-image" hidden/>
                     <input id="gg-email" name="gg-email" hidden/>
@@ -1162,7 +1162,7 @@
                     document.querySelector('#gg-name').value = name;
                     document.querySelector('#gg-image').value = image;
                     document.querySelector('#gg-email').value = email;
-                    document.getElementById('login-submit').action = document.documentURI;
+                    document.getElementById('login-submit').submit();
                 }).catch((error) => {
                     console.log('Google Sign Up or Login Error: ', error)
                 });
@@ -1205,4 +1205,13 @@
         else
             byDate.attributes[1].value += searchVal;
     }
+
+    //kiểm tra login rỗng
+    document.getElementById('login-submit').addEventListener('submit',function (e){
+        if (document.getElementById('email').innerHTML !== null || document.getElementById('password').innerHTML !== null){
+            e.preventDefault();
+            showLoginModal();
+            alert('Vui Lòng Không Để Trống Email Và Mật Khẩu');
+        }
+    })
 </script>
