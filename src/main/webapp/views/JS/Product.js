@@ -5,7 +5,7 @@ let endDate = document.querySelectorAll('.remaining');
 let x = setInterval(function() {
     for (let i =0; i < endDate.length; i++) {
         // Set the date we're counting down to
-        let countDownDate = new Date(date[i].childNodes[0].nodeValue).getTime();
+        let countDownDate = new Date(date[i].innerHTML).getTime();
 
         // Get today's date and time
         let now = new Date().getTime();
@@ -21,22 +21,22 @@ let x = setInterval(function() {
 
         if (days > 3) {
             // Output the result in an element with id="demo"
-            endDate[i].innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            endDate[i].innerHTML = days + 'd ' + hours + 'h ' + minutes+'m '+ seconds + 's';
         }
         else {
             if (days > 0) {
-                endDate[i].innerHTML =`${days} ngày nữa`;
+                endDate[i].innerHTML = days + ' ngày nữa';
             }
             else {
                 if (hours > 0){
-                    endDate[i].innerHTML =`${hours} tiếng nữa`;
+                    endDate[i].innerHTML = hours + ' tiếng nữa';
                 }
                 else {
                     if (minutes > 0){
-                        endDate[i].innerHTML =`${minutes} phút nữa`;
+                        endDate[i].innerHTML = minutes + ' phút nữa';
                     }
                     else {
-                        endDate[i].innerHTML =`${seconds} giây nữa`;
+                        endDate[i].innerHTML = seconds + ' giây nữa';
                     }
                 }
             }
