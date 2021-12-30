@@ -101,11 +101,16 @@ public class ProductFEServlet extends HttpServlet {
                     AccountUtils.login(request,response);
                 }
                 break;
+            case "/ProductByCat":
+            case "/ByDate":
+            case "/ByPrice":
+            case "/WithName":
+                AccountUtils.login(request,response);
+                break;
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);
                 break;
         }
-
     }
 
     private static void auction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

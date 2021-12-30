@@ -1,7 +1,11 @@
 package com.ute.webproject.utils;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import com.ute.webproject.beans.Category;
+import com.ute.webproject.beans.Product;
 import com.ute.webproject.beans.User;
+import com.ute.webproject.models.CategoryModel;
+import com.ute.webproject.models.ProductModel;
 import com.ute.webproject.models.UserModel;
 
 import javax.servlet.ServletException;
@@ -9,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 public class AccountUtils {
@@ -32,11 +37,11 @@ public class AccountUtils {
                 ServletUtils.redirect(url, request, response);
             } else {
                 request.setAttribute("hasError", true);
-                ServletUtils.forward(convertURItoPath(url), request, response);
+                ServletUtils.forward(convertURItoPath(url, request, response), request, response);
             }
         } else {
             request.setAttribute("hasError", true);
-            ServletUtils.forward(convertURItoPath(url), request, response);
+            ServletUtils.forward(convertURItoPath(url, request, response), request, response);
         }
     }
 
@@ -56,30 +61,51 @@ public class AccountUtils {
         return email;
     }
 
-    private static String convertURItoPath(String url){
+    private static String convertURItoPath(String url,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] urls = url.split("/");
         int len = urls.length;
         if(Objects.equals(urls[4], "Home")){
-            if(len == 6){
-                return "/views/vwHome/About.jsp";
-            }else {
-                return "/views/vwHome/Index.jsp";
-            }
+            return "/views/vwHome/Index.jsp";
         }else {
             if (Objects.equals(urls[4], "Product")){
-                if (len == 6){
-                    String[] childUrl = urls[5].split("/?");
-                    if (Objects.equals(childUrl[0], "Detail")){
+                if (len == 7){
+                    if (urls[6].contains("Detail")){
                         return "/views/vwProduct/ProductDetail.jsp";
                     }else {
+                        if(urls[6].contains("WithName")){
+                            String proName = request.getParameter("name");
+                            List<Category> cate = CategoryModel.findAll();
+                            List<Product> search = ProductModel.searchPro(proName);
+
+                            request.setAttribute("products", search);
+                            request.setAttribute("categories", cate);
+                        }else{
+                            if (urls[6].contains("ByPrice")){
+                                String proByMoney = request.getParameter("name");
+                                List<Product> byMoney = ProductModel.orderByMoney(proByMoney);
+
+                                request.setAttribute("products", byMoney);
+                            }else {
+                                if (urls[6].contains("ByDate")){
+                                    String proByDate = request.getParameter("name");
+                                    List<Product> byDate = ProductModel.orderByDate(proByDate);
+
+                                    request.setAttribute("products", byDate);
+                                }
+                                else {
+                                    int catId = Integer.parseInt(request.getParameter("id"));
+                                    List<Category> cat = CategoryModel.findAll();
+                                    List<Product> list = ProductModel.findByCatId(catId);
+
+                                    request.setAttribute("products", list);
+                                    request.setAttribute("categories", cat);
+                                }
+                            }
+                        }
                         return "/views/vwProduct/ProductByCat.jsp";
                     }
                 }else {
-                    if (urls[4].equals("Product")){
-                        return "/views/vwProduct/Product.jsp";
-                    }else {
-                        return "/views/vwProduct/ProductDetail.jsp";
-                    }
+                    return "/views/vwProduct/Product.jsp";
                 }
             }
         }
