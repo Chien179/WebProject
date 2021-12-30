@@ -107,7 +107,7 @@
                 <a href="https://fullstack.edu.vn/" target="_blank">
                     <img class="footer__logo-img" src="${pageContext.request.contextPath}/Img/f8-logo.png" alt="F8 Logo">
                 </a>
-                <a href="https://tiki.vn/" target="_blank">
+                <a href="https://www.ebay.com/" target="_blank">
                     <img class="footer__logo-img" src="${pageContext.request.contextPath}/Img/ebaylogo.png" alt="Ebay Logo">
                 </a>
             </div>

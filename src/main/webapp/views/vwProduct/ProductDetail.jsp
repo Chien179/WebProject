@@ -550,7 +550,7 @@
                                 <input id="curPrice" name="curPrice" value="${product.price}" hidden>
                                 <input id="bid" name="bid" value="false" hidden>
                                 <c:set var="rcmPrice" value="${product.price + product.step}"/>
-                                <input id="maxPrice" name="maxPrice" type="number" style="width: 50%; height: 50px; font-size: 25px; margin-left: 30px" value="${rcmPrice}"/>
+                                <input id="maxPrice" name="maxPrice" type="number" style="width: 50%; height: 50px; font-size: 25px; margin-left: 30px; margin-right: 30px" value="${rcmPrice}"/>
                                 <button class="btn btn--primary product-detail__info-shop-btn-normal" id="bid-button" style="margin-top: -16px">ĐẶT BID</button>
                             </form>
                         </div>
