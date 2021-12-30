@@ -29,7 +29,7 @@ public class AccountServlet extends HttpServlet {
                 break;
 
             case "/IsAvailable":
-                String email = request.getParameter("user");
+                String email = request.getParameter("email");
                 User user = UserModel.findByEmail(email);
                 boolean isAvailable = (user == null);
 
@@ -64,14 +64,37 @@ public class AccountServlet extends HttpServlet {
                 break;
             case "/UserUpdate":
                 String nameviethoa = request.getParameter("name");
-                String password = request.getParameter("password");
+                String oldPass = request.getParameter("oldPass");
+                String newPass = request.getParameter("newPass");
                 int id=Integer.parseInt(request.getParameter("id"));
                 DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                 LocalDate Dob = LocalDate.parse(request.getParameter("dob"), df);
-                User user = new User(nameviethoa, password, id, Dob, 0);
-                UserModel.updateUser(user);
-//                String url = request.getHeader("referer");
-                ServletUtils.redirect("/Home", request, response);
+
+                String email = request.getParameter("email");
+
+                System.out.println(oldPass);
+                System.out.println(newPass);
+                System.out.println(email);
+                System.out.println(id);
+//                User user = UserModel.findByEmail(email);
+//
+//                BCrypt.Result checkOldPass = BCrypt.verifyer().verify(oldPass.toCharArray(), user.getPassword());
+//                BCrypt.Result checkNewPass = BCrypt.verifyer().verify(newPass.toCharArray(), user.getPassword());
+//
+//                if (!checkOldPass.verified) {
+//                    request.setAttribute("oldPassError", true);
+//                    ServletUtils.forward("/views/vwAccount/User.jsp", request, response);
+//                }else {
+//                    if (!checkNewPass.verified){
+//                        request.setAttribute("newPassError", true);
+//                        ServletUtils.forward("/views/vwAccount/User.jsp", request, response);
+//                    }else {
+//                        User updateUser = new User(nameviethoa, BCrypt.withDefaults().hashToString(12, newPass.toCharArray()), id, Dob, 0);
+//                        UserModel.updateUser(updateUser);
+////                String url = request.getHeader("referer");
+//                        ServletUtils.redirect("/Home", request, response);
+//                    }
+//                }
                 break;
             default:
                 ServletUtils.forward("/views/404.jsp", request, response);

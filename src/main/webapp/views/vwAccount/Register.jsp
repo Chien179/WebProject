@@ -7,6 +7,7 @@
   <title>Chilldingo</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/views/CSS/Register.css">
   <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var onloadCallback = function() {
       grecaptcha.render('captcha', {
@@ -16,6 +17,7 @@
 
     $('#frmRegister').on('submit', function (e) {
       e.preventDefault();
+      console.log("here")
 
       const email = $('#txtEmail').val();
       if (email.length === 0) {
@@ -23,9 +25,10 @@
         return;
       }
 
-      $.getJSON('${pageContext.request.contextPath}/Account/IsAvailable?user=' + email, function (data) {
+      $.getJSON('${pageContext.request.contextPath}/Account/IsAvailable?email=' + email, function (data) {
         if (data === true) {
           $('#frmRegister').off('submit').submit();
+          console.log('test')
         } else {
           alert('Email is not available.');
         }

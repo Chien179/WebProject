@@ -1208,7 +1208,7 @@
 
     //kiểm tra login rỗng
     document.getElementById('login-submit').addEventListener('submit',function (e){
-        if (document.getElementById('email').innerHTML !== null || document.getElementById('password').innerHTML !== null){
+        if (document.getElementById('email').innerHTML === null || document.getElementById('password').innerHTML === null){
             e.preventDefault();
             showLoginModal();
             alert('Vui Lòng Không Để Trống Email Và Mật Khẩu');

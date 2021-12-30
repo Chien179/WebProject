@@ -781,7 +781,7 @@
                     </div>
                     <div class="User__info User__info-mail-container">
                         <label class="User__info User__info-mail">Email:</label>
-                        <input  type="email" class="User__info-mail-input" placeholder="Email của bạn" value="${users.email}" disabled>
+                        <input  type="email" class="User__info-mail-input" placeholder="Email của bạn" value="${users.email}" name="email" disabled>
                     </div>
                     <div class="User__info User__info-dateofBirth-container">
                         <label class="User__info-dateofBirth">Ngày sinh: </label>
@@ -789,11 +789,11 @@
                     </div>
                     <div class="User__info User__info-password-container">
                         <label class="User__info-password">Mật khẩu: </label>
-                        <input required type="password" class="User__info-password-input" name="password">
+                        <input required type="password" class="User__info-password-input" name="oldPass">
                     </div>
                     <div class="User__info User__info-new-password-container">
                         <label class="User__info-new-password">Mật khẩu mới: </label>
-                        <input  type="password" class="User__info-new-password-input">
+                        <input  type="password" class="User__info-new-password-input" name="newPass">
                     </div>
                     <div class="User__info User__info-retype-password-container">
                         <label class="User__info-retype-password">Nhập lại mật khẩu: </label>
@@ -811,6 +811,8 @@
                 </div>
             </form>
         </div>
+        <div id="oldPassError" hidden>${oldPassError}</div>
+        <div id="newPassError" hidden>${newPassError}</div>
         <script>
             const submitForm = document.querySelector('.User__info-form');
             const dateofBirth = document.querySelector('.User__info-dateofBirth-input');
@@ -862,31 +864,32 @@
 
             function validateMyForm()
             {
-
                 if(dateofBirth.value === null || dateofBirth.value === ""){
                     dateofBirth.value = "2001-01-01"
                 }
                 if(checkBox.checked == true){
-                    if(!(passwordInput.value === "${users.password}" && newpasswordInput.value === repassowrdInput.value)) {
-                        alert("Mật khẩu không chính xác");
+                    if(!(newpasswordInput.value === repassowrdInput.value)) {
+                        alert("Mật khẩu nhập lại không khớp");
                         // returnToPreviousPage();
                         return false;
                     }
                     alert("Chỉnh sửa thông tin thành công!");
                     return true;
                 }
-                else{
-                    if(passwordInput.value !== "${users.password}"){
-                        alert("Mật khẩu chưa chính xác");
-                        return false;
-                    }
-                    alert("Cập nhật thông tin thành công!");
-                    return true;
-                }
-
             }
             function returnToPreviousPage(){
                 window.history.back();
+            }
+
+            const oldPassErr = (document.getElementById('oldPassError').innerHTML === 'true');
+            const newPassErr = (document.getElementById('newPassError').innerHTML === 'true');
+
+            if(oldPassErr){
+                alert('Mật khẩu không đúng!')
+            }
+
+            if(newPassErr){
+                alert('Mật khẩu mới trùng với mật khẩu cũ')
             }
 
             checkBox.addEventListener('click', showhideInputpassowrd);
