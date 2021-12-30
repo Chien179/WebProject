@@ -194,7 +194,7 @@
         </script>
     </jsp:attribute>
     <jsp:body>
-        <div class="">
+        <div class="row">
             <div class="row product__container" style="margin: 0 auto">
                 <div class="card-header bg-white mb-1 sticky-top product__header">
                     <h3 class="my-auto product__heading">SẢN PHẨM HIỆN CÓ</h3>
@@ -221,9 +221,9 @@
                     </c:forEach>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn--primary" onclick="loadMore()">Load More</button>
-            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn--primary" onclick="loadMore()">Load More</button>
         </div>
     </jsp:body>
 </t:main>
