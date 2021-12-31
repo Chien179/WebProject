@@ -86,12 +86,22 @@
   .focus-input{
     color: var(--primary-color);
   }
+
+  .header__logo{
+    /* width: 200px; */
+    margin-right: 26px;
+  }
+  .header__logo-img{
+    width: 120px;
+  }
 </style>
 <body style="margin: 0">
   <table>
       <tr>
         <div style="background-image: linear-gradient( #1ab7ea, #48c5ee, #6dd1f1, #8adaf4); display: flex; align-items: center;">
-          <h2 class="logo">AUCTION</h2>
+          <div class="header__logo">
+            <a href="${pageContext.request.contextPath}/Home"><img class="header__logo-img" src="${pageContext.request.contextPath}/Img/download.png" alt="Logo"></a>
+          </div>
         </div>
       </tr>
       <tr>

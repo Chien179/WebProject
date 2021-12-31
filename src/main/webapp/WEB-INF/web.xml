@@ -13,10 +13,10 @@
         <url-pattern>/Product</url-pattern>
     </filter-mapping>
 
-    <filter-mapping>
-        <filter-name>DetailFilter</filter-name>
-        <url-pattern>/Product/ByCate/Detail</url-pattern>
-    </filter-mapping>
+<!--    <filter-mapping>-->
+<!--        <filter-name>DetailFilter</filter-name>-->
+<!--        <url-pattern>/Product/ByCate/Detail</url-pattern>-->
+<!--    </filter-mapping>-->
 
 <!--    <filter-mapping>-->
 <!--        <filter-name>ByCatFilter</filter-name>-->
